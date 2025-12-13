@@ -1,0 +1,444 @@
+body{
+    background-image: url(./assets/images/body3.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.vip-nav {
+    width: 100%;
+    padding: 20px 0;
+    background: rgba(255, 215, 0, 0.08); /* light gold glass */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 5px 25px rgba(255, 215, 0, 0.25);
+    animation: navGlow 4s infinite ease-in-out;
+}
+
+.vip-nav nav h1 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #fff;
+    position: relative;
+    background: linear-gradient(90deg, #ffd700, #fff7ba, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: goldShade 3s infinite alternate;
+}
+
+/* GOLD Underline Shine */
+.vip-nav nav h1::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, #ffd700, #fff, #ffd700);
+    border-radius: 10px;
+    transition: 0.6s;
+}
+
+.vip-nav nav h1:hover::after {
+    width: 70%;
+}
+
+/* NAVBAR Glow Animation */
+@keyframes navGlow {
+    0% { box-shadow: 0px 5px 15px rgba(255, 215, 0, 0.2); }
+    50% { box-shadow: 0px 5px 35px rgba(255, 215, 0, 0.8); }
+    100% { box-shadow: 0px 5px 15px rgba(255, 215, 0, 0.2); }
+}
+
+/* GOLD TEXT SHIMMER */
+@keyframes goldShade {
+    0% { letter-spacing: 1px; }
+    50% { letter-spacing: 3px; }
+    100% { letter-spacing: 1px; }
+}
+
+.hero-section1{
+    margin-top: 100px;
+   width: 100%;
+    display: flex;
+    justify-content: center; 
+  
+}
+
+.card1{
+width: 80%;
+height: 500px;
+background-color: rgba(255, 255, 255, 0.363);
+display: flex;
+align-items: center;
+padding-top: 30PX;
+flex-direction: column;
+border-radius: 20px;
+border: none;
+
+
+}
+.bg{
+background-image: url(./assets/images/largecolor.png);
+background-position: center;
+background-size: cover;
+width: 90%;
+height: 400px;
+border-radius: 20px;
+}
+
+.link {
+    display: flex;
+    margin-top: 10px;
+    gap: 200px;
+}
+
+/* ULTRA VIP Button */
+.vipx-btn {
+    padding: 15px 15px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    color: #fff;
+    background: rgba(255, 215, 0, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s ease;
+    letter-spacing: 1px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+/* Gold border */
+.vipx-btn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50px;
+    padding: 2px;
+    background: linear-gradient(135deg, #ffd700, #ffef9f, #ffd700);
+    -webkit-mask: 
+        linear-gradient(#000 0 0) content-box, 
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+/* Shine effect */
+.vipx-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 150%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.8),
+        transparent
+    );
+    transition: 0.7s;
+}
+
+/* Hover Effects */
+.vipx-btn:hover {
+    transform: scale(1.12) rotateX(8deg) rotateY(-8deg);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+}
+
+/* Shine moves on hover */
+.vipx-btn:hover::before {
+    left: 150%;
+}
+
+/* GOLD Pulse Animation */
+@keyframes goldPulse {
+    0% { box-shadow: 0 0 10px rgba(255, 215, 0, 0.4); }
+    50% { box-shadow: 0 0 25px rgba(255, 215, 0, 0.9); }
+    100% { box-shadow: 0 0 10px rgba(255, 215, 0, 0.4); }
+}
+
+.vipx-btn {
+    animation: goldPulse 2.5s infinite ease-in-out;
+}
+
+.hero-section2{
+    margin-top: 50px;
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+}
+
+.card2{
+width: 80%;
+height: 500px;
+border: none;
+background-color: rgba(255, 255, 255, 0.377);
+display: flex;
+align-items: center;
+padding-top: 30PX;
+flex-direction: column;
+border-radius: 20px;
+}
+
+.bg2{
+background-image: url(./assets/images/large\ iphine.png);
+background-position: bottom;
+background-size: cover;
+width: 90%;
+height: 400px;
+border-radius: 20px;
+}
+
+.hero-section3{
+    margin-top: 50px;
+   width: 100%;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.card3{
+width: 80%;
+height: 500px;
+border: none;
+background-color: rgba(255, 255, 255, 0.39);
+display: flex;
+align-items: center;
+padding-top: 30PX;
+flex-direction: column;
+border-radius: 20px;
+}
+
+.bg3{
+background-image: url(./assets/images/largezero2.png);
+background-position: center;
+background-size: cover;
+width: 90%;
+height: 400px;
+border-radius: 20px;
+}
+
+
+.hero-section4{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.card4{
+width: 80%;
+height: 500px;
+border: none;
+background-color: rgba(255, 255, 255, 0.39);
+display: flex;
+align-items: center;
+padding-top: 30PX;
+flex-direction: column;
+border-radius: 20px;
+}
+
+.bg4{
+background-image: url(./assets/images/google.png);
+background-position: bottom;
+background-size: cover;
+width: 90%;
+height: 400px;
+border-radius: 20px;
+}
+
+.hero-section5{
+    margin-top: 50px;
+   width: 100%;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.card5{
+width: 80%;
+height: 500px;
+border: none;
+background-color: rgba(255, 255, 255, 0.39);
+display: flex;
+align-items: center;
+padding-top: 30PX;
+flex-direction: column;
+border-radius: 20px;
+}
+
+.bg5{
+background-image: url(./assets/images/google.png);
+background-position: bottom;
+background-size: cover;
+width: 90%;
+height: 400px;
+border-radius: 20px;
+}
+
+
+ 
+.hero-section6{
+    margin-top: 50px;
+   width: 100%;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.card6{
+width: 80%;
+height: 500px;
+border: none;
+background-color: rgba(255, 255, 255, 0.39);
+display: flex;
+align-items: center;
+padding-top: 30PX;
+flex-direction: column;
+border-radius: 20px;
+}
+
+.bg6{
+background-image: url(./assets/images/periodic.png);
+background-position: top;
+background-size: cover;
+width: 90%;
+height: 400px;
+border-radius: 20px;
+}
+
+/* resposive section */
+
+@media (max-width:480px){
+   .vip-nav nav h1{
+        font-size: 10px;
+        letter-spacing: 0px;
+    }
+
+    .vipx-btn{
+        padding: 12px 8px;
+        font-size: 11px;
+    }
+    .link{
+        gap: 60px;
+    }
+
+    .card1{
+        height: 340px;
+        padding: 10px 0px;
+         border: none;
+
+    }
+
+    .bg{
+        background-image: url(./assets/images/mobilecolor.png);
+        height: 280px;
+    }
+
+    .card2{
+        height: 340px;
+        padding: 10px 0px;
+         border: none;
+
+    }
+
+    .bg2{
+        background-image: url(./assets/images/mobile\ iphone.png);
+        height: 280px;
+    }
+
+    .card3{
+        height: 340px;
+        padding: 10px 0px;
+         border: none;
+
+    }
+
+    .bg3{
+        background-image: url(./assets/images/largezero.png);
+        height: 280px;
+        
+    }
+
+    .card4{
+        height: 340px;
+        padding: 10px 0px;
+         border: none;
+
+    }
+
+    .bg4{
+        background-image: url(./assets/images/Screenshot\ 2025-12-11\ 132006.png);
+        height: 280px;
+        background-position: top;
+    }
+
+    .card6{
+        height: 340px;
+        padding: 10px 0px;
+        border: none;
+
+    }
+
+    .bg6{
+        background-image: url(./assets/images/periodic.png);
+        background-position: left;
+        height: 280px;
+    }
+
+}
+
+@media (min-width:375px) and (max-width:425px){
+   .vip-nav nav h1{
+        font-size: 12px;
+        letter-spacing: 0px;
+    } 
+
+    .link{
+        gap: 100px;
+    }
+}
+
+/* tablet section */
+
+@media (min-width:500px) and (max-width:768px){
+   .vip-nav nav h1{
+        font-size: 25px;
+        letter-spacing: 2px;
+    } 
+.link{
+    gap: 200px;
+}
+    .bg{
+        background-image: url(./assets/images/tablet.png);
+        background-position: bottom;
+    } 
+    .bg3{
+        background-image: url(./assets/images/largezero.png);
+        background-position: top;
+    } 
+   
+    .bg4{
+        background-position: left;
+    }
+}
