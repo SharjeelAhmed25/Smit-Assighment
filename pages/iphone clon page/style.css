@@ -1,0 +1,1907 @@
+
+body{
+    /* background-color: rgb(231, 231, 243); */
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+}
+
+a{
+   color: #5f6368; 
+     text-decoration: none;
+      font-size: 24px;
+}
+
+.container > nav > ul > li > .a1{
+    text-decoration: none;
+    font-size: 27px;
+    color: #5f6368;
+}
+
+nav{
+  
+    width: 100%;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    margin: 0px;
+
+}
+
+
+
+nav > ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.nb{
+    display: flex;
+  
+    width: 100%;
+    justify-content: space-evenly;
+    
+    height: 50px;
+    align-items: center;
+}
+
+nav > .na > img{
+    width: 60px;
+    height: 60px;
+ 
+}
+
+nav > .nb > a > .search{
+    width: 30px;
+    height: 30px;
+}
+
+nav > .nb > a > .lock{
+    width: 30px;
+    height: 30px;
+}
+
+nav > .nb > .men{
+    display: none;
+}
+
+/* hero section */
+
+.hero-section{
+
+    width: 100%;
+    background-image: url(./assets/images/iphone/hero_ase25__cop938p8rv6u_large.jpg);
+    height: 100%;
+    margin-top: 70px;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  
+
+}
+
+/* :hover sec */
+
+.hero-section:hover{
+
+    width: 100%;
+    background-image: url(./assets/images/iphone/large.jpg);
+    height: 100%;
+    margin-top: 70px;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.5s ;
+
+
+    .head > h1 , p{
+    color: black;
+    margin: 0px;
+}
+
+.head > p{
+    color: black;
+
+}
+
+
+}
+
+
+.head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 350px;
+    
+}
+
+.head > h1 , p{
+    color: white;
+    margin: 0px;
+}
+
+.head > p{
+    color: white;
+
+}
+
+.head > h1 , p , .btttn{
+    margin-top: 20px;
+}
+
+.head > h1{
+    font-size: 65px;
+}
+.head > p{
+    font-size: 35px;
+}
+
+.btttn > button{
+    background-color: rgb(50, 129, 219);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 25px;
+    font-size: 30px;
+    margin-left: 10px;
+    border: none;
+}
+
+/* iphone 17 pro section */
+
+.iphone-section{
+    width: 100%;
+    height: 70%;
+    background-image: url(./assets/images/iphone/hero_iphone_17_prolarge.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-top: 30px;
+}
+
+.ichild{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.ichild > h1 , p{
+    color: white;
+    margin: 0px;
+}
+
+.ichild > .p1{
+    color: white;
+
+}
+
+.ichild > h1 , p , .btn{
+    margin-top: 20px;
+}
+
+.ichild > h1{
+    font-size: 50px;
+}
+.ichild > p{
+    font-size: 35px;
+}
+
+.btn > button{
+    background-color: rgb(50, 129, 219);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 25px;
+    font-size: 25px;
+    margin-left: 10px;
+    border: none;
+}
+
+.btn > .btn2{
+    background-color: black;
+    border: 1px solid rgb(50, 129, 219);
+}
+.btn > .btn2:hover{
+    background-color: rgb(50, 129, 219);
+    color: white;
+    border: 1px solid rgb(50, 129, 219);
+    transition: 0.5s ease all;
+}
+
+/* iphone air section */
+
+.iphone-air{
+    width: 100%;
+    height: 70%;
+    background-image: url(./assets/images/iphone/hero_iphone_air___large.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-top: 30px;
+}
+
+.airchild{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+
+.airchild > h1 , p{
+    color: black;
+    
+}
+
+.airchild > h1 , p , .bttn{
+    margin-top: 20px;
+}
+
+.airchild > h1{
+    font-size: 60px;
+    margin-bottom: 0px;
+}
+.airchild > p{
+    font-size: 28px;
+    text-align: center;
+}
+
+.bttn > button{
+    background-color: rgb(50, 129, 219);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 25px;
+    font-size: 25px;
+    margin-left: 10px;
+    border: none;
+}
+
+.bttn > .btn3{
+    background-color: transparent;
+    color: black;
+    border: 1px solid rgb(50, 129, 219);
+}
+.bttn > .btn3:hover{
+   background-color: rgb(50, 129, 219);
+    color: white;
+    border: 1px solid rgb(50, 129, 219);
+    transition: 0.5s ease all;
+}
+
+/* ipad airpods section */
+
+.ipad-airpods{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    
+
+}
+
+.child1{
+    width: 50%;
+    height: 100%;
+    background-image: url(./assets/images/airbirds/promo_airpodspro_large.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.child1 > h1{
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+.child1 > p{
+    font-size: 25px;
+    text-align: center;
+    margin: 0px;
+}
+
+.cbtn > button{
+    background-color: rgb(50, 129, 219);
+    color: white;
+     padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border: none;
+}
+
+.cbtn > .cbttn{
+    background-color: transparent;
+    color: rgb(50, 129, 219);
+    border: 1px solid rgb(50, 129, 219);
+}
+.cbtn > .cbttn:hover{
+    background-color: rgb(50, 129, 219);
+    color: white;
+    border: 1px solid rgb(50, 129, 219);
+    transition: 0.5s ease all;
+}
+
+.child2{
+    width: 50%;
+    height: 100%;
+    background-image: url(./assets/images/ipad/promo_ipad_air_avail___large.jpg);
+     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 20px;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.child2 > img{
+    width: 300px;
+    height: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.child2 > p{
+    font-size: 30px;
+    text-align: center;
+    margin: 0px;
+}
+
+.cbtn > button{
+    background-color: rgb(50, 129, 219);
+    color: white;
+     padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border: none;
+}
+
+.cbtn > .cbttn{
+    background-color: transparent;
+    color: rgb(50, 129, 219);
+    border: 1px solid rgb(50, 129, 219);
+}
+.cbtn > .cbttn:hover{
+    background-color: rgb(50, 129, 219);
+    color: white;
+    border: 1px solid rgb(50, 129, 219);
+    transition: 0.5s ease all;
+}
+
+/* ipad watch */
+
+.ipad-watch{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    
+
+}
+
+.wchild1{
+    width: 50%;
+    height: 100%;
+    background-image: url(./assets/images/watches/promo_apple_watch_series_11_large.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wchild1 > img{
+    margin-top: 50px;
+    margin-bottom: 40px;
+    width: 400px;
+}
+.wchild1 > p{
+    font-size: 25px;
+    text-align: center;
+    margin: 0px;
+}
+
+.wbtn > button{
+    background-color: rgb(50, 129, 219);
+    color: white;
+     padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border: none;
+}
+
+.wbtn > .wbttn{
+    background-color: transparent;
+    color: rgb(50, 129, 219);
+    border: 1px solid rgb(50, 129, 219);
+}
+.wbtn > .wbttn:hover{
+    background-color: rgb(50, 129, 219);
+    color: white;
+    border: 1px solid rgb(50, 129, 219);
+    transition: 0.5s ease all;
+}
+
+.wchild2{
+    width: 50%;
+    height: 100%;
+    background-image: url(./assets/images/watches/promo_ipad___large.jpg);
+     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 20px;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wchild2 > h1{
+    font-size: 60px;
+    margin-top: 50px;
+
+}
+.wchild2 > p{
+    font-size: 25px;
+    text-align: center;
+    margin: 0px;
+}
+
+.wbtn > button{
+    background-color: rgb(50, 129, 219);
+    color: white;
+     padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border: none;
+}
+
+.wbtn > .wbttn{
+    background-color: transparent;
+    color: rgb(50, 129, 219);
+    border: 1px solid rgb(50, 129, 219);
+}
+.wbtn > .wbttn:hover{
+    background-color: rgb(50, 129, 219);
+    color: white;
+    border: 1px solid rgb(50, 129, 219);
+    transition: 0.5s ease all;
+}
+
+/* trade iphone */
+
+.trade-iphone{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    
+
+}
+
+.tchild1{
+    width: 50%;
+    height: 100%;
+    background-image: url(./assets/images/iphone/promo_iphone_tradein___large.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tchild1 > img{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 250px;
+}
+.tchild1 > p{
+    font-size: 30px;
+    text-align: center;
+    margin: 0px;
+}
+
+.tbtn > button{
+    background-color: rgb(50, 129, 219);
+    color: white;
+     padding: 15px 25px;
+    border-radius: 25px;
+    font-size: 22px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border: none;
+}
+
+.tbtn > .tbttn{
+    background-color: transparent;
+    color: rgb(50, 129, 219);
+    border: 1px solid rgb(50, 129, 219);
+}
+
+
+.tchild2{
+    width: 50%;
+    height: 100%;
+    background-image: url(./assets/images/iphone/promo_apple_card___large.jpg);
+     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 20px;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tchild2 > img{
+   
+    width: 200px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+
+}
+.tchild2 > p{
+    font-size: 30px;
+    text-align: center;
+    margin: 0px;
+}
+
+.tbtn > button{
+    background-color: rgb(50, 129, 219);
+    color: white;
+     padding: 15px 25px;
+    border-radius: 25px;
+    font-size: 22px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border: none;
+}
+
+.tbtn > .tbttn{
+    background-color: transparent;
+    color: rgb(50, 129, 219);
+    border: 1px solid rgb(50, 129, 219);
+}
+.tbtn > .tbttn:hover{
+    background-color: rgb(50, 129, 219);
+    color: white;
+    border: 1px solid rgb(50, 129, 219);
+    transition: 0.5s ease all;
+}
+
+/* footer section */
+
+footer{
+    width: 100%;
+    margin-top: 50px;
+    background-color: rgb(252, 248, 248);
+    display: flex;
+    justify-content: center;
+}
+
+footer > .cmd{
+    width: 90%;
+}
+
+footer > .cmd > div{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #5f6368; */
+}
+
+footer > .cmd > div > p{
+    text-align: justify;
+    font-size: 25px;
+    line-height: 1.5;
+    color: #5f6368;
+    padding: 0px;
+}
+
+.foot{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    /* padding-left: 100px; */
+    
+}
+
+* h2{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+.foot > div > .link{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    
+}
+
+footer > .cmd >.dddd{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    padding-left: 110px;
+    margin-top: 50px;
+    /* background-color: #5f6368; */
+}
+
+footer > .cmd > div > p > a{
+    
+    
+    color: rgb(50, 129, 219);
+   
+}
+
+.main{
+    display: flex;
+    width: 100%;
+    
+    /* justify-content: space-around; */
+}
+
+.main > .flink > span{
+    font-size: 25px;
+    text-align: center;
+    padding-left: 110px;
+    color: #5f6368;
+
+}
+
+.main > .flink > a{
+    color: rgb(50, 129, 219);
+    
+}
+
+.flink{
+    
+    width: 80%;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+
+.clink{
+    width: 20%;
+}
+
+.none-footer{
+    display: none;
+}
+
+
+@media (max-width: 425px){
+
+  nav{
+    padding: 0px;
+    height: 50px;
+    gap: 50px;
+    
+}
+
+nav > .na > img{
+    width: 35px;
+    height: 35px;
+}
+
+    nav > ul{
+        
+       display: none;
+    }
+    .nb{
+        display: flex;
+        gap: 30px;
+    }
+
+    nav > .nb > .men{
+        display: block;
+    }
+
+    nav > .nb > a > .search , .lock{
+        width: 25px;
+       height: 25px;
+       margin-left: 60px;
+    }
+    nav > .nb > a > .lock{
+        width: 25px;
+       height: 25px;
+       margin: 0px;
+    }
+   
+   
+    .hero-section{
+
+    background-image: url(./assets/images/iphone/small_2x.jpg);
+    margin-top: 0px;
+
+}
+
+.head{
+    
+    margin-top: 200px;
+    
+}
+
+.head > h1 , p{
+    color: black;
+   
+}
+
+.head > p{
+    color: black;
+
+}
+
+
+.head > h1{
+    font-size: 23px;
+}
+.head > p{
+    font-size: 12px;
+}
+
+.btttn > button{
+   
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 15px;
+
+}
+
+/* 17 pro start */
+
+.iphone-section{
+    width: 100%;
+    height: 70%;
+    background-image: url(./assets/images/iphone/hero_iphone_17_prosmall.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.ichild{
+    display: flex;
+    
+    
+}
+
+
+.ichild > h1{
+    font-size: 23px;
+}
+.ichild > p{
+    font-size: 12px;
+}
+
+.btn > button{
+    
+    padding: 5px 15px;
+    border-radius: 25px;
+    font-size: 12px;
+   
+}
+
+/* air iphone section */
+
+.iphone-air{
+  
+    background-image: url(./assets/images/iphone/hero_iphone_air_small_2x.jpg);
+    height: 100%;
+}
+
+.airchild > h1{
+    font-size: 35px;
+    margin-bottom: 0px;
+}
+.airchild > p{
+    font-size: 15px;
+    margin-bottom: 0px;
+   
+}
+
+.bttn > button{
+    background-color: rgb(50, 129, 219);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 12px;
+    margin-left: 10px;
+    border: none;
+}
+
+/* ipad airpods section */
+
+.ipad-airpods{
+    width: 100%;
+    height: 200%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    justify-content: center;
+    
+
+}
+
+.child1{
+   width: 100%;
+   height: 100%;
+    background-image: url(./assets/images/airbirds/promo_airpodspro_3__small.jpg);
+   margin: 0px;
+
+}
+
+.child1 > h1{
+    font-size: 23px;
+}
+.child1 > p{
+    font-size: 12px;
+   
+}
+
+.cbtn > button{
+   
+     padding: 5px 10px;
+    font-size: 12px;
+   
+}
+
+.child2{
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/images/ipad/promo_ipad_air_avail__6_small_2x.jpg);
+   margin: 0px;
+   align-items: center;
+   margin-top: 30px;
+}
+
+.child2 > img{
+    width: 180px;
+    height: 40px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.child2 > p{
+    font-size: 15px;
+    text-align: center;
+    margin: 0px;
+   
+}
+
+.cbtn > button{
+    
+     padding: 5px 15px;
+    font-size: 15px;
+   
+}
+
+
+/* ipad watch */
+
+.ipad-watch{
+    width: 100%;
+    height: 200%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    justify-content: center;
+    
+
+}
+
+.wchild1{
+    
+    background-image: url(./assets/images/watches/promo_apple_watch_series__small.jpg);
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wchild1 > img{
+
+    margin-bottom: 20px;
+    width: 250px;
+}
+.wchild1 > p{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.wbtn > button{
+    background-color: rgb(50, 129, 219);
+    color: white;
+     padding: 5px 15px;
+    border-radius: 25px;
+    font-size: 12px;
+    
+}
+
+
+.wchild2{
+   background-image: url(./assets/images/watches/promo_ipad___small_2x.jpg);
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.wchild2 > h1{
+    font-size: 50px;
+    margin-top: 50px;
+
+}
+.wchild2 > p{
+    font-size: 15px;
+    margin: 0px;
+}
+
+
+.wbtn > button{
+   
+     padding: 6px 18px;
+    border-radius: 25px;
+    font-size: 15px;
+
+   
+}
+
+/* trade iphone */
+
+.trade-iphone{
+    width: 100%;
+    height: 200%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    justify-content: center;
+    
+    
+
+}
+
+.tchild1{
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/images/iphone/promo_iphone_tradein___small_2x.jpg);
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tchild1 > img{
+   
+    width: 150px;
+}
+.tchild1 > p{
+    font-size: 15px;
+   ;
+}
+
+.tbtn > button{
+   
+     padding: 7px 15px;
+    border-radius: 25px;
+    font-size: 15px;
+
+}
+
+.tchild2{
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/images/iphone/promo_apple_card__small.jpg);
+    margin: 0px;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.tchild2 > img{
+   
+    width: 170px;
+}
+
+.tchild2 > p{
+    font-size: 15px; 
+}
+
+.tbtn > button{
+   
+     padding: 7px 15px;
+    border-radius: 25px;
+    font-size: 15px;
+   
+}
+
+/* footer section */
+
+footer > .cmd{
+   
+    display: none;
+}
+
+.main{
+    display: none;
+}
+
+.none-footer{
+    display: block;
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.none-footer > .none-main > .fnp1{
+width: 100%;
+height: 100%;
+
+}
+
+.none-footer > .none-main > .fnp1{
+
+    display: flex;
+    justify-content: center;
+}
+
+.none-footer > .none-main .fnp1 > p{
+
+    text-align: justify;
+    margin: 0px;
+    line-height: 1.5;
+    font-size: 12px;
+    padding: 20px;
+}
+
+/* shop section */
+
+.n-l-section{
+
+    display: block;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+}
+
+.n-l-head{
+
+    width: 90%;
+   
+}
+
+.arrow{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    
+}
+
+/* tablet screen */
+
+
+@media (min-width:426px) and (max-width: 768px){
+
+ nav{
+   
+    height: 50px;
+    justify-content: space-around;   
+}
+
+
+nav > .nb > .men{
+    display: block;
+}
+.nb{
+    display: flex;
+    gap: 100px;
+    width: 35%;
+    justify-content: flex-start;
+   
+}
+nav > .na > img{
+    width: 55px;
+    height: 55px;
+}
+
+    nav > ul{
+        
+       display: none;
+    }
+
+    nav > .nb > a > .search{
+        width: 25px;
+       height: 25px;
+       
+    }
+    nav > .nb > a > .lock{
+        width: 25px;
+       height: 25px;
+       margin: 0px;
+    }
+
+    nav > .nb > .menu{
+         width: 25px;
+       height: 25px;
+    }
+  
+
+
+    .hero-section{
+
+    background-image: url(./assets/images/iphone/small.jpg);
+    margin-top: 70px;
+
+}
+
+.head{
+    
+    margin-top: 200px;
+    
+}
+
+.head > h1 , p{
+    color: black;
+   
+}
+
+.head > p{
+    color: black;
+
+}
+
+
+.head > h1{
+    font-size: 23px;
+}
+.head > p{
+    font-size: 12px;
+}
+
+.btttn > button{
+   
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 15px;
+
+}
+
+/* 17 pro start */
+
+.iphone-section{
+    width: 100%;
+    height: 70%;
+    background-image: url(./assets/images/iphone/hero_iphone_17_prolarge.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.ichild{
+    display: flex;
+    
+    
+}
+
+
+.ichild > h1{
+    font-size: 23px;
+}
+.ichild > p{
+    font-size: 12px;
+}
+
+.btn > button{
+    
+    padding: 5px 15px;
+    border-radius: 25px;
+    font-size: 12px;
+   
+}
+
+/* air iphone section */
+
+.iphone-air{
+  
+    background-image: url(./assets/images/iphone/hero_iphone_air_small_2x.jpg);
+    height: 100%;
+}
+
+.airchild > h1{
+    font-size: 35px;
+    margin-bottom: 0px;
+}
+.airchild > p{
+    font-size: 15px;
+    margin-bottom: 0px;
+   
+}
+
+.bttn > button{
+    background-color: rgb(50, 129, 219);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 12px;
+    margin-left: 10px;
+    border: none;
+}
+
+/* ipad airpods section */
+
+.ipad-airpods{
+    width: 100%;
+    height: 200%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    justify-content: center;
+    
+
+}
+
+.child1{
+   width: 100%;
+   height: 100%;
+    background-image: url(./assets/images/airbirds/promo_airpodspro_3__small.jpg);
+   margin: 0px;
+
+}
+
+.child1 > h1{
+    font-size: 30px;
+    margin-top: 60px;
+}
+.child1 > p{
+    font-size: 18px;
+    margin-bottom: 20px;
+   
+}
+
+.cbtn > button{
+   
+     padding: 5px 10px;
+    font-size: 12px;
+   
+}
+
+.child2{
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/images/ipad/promo_ipad_air_avail__6_small_2x.jpg);
+   margin: 0px;
+   align-items: center;
+   margin-top: 30px;
+}
+
+.child2 > img{
+    width: 180px;
+    height: 40px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.child2 > p{
+    font-size: 15px;
+    text-align: center;
+    margin: 0px;
+   
+}
+
+.cbtn > button{
+    
+     padding: 8px 15px;
+    font-size: 15px;
+   
+}
+
+
+/* ipad watch */
+
+.ipad-watch{
+    width: 100%;
+    height: 200%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    justify-content: center;
+    
+
+}
+
+.wchild1{
+    
+    background-image: url(./assets/images/watches/promo_apple_watch_series__small.jpg);
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wchild1 > img{
+
+    margin-bottom: 20px;
+    width: 250px;
+}
+.wchild1 > p{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.wbtn > button{
+    background-color: rgb(50, 129, 219);
+    color: white;
+     padding: 5px 15px;
+    border-radius: 25px;
+    font-size: 12px;
+    
+}
+
+
+.wchild2{
+   background-image: url(./assets/images/watches/promo_ipad___small_2x.jpg);
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.wchild2 > h1{
+    font-size: 50px;
+    margin-top: 50px;
+
+}
+.wchild2 > p{
+    font-size: 15px;
+    margin: 0px;
+}
+
+
+.wbtn > button{
+   
+     padding: 6px 18px;
+    border-radius: 25px;
+    font-size: 15px;
+
+   
+}
+
+/* trade iphone */
+
+.trade-iphone{
+    width: 100%;
+    height: 200%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    justify-content: center;
+    
+    
+
+}
+
+.tchild1{
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/images/iphone/promo_iphone_tradein___small_2x.jpg);
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tchild1 > img{
+   
+    width: 150px;
+}
+.tchild1 > p{
+    font-size: 15px;
+   ;
+}
+
+.tbtn > button{
+   
+     padding: 7px 15px;
+    border-radius: 25px;
+    font-size: 15px;
+
+}
+
+.tchild2{
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/images/iphone/promo_apple_card__small.jpg);
+    margin: 0px;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.tchild2 > img{
+   
+    width: 170px;
+}
+
+.tchild2 > p{
+    font-size: 15px; 
+}
+
+.tbtn > button{
+   
+     padding: 7px 15px;
+    border-radius: 25px;
+    font-size: 15px;
+   
+}
+
+/* footer section */
+
+footer > .cmd{
+   
+    display: none;
+}
+
+.main{
+    display: none;
+}
+
+.none-footer{
+    display: block;
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.none-footer > .none-main > .fnp1{
+width: 100%;
+height: 100%;
+
+}
+
+.none-footer > .none-main > .fnp1{
+
+    display: flex;
+    justify-content: center;
+}
+
+.none-footer > .none-main .fnp1 > p{
+
+    text-align: justify;
+    margin: 0px;
+    line-height: 1.5;
+    font-size: 12px;
+    padding: 20px;
+}
+
+/* shop section */
+
+.n-l-section{
+
+    display: block;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+}
+
+.n-l-head{
+
+    width: 90%;
+   
+}
+
+.arrow{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    
+}
+
+@media (min-width: 770px) and (max-width: 1024px){
+  
+ nav{
+   
+    height: 50px;
+justify-content: center;  
+    gap: 30px; 
+}
+
+
+nav > .nb > .men{
+    display: none;
+}
+.nb{
+    display: flex;
+    gap: 10px;
+    width: 50%;
+    justify-content: space-between;
+   
+}
+nav > .na > img{
+    width: 45px;
+    height: 45px;
+}
+
+
+
+.container > nav > ul > li > .a1{
+    text-decoration: none;
+    font-size: 18px;
+    color: #5f6368;
+}
+
+    nav > ul{
+        
+       display: block;
+       font-size: 10px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       gap: 20px;
+    }
+
+    nav > .nb > a > .search{
+        width: 25px;
+       height: 25px;
+       
+    }
+    nav > .nb > a > .lock{
+        width: 25px;
+       height: 25px;
+       margin: 0px;
+    }
+
+/* hero section */
+
+.head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 300px;  
+}
+
+
+.head > h1 , p{
+    color: black;
+    margin: 0px;
+}
+
+.head > p{
+    color: black;
+
+}
+
+.head > h1 , p , .btttn{
+    margin-top: 20px;
+}
+
+.head > h1{
+    font-size: 45px;
+}
+.head > p{
+    font-size: 22px;
+}
+
+.btttn > button{
+    padding: 10px 30px;
+    font-size: 20px;
+    border: none;
+}
+
+.hero-section:hover{
+    display: none;
+}
+
+.hero-section{
+    background-image: url(./assets/images/iphone/large.jpg);
+}
+
+/* iphone 17 pro section */
+
+.iphone-section{
+   
+    background-image: url(./assets/images/iphone/hero_iphone_17_prolarge.jpg);
+}
+
+
+
+.ichild > h1 , p , .btn{
+    margin-top: 10px;
+}
+
+.ichild > h1{
+    font-size: 45px;
+}
+.ichild > p{
+    font-size: 30px;
+}
+
+.btn > button{
+    padding: 5px 20px;
+    font-size: 15px;
+}
+
+/* iphone air section */
+
+.airchild > h1{
+    font-size: 50px;
+    margin-bottom: 0px;
+}
+.airchild > p{
+    font-size: 20px;
+}
+
+.bttn > button{
+    padding: 8px 20px;
+    font-size: 16px;  
+}
+
+/* ipad airpods section */
+
+.child1 > h1{
+    font-size: 40px;
+}
+.child1 > p{
+    font-size: 18px;
+}
+
+.child2 > img{
+    width: 150px;
+    height: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.child2 > p{
+    font-size: 20px;
+  
+}
+
+.cbtn > button{
+    padding: 8px 20px;
+    font-size: 15px;
+}
+
+/* ipad watch */
+
+
+
+.wchild1 > img{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 300px;
+}
+.wchild1 > p{
+    font-size: 25px;
+}
+
+
+.wchild2 > h1{
+    font-size: 45px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+}
+.wchild2 > p{
+    font-size: 20px;
+    
+}
+
+.wbtn > button{
+  
+     padding: 10px 20px;
+    font-size: 15px;
+   
+}
+
+/* trade iphone */
+
+
+.tchild1 > img{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 40px;
+}
+.tchild1 > p{
+    font-size: 20px; 
+}
+
+.tchild2 > img{
+    width: 200px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    height: 40px;
+}
+.tchild2 > p{
+    font-size: 20px;
+}
+
+.tbtn > button{
+     padding: 10px 20px;
+    font-size: 15px;
+}
+
+.main{
+    padding: 20px;
+}
+
+.main > .flink > span{
+    font-size: 15px;
+}
+
+.main > .flink > a{
+    font-size: 15px;
+    
+}
+
+.clink > a{
+   font-size: 16px;
+}
+
+.foot > div > .link > a{
+   font-size: 15px; 
+}
+
+h2{
+    font-size: 20px;
+}
+
+footer > .cmd > div > p{
+    
+    font-size: 15px;
+   
+}
+footer > .cmd > div > p > a{
+    
+    font-size: 15px;
+    color: rgb(50, 129, 219);
+   
+}
+
+}
+
+@media (min-width: 1026px) and (max-width: 1440px){
+
+     .container > nav > ul > li > .a1{
+    font-size: 12px;
+}
+
+    nav{
+    gap: 50px;  
+}
+
+.container nav > ul > li > .a1{
+    font-size: 20px;
+}
+
+.container nav > ul{
+    gap: 35px;
+}
+
+nav > .na > img{
+    width: 45px;
+    height: 45px;
+    /* background-color: black; */
+}
+
+nav > .nb > a > .search{
+    width: 30px;
+    height: 30px;
+}
+
+nav > .nb > a > .lock{
+    width: 30px;
+    height: 30px;
+}
+}
+
+@media (min-width: 2000px) and (max-width: 2560px){
+     
+
+    nav{
+    gap: 70px; 
+}
+
+.container nav > ul > li > .a1{
+    font-size: 40px;
+  
+}
+
+.container nav > ul{
+    gap: 80px;
+    justify-content: center;
+}
+
+nav > .na > img{
+    width: 80px;
+    height: 80px;
+    /* background-color: black; */
+}
+
+nav > .nb > a > .search{
+    width: 60px;
+    height: 60px;
+}
+
+nav > .nb > a > .lock{
+    width: 60px;
+    height: 60px;
+}
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

@@ -1,0 +1,314 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    background-color: rgb(61, 5, 151);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.perent{
+    width: 450px;
+    height: 360px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    
+}
+
+.child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 310px;
+    border-radius: 10px;
+    
+}
+
+.child > img{
+    width: 425px;
+    height: 280px;
+    border-radius: 10px;
+    
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.container{
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 50px;
+
+
+}
+
+/* resposivenes */
+
+/* small mobile */
+
+@media (min-width: 320px) and (max-width: 375px){
+
+    .perent{
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    
+}
+
+.child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 210px;
+    border-radius: 10px;
+    
+}
+
+.child > img{
+    width: 225px;
+    height: 197px;
+    border-radius: 10px;
+    
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    font-size: 12px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 50px;
+
+
+}
+
+} 
+
+/* m mobile */
+
+ @media (min-width: 375px) and (max-width: 425px){
+
+    .perent{
+    width: 310px;
+    height: 300px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    
+}
+
+.child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 310px;
+    height: 260px;
+    border-radius: 10px;
+    
+}
+
+.child > img{
+    width: 285px;
+    height: 230px;
+    border-radius: 10px;
+    
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 375px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 50px;
+
+
+}
+
+} 
+
+/* large mobile */
+
+@media (min-width: 425px) and (max-width: 768px){
+
+    .perent{
+    width: 350px;
+    height: 300px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    
+}
+
+.child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 260px;
+    border-radius: 10px;
+    
+}
+
+.child > img{
+    width: 325px;
+    height: 230px;
+    border-radius: 10px;
+    
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 425px;
+    align-items: center;
+    flex-wrap: wrap;
+    /* height: 1200px; */
+    justify-content: space-around;
+    margin-top: 50px;
+
+
+}
+
+}
+
+
+
+
+/* tablet screen */
+
+@media (min-width: 768px) and (max-width: 1024px){
+
+    .perent{
+    width: 220px;
+    height: 220px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    
+}
+
+.child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 180px;
+    border-radius: 10px;
+    
+}
+
+.child > img{
+    width: 195px;
+    height: 170px;
+    border-radius: 10px;
+    
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    font-size: 12px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 768px;
+    margin: 30px 0px 0px 0px;
+
+
+}
+
+}
+
+/* leptop 1024px screen */
+
+@media (min-width: 1024px) and (max-width: 1440px){
+
+    .perent{
+    width: 260px;
+    height: 220px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    
+}
+
+.child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 260px;
+    height: 180px;
+    border-radius: 10px;
+    
+}
+
+.child > img{
+    width: 235px;
+    height: 170px;
+    border-radius: 10px;
+    
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    font-size: 12px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 1024px;
+    flex-wrap: wrap;
+    margin: 30px 0px 0px 0px;
+
+
+}
+
+}
+

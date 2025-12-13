@@ -1,0 +1,336 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.089);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+}
+
+.perent{
+  background-color: white;
+  width: 900px;
+  display: flex;
+  justify-content: space-between;
+  /* width: 900px; */
+  padding: 50px;
+  border-radius: 28px;
+  height: 300px;
+}
+
+.logo{
+  flex: 1;
+}
+
+img{
+  width: 100px;
+  height: 100px;
+}
+
+h1{
+  font-size: 35px;
+}
+
+p{
+  margin-top: 15px;
+  font-weight: 100;
+}
+
+.input-feild{
+
+  width: 400px;
+
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+input{
+   background-color: transparent;
+   padding: 14px;
+   color: black;
+   font-size: 15px;
+   margin-top: 20px;
+   margin-bottom: 16px;
+   border-radius: 7px;
+   transition: border 0.1s ease;
+   outline: none;
+  border: 1px solid #dadce0;
+
+}
+
+.input-feild input:focus{
+    border: 2px solid #1a73e8;
+    box-shadow: 0px 0px 5px #1a73e8;
+}
+
+button{
+  width: 80px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #2669c2;
+  cursor: pointer;
+}
+
+.btn{
+  display: flex;
+  justify-content: flex-end;
+  width: 400px;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #5f6368;
+    margin: 25px;
+    width: 900px;
+}
+
+footer > select{
+    background-color: transparent;
+    outline: none;
+    font-size: 12px;
+    color: #5f6368;
+    border: none;
+}
+
+.footer-link a{
+    color: #5f6368;
+    margin-left: 15px;
+    text-decoration: none;
+    
+}
+
+a{
+  text-decoration: none;
+  color: #5f6368;
+  margin: 0px 10px;
+}
+
+.res{
+display: none;
+}
+
+/* responsive section */
+
+/* mobile section */
+
+@media (min-width: 320px) and (max-width:375px) {
+
+  .container{
+    width: 320px;
+    
+  }
+  
+  
+  .perent{
+
+    width: 290px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: #1a73e8; */
+    
+  }
+
+  .res{
+  display: block;
+  font-size: 20px;
+  text-align: left;
+}
+
+.unr{
+  display: none;
+}
+
+form{
+  align-items: center;
+  margin-top: 0px;
+}
+
+.input-feild > form > input{
+
+  width: 250px;
+  
+}
+
+.foooter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #5f6368;
+    width: 300px;
+}
+
+.btn{
+  justify-content: flex-end;
+  width: 280px;
+}
+
+}
+
+@media (min-width: 375px) and (max-width: 425px) {
+
+  .perent{
+
+    width: 100%;
+    margin-top: 0px;
+    padding: 25px 0px;
+    height: 400px;
+    /* height: 500px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  .res{
+  display: block;
+  font-size: 25px;
+  text-align: left;
+}
+
+.unr{
+  display: none;
+}
+
+
+form{
+  align-items: flex-end;
+  padding: 0px;
+  margin: 0px;
+  /* background-color: #1a73e8; */
+  width: 330px;
+  
+}
+
+.input-feild > form > input{
+
+  width: 280px;
+  height: 30px;
+  margin-top: 10px;
+
+
+  
+  
+}
+
+.foooter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #5f6368;
+    width: 375px;
+}
+
+.btn{
+  justify-content: flex-end;
+  width: 300px;
+  margin-top: 0px;
+}
+
+}
+
+
+
+/* tablet screen */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .perent{
+
+    width: 100%;
+    
+  }
+
+  .res{
+  display: block;
+  font-size: 25px;
+  text-align: left;
+}
+
+.unr{
+  display: none;
+}
+
+form{
+  align-items: flex-end;
+}
+
+.input-feild > form > input{
+
+  width: 350px;
+  
+}
+
+.foooter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #5f6368;
+    width: 695px;
+}
+  
+}
+
+/* leptop 1024 */
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+
+  .perent{
+
+    width: 100%;
+    
+  }
+
+  .res{
+  display: none;
+  font-size: 25px;
+  text-align: left;
+}
+
+.unr{
+  display: block;
+}
+
+
+.foooter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #5f6368;
+    width: 770px;
+}
+  
+}
+
+
+
+
+
+
+ 

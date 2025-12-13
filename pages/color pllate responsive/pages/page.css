@@ -1,0 +1,679 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav{
+    display: flex;
+    margin-top: 40px;
+    align-items: center;
+
+}
+
+.back{
+    width: 30%;
+    
+}
+
+.code{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#h1{
+    background-color: rgb(128, 238, 128);
+    border: 5px solid black;
+    border-radius: 15px;
+    padding: 10px 40px;
+    
+   
+}
+
+.cod{
+
+    display: none;
+}
+
+.h11{
+   
+    display: none;
+   
+}
+
+.bake{
+    display: none;
+}
+
+
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#h1:hover{
+    background-color: black;
+    border: 5px solid rgb(128, 238, 128);
+    color: white;
+    transition: 0.5s ease all;
+    border-radius: 15px;
+    padding: 10px 40px;
+   
+}
+
+.sound{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.color-head{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+
+    
+
+}
+
+.perent{
+    width: 100%;
+    display: flex;
+    /* flex-direction: column; */
+    
+
+}
+
+.col{
+    width: 20%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+}
+
+.color1{
+    background-color: gold;
+
+}
+
+.color2{
+    background-color: mediumorchid;
+    
+}
+
+.color3{
+    background-color: aqua;
+    
+}
+
+.color4{
+    background-color: green;
+
+    
+}
+
+.color5{
+    background-color: red;
+    
+}
+
+
+.color6{
+    background-color: palevioletred;
+
+}
+
+.color7{
+    background-color: peachpuff;
+    
+}
+
+.color8{
+    background-color: grey;
+    
+}
+
+.color9{
+    background-color: skyblue;
+
+    
+}
+
+.color10{
+    background-color: brown;
+    
+}
+
+.color11{
+    background-color: pink;
+
+}
+
+.color12{
+    background-color: purple;
+    
+}
+
+.color13{
+    background-color: palegreen;
+    
+}
+
+.color14{
+    background-color: peru;
+
+    
+}
+
+.color15{
+    background-color: fuchsia;
+    
+}
+
+
+.color16{
+    background-color: papayawhip;
+
+}
+
+.color17{
+    background-color: brown;
+    
+}
+
+.color18{
+    background-color: aqua;
+    
+}
+
+.color19{
+    background-color: green;
+
+    
+}
+
+.color20{
+    background-color: rgb(243, 74, 74);
+    
+}
+
+@media (max-width: 320px){
+
+.back{
+    width: 35%;
+    font-size: 7px;
+    display: none;
+    
+}
+
+.bake{
+    display: block;
+     width: 30%;
+    font-size: 7px;
+}
+
+.code{
+   
+    display: none;
+}
+
+#h1{
+   
+    display: none;
+   
+}
+
+.cod{
+
+    display: block;
+    width: 40%;
+
+}
+
+.h11{
+    display: block;
+    background-color: rgb(139, 248, 139);
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 10px;
+    border: 4px solid black;
+}
+
+.h11:hover{
+
+    border: 4px solid rgb(139, 248, 139);
+    background-color: black;
+    color: white;
+    transition: 0.5s ease all;
+
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.sound{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 7px;
+}
+
+.color-head{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+
+    
+
+}
+
+.perent{
+    width: 100%;
+    display: flex;
+
+}
+
+.col{
+    width: 20%;
+    height: 100px;
+    font-size: 5px;
+    
+}
+
+}
+
+@media (min-width: 320px) and (max-width: 375px){
+
+.back{
+    width: 35%;
+    font-size: 7px;
+    display: none;
+    
+}
+
+.bake{
+    display: block;
+     width: 30%;
+    font-size: 7px;
+}
+
+.code{
+   
+    display: none;
+}
+
+#h1{
+   
+    display: none;
+   
+}
+
+.cod{
+
+    display: block;
+    width: 40%;
+
+}
+
+.h11{
+    display: block;
+    background-color: rgb(139, 248, 139);
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 10px;
+    border: 4px solid black;
+}
+
+.h11:hover{
+
+    border: 4px solid rgb(139, 248, 139);
+    background-color: black;
+    color: white;
+    transition: 0.5s ease all;
+
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.sound{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    font-size: 7px;
+}
+
+.color-head{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+
+    
+
+}
+
+.perent{
+    width: 100%;
+    display: flex;
+
+}
+
+.col{
+    width: 20%;
+    height: 100px;
+    font-size: 6px;
+    
+}
+
+}
+
+
+@media (min-width: 376px) and (max-width:425px){
+
+.back{
+    width: 35%;
+    font-size: 7px;
+    display: none;
+    
+}
+
+.bake{
+    display: block;
+     width: 30%;
+    font-size: 10px;
+}
+
+.code{
+   
+    display: none;
+}
+
+#h1{
+   
+    display: none;
+   
+}
+
+.cod{
+
+    display: block;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.h11{
+    display: block;
+    background-color: rgb(139, 248, 139);
+    padding: 5px 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: 4px solid black;
+}
+
+.h11:hover{
+
+    border: 4px solid rgb(139, 248, 139);
+    background-color: black;
+    color: white;
+    transition: 0.5s ease all;
+
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.sound{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 10px;
+}
+
+.color-head{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+
+    
+
+}
+
+.perent{
+    width: 100%;
+    display: flex;
+
+}
+
+.col{
+    width: 20%;
+    height: 100px;
+    font-size: 7px;
+    
+}
+
+}
+
+@media (min-width: 500px) and (max-width: 768px){
+
+    
+
+.back{
+    width: 35%;
+    font-size: 10px;
+    display: block;
+    
+
+    
+}
+
+.bake{
+    display: none;
+    width: 30%;
+    font-size: 10px;
+
+}
+
+.code{
+   
+    display: none;
+}
+
+#h1{
+   
+    display: none;
+   
+}
+
+.cod{
+
+    display: block;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    
+
+
+}
+
+.h11{
+    display: block;
+    background-color: rgb(139, 248, 139);
+    padding: 5px 40px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 4px solid black;
+}
+
+.h11:hover{
+
+    border: 4px solid rgb(139, 248, 139);
+    background-color: black;
+    color: white;
+    transition: 0.5s ease all;
+
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.sound{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 10px;
+    
+}
+
+.color-head{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+
+    
+
+}
+
+.perent{
+    width: 100%;
+    display: flex;
+
+}
+
+.col{
+    width: 20%;
+    height: 150px;
+    font-size: 10px;
+    
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+
+    
+
+.back{
+    width: 35%;
+    font-size: 10px;
+    display: block;
+    
+
+    
+}
+
+.bake{
+    display: none;
+    width: 30%;
+    font-size: 10px;
+
+}
+
+.code{
+   
+    display: none;
+}
+
+#h1{
+   
+    display: none;
+   
+}
+
+.cod{
+
+    display: block;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    
+
+
+}
+
+.h11{
+    display: block;
+    background-color: rgb(139, 248, 139);
+    padding: 5px 40px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 4px solid black;
+}
+
+.h11:hover{
+
+    border: 4px solid rgb(139, 248, 139);
+    background-color: black;
+    color: white;
+    transition: 0.5s ease all;
+
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.sound{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 10px;
+    
+}
+
+.color-head{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+
+    
+
+}
+
+.perent{
+    width: 100%;
+    display: flex;
+
+}
+
+.col{
+    width: 20%;
+    height: 150px;
+    font-size: 11px;
+    
+}
+
+}
+
+
+
