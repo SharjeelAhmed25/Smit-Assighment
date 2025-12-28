@@ -13,7 +13,7 @@ body{
 }
 
 a{
-   color: #5f6368; 
+   color: white; 
      text-decoration: none;
       font-size: 24px;
 }
@@ -21,19 +21,18 @@ a{
 .container > nav > ul > li > .a1{
     text-decoration: none;
     font-size: 27px;
-    color: #5f6368;
 }
 
 nav{
   
     width: 100%;
     height: 100px;
-    background-color: rgb(255, 255, 255);
+    background-color: black;
     display: flex;
     gap: 40px;
     align-items: center;
     justify-content: center;
-    position: fixed;
+    position: sticky;
     margin: 0px;
 
 }
@@ -82,11 +81,10 @@ nav > .nb > .men{
 .hero-section{
 
     width: 100%;
-    background-image: url(./assets/images/iphone/hero_ase25__cop938p8rv6u_large.jpg);
     height: 100%;
-    margin-top: 70px;
-    background-size: cover;
-    background-position: bottom;
+    /* margin-top: 70px; */
+    /* background-size: cover;
+    background-position: bottom; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -95,27 +93,48 @@ nav > .nb > .men{
 
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.bg-slider {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    animation: bgChange 15s infinite ease-in-out;
+}
+
+/* Background animation */
+
+.bg-slider {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    animation: bgChange 8s infinite linear;
+}
+@keyframes bgChange {
+    0% {
+            background-image: url(./assets/images/iphone/hero_ase25__cop938p8rv6u_large.jpg);
+
+    }
+    50% {
+        background-image: url("./assets/images/iphone/small.jpg");
+    }
+    66% {
+        background-image: url("./assets/images/ipad/promo_ipad_air_avail___large.jpg");
+    }
+    100% {
+        background-image: url("assets/images/iphone/promo_carrier__e0izvxwqosgi_small_2x.jpg");
+    }
+}
+
+
+
 /* :hover sec */
 
-.hero-section:hover{
-
-    width: 100%;
-    background-image: url(./assets/images/iphone/large.jpg);
-    height: 100%;
-    margin-top: 70px;
-    /* background-repeat: no-repeat; */
-    background-size: cover;
-    background-position: bottom;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: 0.5s ;
-
-
-    .head > h1 , p{
-    color: black;
-    margin: 0px;
-}
 
 .head > p{
     color: black;
@@ -123,7 +142,7 @@ nav > .nb > .men{
 }
 
 
-}
+
 
 
 .head{
@@ -175,6 +194,40 @@ nav > .nb > .men{
     background-position: center;
     margin-top: 30px;
 }
+
+.bg-slider {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    animation: bgChange 15s infinite ease-in-out;
+}
+
+/* Background animation */
+
+.bg-slider {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    animation: bgChange 8s infinite linear;
+}
+@keyframes bgChange {
+    0% {
+            background-image: url(./assets/images/iphone/hero_ase25__cop938p8rv6u_large.jpg);
+
+    }
+    50% {
+        background-image: url("./assets/images/iphone/small.jpg");
+    }
+    66% {
+        background-image: url("./assets/images/ipad/promo_ipad_air_avail___large.jpg");
+    }
+    100% {
+        background-image: url("assets/images/iphone/promo_carrier__e0izvxwqosgi_small_2x.jpg");
+    }
+}
+
 
 .ichild{
     display: flex;
@@ -752,6 +805,22 @@ nav > .na > img{
     background-image: url(./assets/images/iphone/small_2x.jpg);
     margin-top: 0px;
 
+}
+
+@keyframes bgChange {
+    0% {
+            background-image: url(./assets/images/iphone/hero_ase25__cop938p8rv6u_large.jpg);
+
+    }
+    50% {
+        background-image: url("assets/images/slider/images (1).jpg");
+    }
+    66% {
+        background-image: url("assets/images/slider/images (2).jpg");
+    }
+    100% {
+        background-image: url("assets/images/slider/images (2).jpg");
+    }
 }
 
 .head{
