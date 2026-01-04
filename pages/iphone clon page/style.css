@@ -1165,11 +1165,13 @@ height: 100%;
 
     display: flex;
     justify-content: center;
+    color: black;
 }
 
 .none-footer > .none-main .fnp1 > p{
 
     text-align: justify;
+    color: black;
     margin: 0px;
     line-height: 1.5;
     font-size: 12px;
