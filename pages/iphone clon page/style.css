@@ -823,13 +823,13 @@ nav > .na > img{
 
     }
     50% {
-        background-image: url("assets/images/slider/images (1).jpg");
+        background-image: url("./assets/images/watches/promo_apple_watch_series__small.jpg");
     }
     66% {
-        background-image: url("assets/images/slider/images (2).jpg");
+        background-image: url("./assets/images/airbirds/promo_airpodspro_3__small.jpg");
     }
     100% {
-        background-image: url("assets/images/slider/images (2).jpg");
+        background-image: url("./assets/images/ipad/promo_ipad_air_avail__6_small_2x.jpg");
     }
 }
 
@@ -840,12 +840,12 @@ nav > .na > img{
 }
 
 .head > h1 , p{
-    color: black;
+    color: rgb(238, 238, 184);
    
 }
 
 .head > p{
-    color: black;
+    color: rgb(236, 236, 179);
 
 }
 
@@ -1666,7 +1666,7 @@ nav > .na > img{
 .container > nav > ul > li > .a1{
     text-decoration: none;
     font-size: 18px;
-    color: #5f6368;
+    color: white;
 }
 
     nav > ul{
