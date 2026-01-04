@@ -6,6 +6,8 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+
+
 .container{
     width: 100vw;
     height: 100vh;
@@ -839,7 +841,21 @@ nav > .na > img{
     
 }
 
-.head > h1 , p{
+#hh1{
+     background: linear-gradient(to bottom, orange, purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+#pp2{
+     background: linear-gradient(to bottom, orange, purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+/* .head > h1 , p{
     color: rgb(238, 238, 184);
    
 }
@@ -847,7 +863,7 @@ nav > .na > img{
 .head > p{
     color: rgb(236, 236, 179);
 
-}
+} */
 
 
 .head > h1{
@@ -885,9 +901,11 @@ nav > .na > img{
 
 .ichild > h1{
     font-size: 23px;
+    color: black;
 }
 .ichild > p{
     font-size: 12px;
+     color: black;
 }
 
 .btn > button{
@@ -909,11 +927,12 @@ nav > .na > img{
 .airchild > h1{
     font-size: 35px;
     margin-bottom: 0px;
+     color: black;
 }
 .airchild > p{
     font-size: 15px;
     margin-bottom: 0px;
-   
+    color: black;
 }
 
 .bttn > button{
@@ -949,9 +968,11 @@ nav > .na > img{
 
 .child1 > h1{
     font-size: 23px;
+     color: black;
 }
 .child1 > p{
     font-size: 12px;
+     color: black;
    
 }
 
@@ -981,6 +1002,7 @@ nav > .na > img{
     font-size: 15px;
     text-align: center;
     margin: 0px;
+     color: black;
    
 }
 
@@ -1024,6 +1046,7 @@ nav > .na > img{
 .wchild1 > p{
     font-size: 15px;
     margin-bottom: 10px;
+     color: black;
 }
 
 .wbtn > button{
@@ -1050,10 +1073,12 @@ nav > .na > img{
 .wchild2 > h1{
     font-size: 50px;
     margin-top: 50px;
+     color: black;
 
 }
 .wchild2 > p{
     font-size: 15px;
+     color: black;
     margin: 0px;
 }
 
@@ -1097,7 +1122,8 @@ nav > .na > img{
 }
 .tchild1 > p{
     font-size: 15px;
-   ;
+     color: black;
+   
 }
 
 .tbtn > button{
@@ -1126,6 +1152,7 @@ nav > .na > img{
 
 .tchild2 > p{
     font-size: 15px; 
+     color: black;
 }
 
 .tbtn > button{
@@ -1165,7 +1192,7 @@ height: 100%;
 
     display: flex;
     justify-content: center;
-    color: black;
+    color: black   ;
 }
 
 .none-footer > .none-main .fnp1 > p{
