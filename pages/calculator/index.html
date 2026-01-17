@@ -3,115 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> Calculator</title>
-
-
+<title>Calculator</title>
+<link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
-    <div class="calculator">
+<div class="calculator">
 
-         <div class="output">
-        
-        <div class="expression"></div>
-        <div class="result">0</div>
-
-    </div>
-
-    <div class="button">
-        
-        <button class="clear" onClick="">AC</button>
-        <button onClick="">DEL</button>
-        <button onClick="">%</button>
-        <button class="operator" onClick="">/</button>
-
-        <button onClick="">7</button>
-        <button class="8">8</button>
-        <button onclick="">9</button>
-        <button class="mul" onClick="">x</button>
-        
-        <button onclick="">4</button>
-        <button onclick="">5</button>
-        <button onclick="">6</button>
-        <button class="mins" onclick="">-</button>
-
-        <button onClick="">1</button>
-        <button onClick="">2</button>
-        <button onClick="">3</button>
-        <button class="plus" onClick="">+</button>
-
-        <button onClick="">0</button>
-        <button onClick="">.</button>
-        <button class="equal" onClick="">=</button>
-    </div>
-
-
-    </div>
-
-</body>
-</html>
-
-
-
-<!-- <div class="calculator">
-
-    <div class="display-box">
-        <div class="expression" id="expression"></div>
+    <div class="output">
+        <div class="expression" id="exp"></div>
         <div class="result" id="result">0</div>
     </div>
 
-    <div class="buttons">
-        <button class="clear" onclick="clearAll()">AC</button>
-        <button onclick="deleteLast()">DEL</button>
-        <button onclick="append('%')">%</button>
-        <button class="operator" onclick="append('/')">÷</button>
+    <div class="button">
 
-        <button onclick="append('7')">7</button>
-        <button onclick="append('8')">8</button>
-        <button onclick="append('9')">9</button>
-        <button class="operator" onclick="append('*')">×</button>
+        <div class="1row">
+            <button class="same" onclick="calculator('C')">C</button>
+            <button class="same" onclick="calculator('%')">%</button>
+            <button class="same" onclick="calculator('DEL')">DEL</button>
+            <button class="same" onclick="calculator('/')">/</button>
+        </div>
 
-        <button onclick="append('4')">4</button>
-        <button onclick="append('5')">5</button>
-        <button onclick="append('6')">6</button>
-        <button class="operator" onclick="append('-')">−</button>
+        <div class="2row">
+            <button class="same" onclick="calculator('7')">7</button>
+            <button class="same" onclick="calculator('8')">8</button>
+            <button class="same" onclick="calculator('9')">9</button>
+            <button class="same" onclick="calculator('x')">x</button>
+        </div>
 
-        <button onclick="append('1')">1</button>
-        <button onclick="append('2')">2</button>
-        <button onclick="append('3')">3</button>
-        <button class="operator" onclick="append('+')">+</button>
+        <div class="3row">
+              <button class="same" onclick="calculator('4')">4</button>
+            <button class="same" onclick="calculator('5')">5</button>
+            <button class="same" onclick="calculator('6')">6</button>
+            <button class="same mins" onclick="calculator('-')">-</button>
+        </div>
 
-        <button onclick="append('0')">0</button>
-        <button onclick="append('.')">.</button>
-        <button class="equal" onclick="calculate()">=</button>
+        <div class="4row">
+            <button class="same" onclick="calculator('1')">1</button>
+            <button class="same" onclick="calculator('2')">2</button>
+              <button class="same" onclick="calculator('3')">3</button>
+            <button class="same" onclick="calculator('+')">+</button>
+        </div>
+
+        <div class="5row">
+            <button class="same alg" onclick="calculator('0')">0</button>
+            <button class="same" onclick="calculator('.')">.</button>
+            <button class="same" onclick="calculator('=')">=</button>
+        </div>
+
     </div>
+</div>
 
-</div> -->
-
-<!-- <script>
-let expression = document.getElementById("expression");
-let result = document.getElementById("result");
-
-function append(value){
-    expression.innerText += value;
-}
-
-function clearAll(){
-    expression.innerText = "";
-    result.innerText = "0";
-}
-
-function deleteLast(){
-    expression.innerText = expression.innerText.slice(0,-1);
-}
-
-function calculate(){
-    try{
-        let res = eval(expression.innerText);
-        result.innerText = res;
-    }catch{
-        result.innerText = "Error";
-    }
-}
-</script> -->
+<script src="./app.js"></script>
+</body>
+</html>
