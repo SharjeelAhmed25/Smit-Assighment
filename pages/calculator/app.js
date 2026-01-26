@@ -16,9 +16,6 @@ function calculator(value) {
     
     
 }
-
-
-    
     if (value === 'DEL') {
         expression = expression.slice(0, -1);
         exp.innerText = expression;
