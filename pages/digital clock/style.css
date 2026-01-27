@@ -1,55 +1,87 @@
+
 body {
     margin: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(./assets/images/bg.png);
-    font-family: Arial, sans-serif;
+    background-image: url(./assets/images/bg.png); 
+    background-size: cover;
+    background-position: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
+
 .clock-box {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px 50px;
-    height: 200px;
-    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 40px 70px;
+    min-width: 420px;
+    border-radius: 25px;
     text-align: center;
-    color: white;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 
+    0 0 20px rgba(0,255,255,0.25),
+    0 0 60px rgba(0,255,255,0.15);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 20px;
+    gap: 15px;
+    animation: float 4s ease-in-out infinite;
 }
+
+.date{
+    color: white;
+    display: flex;
+    font-weight: bolder;
+    font-size: 20px;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
 
 .day {
     font-size: 22px;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-    color: #ffdd57;
+    letter-spacing: 4px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #00f5ff, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
+
 .time {
-    font-size: 48px;
+    font-size: 54px;
     font-weight: bold;
-    color: white;
+    background: linear-gradient(90deg, #7bff00, #00f5ff, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 15px rgba(0,255,255,0.6);
+}
+
+
+.time span:nth-child(1)::after,
+.time span:nth-child(2)::after {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
 }
 
 #ampm {
     font-size: 18px;
     margin-left: 10px;
-    color: #ffdd57;
+    background: linear-gradient(90deg, #ffd700, #ff9f00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.date {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #ddd;
-}
 
-@media (min-width: 300px) and (max-width: 800px){
-   .day{
-    font-size: 30px;
-   }
-}

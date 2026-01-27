@@ -40,6 +40,12 @@ function clock() {
         seconds = "0" + seconds;
     }
 
+    if(month < 10){
+  
+        month = "0"+ month
+
+    }
+
     document.getElementById("hours").innerText = hours + " : ";
     document.getElementById("min").innerText = minutes + " : ";
     document.getElementById("sec").innerText = seconds + " ";
