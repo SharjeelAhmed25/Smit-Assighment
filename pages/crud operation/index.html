@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course CRUD</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="container">
+
+    <h2>Course Management</h2>
+
+    <input type="text" id="cuarseinput" placeholder="Course Name">
+    <input type="text" id="instructorinput" placeholder="Instructor">
+    <input type="text" id="durationinput" placeholder="Duration">
+    <input type="text" id="levelinput" placeholder="Level">
+
+    <p id="message"></p>
+
+    <button onclick="addcaurses()" id="addbtn">Add Course</button>
+    <button onclick="update()" id="updatebtn" style="display:none;">Update Course</button>
+
+    
+
+    <ul id="listcaurses"></ul>
+</div>
+    <script src="app.js"></script>
+
+</body>
+</html>

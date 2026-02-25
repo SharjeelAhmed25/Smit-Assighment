@@ -52,9 +52,9 @@ function clock() {
     document.getElementById("ampm").innerText = ampm;
 
     document.getElementById("day").innerText = day;
-    document.getElementById("date").innerText = date + '  :';
-    document.getElementById("month").innerText = month + '  :';
-    document.getElementById("year").innerText = year + '  :';
+    document.getElementById("date").innerText = date + '  :   ';
+    document.getElementById("month").innerText = month + '  :  ';
+    document.getElementById("year").innerText = year + '  :  ';
 }
 
 setInterval(clock, 1000);
