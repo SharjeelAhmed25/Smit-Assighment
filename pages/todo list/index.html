@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Todo App</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+        height: 100vh;
+        background: linear-gradient(135deg, #4facfe, #00f2fe);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 380px;
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+    .todohead {
+        display: flex;
+        gap: 5px;
+        margin-bottom: 10px;
+    }
+
+    input {
+        flex: 1;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        outline: none;
+        transition: 0.3s;
+    }
+
+    input:focus {
+        border-color: #4facfe;
+        box-shadow: 0 0 5px rgba(79,172,254,0.5);
+    }
+
+    button {
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 13px;
+        transition: 0.3s;
+    }
+
+    #add_btn {
+        background: #28a745;
+        color: white;
+    }
+
+    #add_btn:hover {
+        background: #218838;
+    }
+
+    #update_btn {
+        background: #007bff;
+        color: white;
+        display: none;
+    }
+
+    #update_btn:hover {
+        background: #0056b3;
+    }
+
+    #delete {
+        width: 100%;
+        margin-top: 8px;
+        background: #dc3545;
+        color: white;
+    }
+
+    #delete:hover {
+        background: #c82333;
+    }
+
+    #message {
+        margin-top: 8px;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .todo {
+        background: #f8f9fa;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.3s;
+    }
+
+    .todo:hover {
+        transform: scale(1.02);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .todo span {
+        flex: 1;
+        font-size: 14px;
+    }
+
+    .todo button {
+        font-size: 12px;
+        padding: 5px 7px;
+        margin-left: 5px;
+    }
+
+    .todo button:nth-child(2) {
+        background: #ffc107;
+        color: black;
+    }
+
+    .todo button:nth-child(3) {
+        background: #dc3545;
+        color: white;
+    }
+
+    .todo button:nth-child(4) {
+        background: #17a2b8;
+        color: white;
+    }
+
+    .done {
+        text-decoration: line-through;
+        color: gray;
+        background-color: green;
+    }
+    
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>✨ Todo App</h2>
+
+    <div class="todohead">
+        <input type="text" id="todo-input" placeholder="Enter your task...">
+        <button onclick="addtodo()" id="add_btn">Add</button>
+        <button onclick="update()" id="update_btn">Update</button>
+    </div>
+
+    <button onclick="deleteall()" id="delete">Delete All</button>
+
+    <p id="message"></p>
+
+    <div id="todo-perent"></div>
+</div>
+
+<script src="./app.js"></script>
+
+</body>
+</html>
