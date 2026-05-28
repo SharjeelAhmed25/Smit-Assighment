@@ -56,7 +56,7 @@ function update(){
         return
     }
 
-     var caursename = document.getElementById("cuarseinput").value.trim();
+     var caursename = document.getElementById("cuarseyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyinput").value.trim();
     var instructor = document.getElementById("instructorinput").value.trim();
     var duration = document.getElementById("durationinput").value.trim();
     var level = document.getElementById("levelinput").value.trim();

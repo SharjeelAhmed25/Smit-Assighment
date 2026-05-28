@@ -1,137 +1,161 @@
+import { auth, provider, addDoc, collection, db , getDocs, query, where, onSnapshot , deleteDoc ,doc,updateDoc } from "./config.js";
+
+import {
+  signInWithPopup,
+  signOut,
+  onAuthStateChanged
+} from "https://www.gstatic.com/firebasejs/12.12.1/firebase-auth.js";
 
 
-var todos = [];
-var perent = document.getElementById("todo-perent");
-var message = document.getElementById("message");
-var indexupdatetodo = null;
+let todos = [];
+let addbtn = document.querySelector("#add_btn");
+let updbtn = document.querySelector("#update_btn");
+let delbtn = document.querySelector("#delete");
+let message = document.querySelector("#message");
+let userinp = document.querySelector("#todo-input");
+let displaydiv = document.querySelector("#todo-perent");
+let editid = null;
 
-function storage(){
-    var data = localStorage.getItem("todos");
-    data = JSON.parse(data);
 
-    if(data !== null){
-        todos = data;
-    }
-    renderTodos();
-}
+addbtn.addEventListener("click" , async ()=>{
+  try {
+    
+    // Add a new document with a generated id.
+const docRef = await addDoc(collection(db, "todos"), {
+  input: userinp.value,
+});
+console.log("Document written with ID: ", docRef.id);
+userinp.value = "";
+  } catch (error) {
+    console.log(error)
+  }
+});
 
-storage();
+//  data execute 
 
-function addtodo(){
 
-    var todoinp = document.getElementById("todo-input").value;
 
-    if(todoinp.trim().length < 1){
-        message.innerText = "please enter this field";
-        message.style.color = "red";
-        return;
-    }
+// // create data 
 
-    var todoobject = {
-        id: new Date().getTime(),
-        userinp: todoinp,
-        iscompleted: false
-    }
+// addbtn.addEventListener("click" , async ()=>{
+  
+//   try{
 
-    todos.push(todoobject);
-    localStorage.setItem('todos', JSON.stringify(todos));
+//     if(userinp.value == ""){
+//       message.innerText = "input this feilds"
+//       return
+//     }else{
+//       message.innerText = "";
+//     }
 
-    document.getElementById("todo-input").value = "";
-    message.innerText = "";
+//     const docref = await addDoc(collection(db , "todos") ,{
+//       input : userinp.value,
+//     })
+//     console.log("document id : " , docref.id);
+//      userinp.value = "";
 
-    renderTodos();
-}
+//   }catch(error){
+// console.log(error)
+//   }
+ 
+// rendertodos();
 
-function edit(id){
+// })
 
-    var todoinp = document.getElementById("todo-input");
+// //edit ka function 
 
-    for(var i = 0; i < todos.length; i++){
-        if(todos[i].id == id){
+// window.edittodo = (id , input)=>{
+// userinp.value = input;
+// editid = id;
+// addbtn.style.display = "none";
+// updbtn.style.display = "block";
+// }
 
-            todoinp.value = todos[i].userinp;
-            indexupdatetodo = i;
+// // update ka function 
 
-            document.getElementById("add_btn").style.display = "none";
-            document.getElementById("update_btn").style.display = "block";
-            break;
-        }
-    }
-}
+// updbtn.addEventListener("click", async ()=>{
 
-function update(){
+//   try{
 
-    var todoinp = document.getElementById("todo-input");
+//     await updateDoc(doc(db , "todos" , editid),{
+//       input : userinp.value 
+//     });
+//     addbtn.style.display = "block";
+//     updbtn.style.display = "none";
+//     editid = null;
+//     userinp.value = "";
 
-    if(todoinp.value.trim() === ""){
-        message.innerText = "enter value";
-        message.style.color = "red";
-        return;
-    }
+//   }catch(error){
+//     console.log(error);
+//   }
 
-    todos[indexupdatetodo].userinp = todoinp.value;
+// })
 
-    localStorage.setItem('todos', JSON.stringify(todos));
+// // read data real tme update 
 
-    document.getElementById("add_btn").style.display = "block";
-    document.getElementById("update_btn").style.display = "none";
+// const unsubscribe = onSnapshot(collection(db , "todos"), (querySnapshot) => {
+//   todos = [];
+//   querySnapshot.forEach((doc) => {
+//     todos.push({
+//   id: doc.id,
+//   input: doc.data().input
+// });
+//   });
+  
+//   rendertodos();
+// });
 
-    document.getElementById("todo-input").value = "";
-    message.innerText = "";
+// // delete data
+ 
+// delbtn.addEventListener("click" , async()=>{
 
-    renderTodos();
-}
+//   try{
+//    const querySnapshot = await getDocs(collection(db , "todos"));
+                                                                                 
+// querySnapshot.forEach(async (item) => {
+//   await deleteDoc(doc(db, "todos", item.id));
+// });
+//   }catch(error){
+// console.log(error)
+//   }
 
-function deleteTodo(id){
+// rendertodos();
+// })
 
-    for (var i = 0; i < todos.length; i++){
-        if (todos[i].id == id){
-            todos.splice(i, 1);
-            break;
-        }
-    }
+// // specific document delete 
+// window.deletetodo = async(id, input)=>{
+// try {
+//   await deleteDoc(doc(db, "todos", id));
+//   userinp.value = "";
+//   updbtn.style.display = "none";
+//   addbtn.style.display = "block";
+// } catch (error) {
+//   console.log(error)
+// }
+// rendertodos();
+// }
 
-    localStorage.setItem("todos", JSON.stringify(todos));
-    renderTodos();
-}
+// let rendertodos = ()=>{
 
-function deleteall(){
+//   displaydiv.innerHTML = "";
 
-    todos = [];
-    localStorage.setItem("todos", JSON.stringify(todos));
-    renderTodos();
-}
+// todos.forEach((item)=>{
 
-function done(id){
+//   displaydiv.innerHTML += `
+  
+//   <div class ="todo">
 
-    for(var i = 0; i < todos.length; i++){
-        if(todos[i].id == id){
-            todos[i].iscompleted = true;
-            break;
-        }
-    }
+//   <h3>${item.input}</h3>
 
-    localStorage.setItem("todos", JSON.stringify(todos));
-    renderTodos();
-}
+//  <button onclick='edittodo("${item.id}" , "${item.input}")'>edit</button>
+//  <button onclick="deletetodo('${item.id}')">
+// delete
+// </button>
 
-function renderTodos(){
+//   </div>
+  
+//   `;
+// });
+// }
 
-    perent.innerHTML = '';
-
-    for(var i = 0; i < todos.length; i++){
-
-        var doneclass = todos[i].iscompleted ? "done" : "";
-        var disabled = todos[i].iscompleted ? "disabled" : "";
-
-        perent.innerHTML += `
-        <div class="todo ${doneclass}">
-            <span>${todos[i].userinp}</span>
-            <button onClick="edit(${todos[i].id})">✏️</button>
-            <button onClick="deleteTodo(${todos[i].id})">🗑️</button>
-            <button ${disabled} onClick="done(${todos[i].id})">✅</button>
-        </div>
-        `;
-    }
-}
-
+ 
