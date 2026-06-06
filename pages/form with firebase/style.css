@@ -1,0 +1,172 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  background: linear-gradient(
+    -45deg,
+    #0f172a,
+    #1e293b,
+    #2563eb,
+    #0f172a
+  );
+
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove{
+
+  0%{
+    background-position: 0% 50%;
+  }
+
+  50%{
+    background-position: 100% 50%;
+  }
+
+  100%{
+    background-position: 0% 50%;
+  }
+
+}
+
+.form-container{
+  width: 100%;
+  max-width: 400px;
+
+  background: rgba(255,255,255,0.08);
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  backdrop-filter: blur(15px);
+
+  padding: 35px;
+
+  border-radius: 20px;
+
+  box-shadow:
+  0 10px 40px rgba(0,0,0,0.3);
+
+  animation: formShow 0.8s ease;
+}
+
+@keyframes formShow{
+
+  from{
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+}
+
+.form-container h1{
+  text-align: center;
+  color: white;
+  margin-bottom: 25px;
+  font-size: 32px;
+}
+
+.input-group{
+  margin-bottom: 20px;
+}
+
+.input-group input{
+  width: 100%;
+  padding: 15px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 12px;
+
+  background: rgba(255,255,255,0.12);
+
+  color: white;
+
+  font-size: 16px;
+
+  transition: 0.3s;
+}
+
+.input-group input::placeholder{
+  color: rgba(255,255,255,0.7);
+}
+
+.input-group input:focus{
+
+  transform: scale(1.02);
+
+  background: rgba(255,255,255,0.18);
+
+  box-shadow:
+  0 0 15px rgba(255,255,255,0.2);
+
+}
+
+.submit-btn{
+
+  width: 100%;
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #3b82f6;
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.submit-btn:hover{
+
+  background: #2563eb;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+  0 10px 20px rgba(37,99,235,0.4);
+
+}
+
+#message{
+  margin-top: 15px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+@media(max-width:500px){
+
+  .form-container{
+    padding: 25px;
+  }
+
+  .form-container h1{
+    font-size: 26px;
+  }
+
+}
