@@ -1,10 +1,4 @@
-import { auth, provider, addDoc, collection, db , getDocs, query, where, onSnapshot , deleteDoc ,doc,updateDoc } from "./config.js";
-
-import {
-  signInWithPopup,
-  signOut,
-  onAuthStateChanged
-} from "https://www.gstatic.com/firebasejs/12.12.1/firebase-auth.js";
+import { addDoc, collection, db , getDocs, query, where, onSnapshot , deleteDoc ,doc,updateDoc } from "./config.js";
 
 
 let todos = [];

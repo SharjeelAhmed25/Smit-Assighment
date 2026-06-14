@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Register Form</title>
-<link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
@@ -12,17 +12,41 @@
 
     <h1>Create Account</h1>
 
-     <form id="register-form">
+    <form id="register-form">
 
       <div class="input-group">
-        <input type="email" id="email-inp" placeholder="Enter your email">
+        <input
+          type="email"
+          id="email-inp"
+          placeholder="Enter your email"
+        >
       </div>
 
       <div class="input-group">
-        <input type="password" id="pass-inp" placeholder="Enter your password">
+        <input
+          type="password"
+          id="pass-inp"
+          placeholder="Enter your password"
+        >
       </div>
 
-      <input type="submit" value="Register" class="submit-btn">
+      <div class="input-group">
+        <input
+          type="submit"
+          value="register"
+          class="submit-btn"
+        >
+      </div>
+
+      <div class="input-group">
+        <button
+          type="button"
+          id="sign-in"
+          class="submit-btn signin"
+        >
+         log in
+        </button>
+      </div>
 
     </form>
 

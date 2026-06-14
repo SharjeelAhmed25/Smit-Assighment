@@ -13,7 +13,6 @@ import {
   updateDoc
 } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-firestore.js";
 
-import {getAuth, createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/12.12.1/firebase-auth.js";
 const firebaseConfig = {
   apiKey: "AIzaSyBsnTnIQeMOr-6PBazVC2mMcNgsnoq-vF0",
   authDomain: "todo-app-deb1a.firebaseapp.com",
@@ -27,14 +26,10 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 const db = getFirestore(app);
-const auth = getAuth(app);
 
 
 export {
   db,
-  auth,
-  provider,
-   onAuthStateChanged,
   onSnapshot,
   deleteDoc,
   doc,
@@ -46,4 +41,3 @@ export {
   where,
   updateDoc
 };
-
