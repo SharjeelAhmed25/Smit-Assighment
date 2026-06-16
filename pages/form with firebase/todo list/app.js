@@ -1,4 +1,4 @@
-import { addDoc, collection, db , getDocs, query, where, onSnapshot , deleteDoc ,doc,updateDoc } from "./config.js";
+import { deleteUser, auth, signOut, addDoc, collection, db , getDocs, query, where, onSnapshot , deleteDoc ,doc,updateDoc, onAuthStateChanged } from "./config.js";
 
 
 let todos = [];
@@ -9,24 +9,8 @@ let message = document.querySelector("#message");
 let userinp = document.querySelector("#todo-input");
 let displaydiv = document.querySelector("#todo-perent");
 let editid = null;
-
-
-// addbtn.addEventListener("click" , async ()=>{
-//   try {
-    
-//     // Add a new document with a generated id.
-// const docRef = await addDoc(collection(db, "todos"), {
-//   input: userinp.value,
-// });
-// console.log("Document written with ID: ", docRef.id);
-// userinp.value = "";
-//   } catch (error) {
-//     console.log(error)
-//   }
-// });
-
-//  data execute 
-
+let logout = document.querySelector("#logout");
+let deleteacount = document.querySelector("#deleteacount");
 
 
 // // create data 
@@ -128,6 +112,45 @@ try {
 }
 rendertodos();
 }
+
+logout.addEventListener("click" , async()=>{
+ try {
+    await signOut(auth);
+   console.log("log out succesfully")
+    message.innerText = "Logout Successfully";
+
+    window.location.replace("../login acount/login.html");
+
+  } catch (error) {
+    console.log(error);
+    message.innerText = error;
+  }
+})
+
+onAuthStateChanged(auth , (user)=>{
+  if(user){
+    console.log("log in" , user.email)
+  }else{
+    console.log("user log out")
+  }
+
+  
+})
+
+deleteacount.addEventListener("click" , async()=>{
+ try {
+
+    await deleteUser(auth.currentUser);
+
+   message.innerText ="Account Deleted Successfully"
+
+    window.location.replace("../index.html");
+
+  } catch (error) {
+    console.log(error);
+    message.innerText = error.message
+  }
+})
 
 let rendertodos = ()=>{
 

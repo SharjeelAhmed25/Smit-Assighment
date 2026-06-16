@@ -19,7 +19,7 @@ body{
 #deleteacount{
     padding: 5px 10px;
     color: red;
-    transition: 0.5s;x
+    transition: 0.5s;
 }
 #deleteacount:hover{
      background-color: rgb(192, 43, 43);

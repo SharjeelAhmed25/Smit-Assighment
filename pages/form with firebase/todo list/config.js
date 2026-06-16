@@ -13,6 +13,8 @@ import {
   updateDoc
 } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-firestore.js";
 
+import {auth,signOut,onAuthStateChanged,deleteUser} from "../config.js";
+
 const firebaseConfig = {
   apiKey: "AIzaSyBsnTnIQeMOr-6PBazVC2mMcNgsnoq-vF0",
   authDomain: "todo-app-deb1a.firebaseapp.com",
@@ -28,6 +30,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 
+
 export {
   db,
   onSnapshot,
@@ -39,5 +42,9 @@ export {
   getDocs,
   query,
   where,
-  updateDoc
+  updateDoc,
+  auth,
+  signOut,
+  onAuthStateChanged,
+  deleteUser
 };

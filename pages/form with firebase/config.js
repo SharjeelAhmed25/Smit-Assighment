@@ -3,9 +3,12 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  onAuthStateChanged
+  onAuthStateChanged,
+  signOut,
+  deleteUser
 } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-auth.js";
-
+import {addDoc,collection} from "https://www.gstatic.com/firebasejs/12.12.1/firebase-firestore.js";
+import { db , deleteDoc } from "./todo list/config.js";
 const firebaseConfig = {
   apiKey: "AIzaSyBsnTnIQeMOr-6PBazVC2mMcNgsnoq-vF0",
   authDomain: "todo-app-deb1a.firebaseapp.com",
@@ -19,11 +22,18 @@ const app = initializeApp(firebaseConfig);
 
 const auth = getAuth(app);
 
+
 export {
   auth,
   createUserWithEmailAndPassword,
   onAuthStateChanged,
    signInWithEmailAndPassword,
+   addDoc,
+   collection,
+   db,
+   signOut,
+   deleteUser,
+   deleteDoc
 };
 
 

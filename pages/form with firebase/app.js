@@ -1,7 +1,11 @@
 import {
   auth,
   createUserWithEmailAndPassword,
-  onAuthStateChanged
+  onAuthStateChanged,
+  addDoc,
+  collection,
+  db,
+  deleteDoc
 } from "./config.js";
 
 let emailInp = document.querySelector("#email-inp");
@@ -36,6 +40,7 @@ async function createUser() {
         emailInp.value,
         passInp.value
       );
+     await userdata()
 
     console.log("Success");
     console.log(userCredential.user);
@@ -46,7 +51,7 @@ async function createUser() {
     passInp.value = "";
 
     setTimeout(() => {
-      window.location.replace = "./todo list/index.html";
+      window.location.replace("./todo list/index.html");
     }, 1000);
 
   } catch (error) {
@@ -56,9 +61,25 @@ async function createUser() {
 
   }
 }
+let userdata = async ()=>{
+  try {
+    const docref = await addDoc(collection(db , "users") ,{
+      email :  auth.currentUser.email,
+      uid : auth.currentUser.uid
+      
+
+    })
+    console.log("document id : " , docref.id);
+  } catch (error) {
+    console.log(error)
+    message.innerText = error
+  }
+}
+
+
 onAuthStateChanged(auth, (user) => {
   if (user) {
-    console.log(user.email);
+    console.log("user email" ,user.email);
   }
 });
 
