@@ -11,7 +11,7 @@ let displaydiv = document.querySelector("#todo-perent");
 let editid = null;
 let logout = document.querySelector("#logout");
 let deleteacount = document.querySelector("#deleteacount");
-
+let username = document.querySelector("#username");
 
 // // create data 
 
@@ -127,30 +127,60 @@ logout.addEventListener("click" , async()=>{
   }
 })
 
-onAuthStateChanged(auth , (user)=>{
-  if(user){
-    console.log("log in" , user.email)
-  }else{
-    console.log("user log out")
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    console.log("log in", user.email);
+
+    username.innerText =
+      "Welcome " +
+      (user.displayName ||
+       localStorage.getItem("fulname"));
+  } else {
+    console.log("user log out");
+    console.log("no user");
+    username.innerText = "No User";
   }
-
+});
   
-})
 
-deleteacount.addEventListener("click" , async()=>{
- try {
 
+deleteacount.addEventListener("click", async () => {
+  try {
+    // 1. get user document
+    const q = query(
+      collection(db, "users"),
+      where("uid", "==", auth.currentUser.uid)
+    );
+
+    const querySnapshot = await getDocs(q);
+
+    // 2. properly await deletion
+    const deletePromises = querySnapshot.docs.map((item) =>
+      deleteDoc(doc(db, "users", item.id))
+    );
+
+    await Promise.all(deletePromises);
+
+    // 3. delete auth user
     await deleteUser(auth.currentUser);
 
-   message.innerText ="Account Deleted Successfully"
+    message.innerText = "Account Deleted Successfully";
 
-    window.location.replace("../index.html");
+    setTimeout(() => {
+      window.location.replace("../index.html");
+    }, 500);
 
   } catch (error) {
     console.log(error);
-    message.innerText = error.message
+
+    if (error.code === "auth/requires-recent-login") {
+      message.innerText =
+        "Please login again before deleting account";
+    } else {
+      message.innerText = error.message;
+    }
   }
-})
+});
 
 let rendertodos = ()=>{
 

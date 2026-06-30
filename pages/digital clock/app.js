@@ -58,9 +58,41 @@
 // }
 
 // setInterval(clock, 1000);
+ 
+let clock = ()=>{
 
+    let time = new Date();
 
-function clock(){
-    var time = new Date();
-    
+   // time section
+
+   let hours = time.getHours();
+   let min = time.getMinutes();
+   let second = time.getSeconds();
+   let = "AM";
+
+  //date section
+
+  let date = time.getDate();
+  let month = time.getMonth();
+  let year = time.getFullYear();
+
+  // day section
+  let dayNumber = time.getDay();
+  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  let day = days[dayNumber];
+
 }
+
+if(hours >= 12){
+am = "PM"
+}
+if(hours > 12){
+hours = hours - 12;
+}
+if(hours ==  0){
+hours = 12
+}
+clock()
+console.log(clock())
+
+setInterval(clock , 1000)

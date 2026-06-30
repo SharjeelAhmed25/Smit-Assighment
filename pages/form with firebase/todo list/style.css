@@ -10,6 +10,23 @@ body{
     background: linear-gradient(135deg,#222121,#616870);
     overflow-x:hidden;
 }
+#username{
+    font-size: 2rem;
+    font-weight: bold;
+    
+    background: linear-gradient(
+        90deg,
+        #ff6b6b,
+        #feca57,
+        #48dbfb,
+        #5f27cd
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+}
 
 #logout{
     padding: 5px 10px;

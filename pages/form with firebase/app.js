@@ -5,11 +5,9 @@ import {
   addDoc,
   collection,
   db,
-  deleteDoc,
   GoogleAuthProvider,
   provider,
   signInWithPopup,
-  getAuth
 } from "./config.js";
 
 let emailInp = document.querySelector("#email-inp");
@@ -18,25 +16,52 @@ let registerForm = document.querySelector("#register-form");
 let message = document.querySelector("#message");
 let signInBtn = document.querySelector("#sign-in");
 let googlebtn = document.querySelector("#google-btn");
-/////////////////////////////////////////////
-let validateForm = ()=> {
+let fullname = document.querySelector("#fullname");
 
+
+/////////////////////////////////////////////////
+// Form Validation
+/////////////////////////////////////////////////
+
+let validateForm = () => {
   if (
     emailInp.value.trim() === "" ||
     passInp.value.trim() === ""
   ) {
-
     message.innerText = "All fields are required";
     return false;
   }
 
   return true;
-}
+};
+
 /////////////////////////////////////////////////
-let  createUser = async ()=> {
+// Save User Data in Firestore
+/////////////////////////////////////////////////
 
+let userdata = async () => {
   try {
+    const docRef = await addDoc(collection(db, "users"), {
+      email: auth.currentUser.email,
+      uid: auth.currentUser.uid,
+      fulname : fullname.value
+    });
 
+    localStorage.setItem("fulname" , fullname.value)
+  
+    console.log("Document ID:", docRef.id);
+  } catch (error) {
+    console.error(error);
+    message.innerText = error.message;
+  }
+};
+
+/////////////////////////////////////////////////
+// Email Password Signup
+/////////////////////////////////////////////////
+
+let createUser = async () => {
+  try {
     if (!validateForm()) return;
 
     const userCredential =
@@ -45,7 +70,14 @@ let  createUser = async ()=> {
         emailInp.value,
         passInp.value
       );
-     await userdata()
+
+    await userdata();
+
+    // Save UID in Local Storage
+    localStorage.setItem(
+      "uid",
+      userCredential.user.uid
+    );
 
     console.log("Success");
     console.log(userCredential.user);
@@ -54,98 +86,89 @@ let  createUser = async ()=> {
 
     emailInp.value = "";
     passInp.value = "";
+    
 
     setTimeout(() => {
       window.location.replace("./todo list/index.html");
     }, 1000);
 
   } catch (error) {
-
     console.error(error);
     message.innerText = error.message;
-
   }
-}
-////////////////////////////////////////////////////////////////
+};
+
+/////////////////////////////////////////////////
+// Google Sign In
+/////////////////////////////////////////////////
 
 let googleSignIn = async () => {
-    try {
+  try {
+    const result = await signInWithPopup(
+      auth,
+      provider
+    );
 
-        await signInWithPopup(auth, provider)
-            .then((result) => {
-                // This gives you a Google Access Token. You can use it to access the Google API.
-               const credential = GoogleAuthProvider.credentialFromResult(result);
-                const token = credential.accessToken;
-                // The signed-in user info.
-                const user = result.user;
-                // IdP data available using getAdditionalUserInfo(result)
-                // ...
+    const credential =
+      GoogleAuthProvider.credentialFromResult(
+        result
+      );
 
+    const token = credential?.accessToken;
+    const user = result.user;
 
-            //     / query uid
-            //     const q = query(
-            //         collection(db,'users'),
-            //         where("uid", "==", user.uid)
-            //     )
-            //     const querySnapshot = await getDocs(q);
+    // Save UID in Local Storage
+    localStorage.setItem("uid", user.uid);
 
-            //     if(querySnapshot){
-            //         / no need to add user in db
-            //         return
-            //     }
-            // / db user add
+    console.log("credential =>", credential);
+    console.log("token =>", token);
+    console.log("user =>", user);
 
+    message.innerText =
+      "Google Sign In Successful";
 
-                console.log("crediential => ", credential)
-                console.log("token => ", token)
-                console.log("user => ", user)
-               setTimeout(() => {
+    setTimeout(() => {
       window.location.replace("./todo list/index.html");
     }, 1000);
 
-            })
-    } catch (error) {
-        const credential = GoogleAuthProvider.credentialFromError(error);
-
-        console.error(error)
-        console.error(credential)
-
-    }
-}
-
-googlebtn.addEventListener("click" , ()=> googleSignIn())
-
-
-////////////////////////////////////////////////////////////////
-let userdata = async ()=>{
-  try {
-    const docref = await addDoc(collection(db , "users") ,{
-      email :  auth.currentUser.email,
-      uid : auth.currentUser.uid
-      
-
-    })
-    console.log("document id : " , docref.id);
   } catch (error) {
-    console.log(error)
-    message.innerText = error
+    const credential =
+      GoogleAuthProvider.credentialFromError(
+        error
+      );
+
+    console.error(error);
+    console.error(credential);
+
+    message.innerText = error.message;
   }
-}
+};
 
+/////////////////////////////////////////////////
+// Auth State
+/////////////////////////////////////////////////
 
-////////////////////////////////////////////////////////////
 onAuthStateChanged(auth, (user) => {
   if (user) {
-    console.log("user email" ,user.email);
+    console.log("User Email:", user.email);
+  }else{
+    console.log("no user")
   }
 });
+
+/////////////////////////////////////////////////
+// Events
+/////////////////////////////////////////////////
 
 registerForm.addEventListener("submit", (e) => {
   e.preventDefault();
   createUser();
 });
 
-signInBtn.addEventListener("click", () => {
-  window.location.replace("./login acount/login.html");
-});
+googlebtn.addEventListener("click", googleSignIn);
 
+signInBtn.addEventListener("click", () => {
+  window.location.replace(
+    "./login acount/login.html"
+  );
+});
