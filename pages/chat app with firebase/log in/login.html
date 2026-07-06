@@ -11,27 +11,9 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./login.css">
 </head>
 <body>
-    <!-- Loader -->
-
-<div id="loader" class="loader">
-
-<lottie-player
-src="https://assets10.lottiefiles.com/packages/lf20_usmfx6bp.json"
-background="transparent"
-speed="1"
-style="width:180px;height:180px;"
-loop
-autoplay>
-</lottie-player>
-
-</div>
-
-<!-- Toast -->
-
-<div id="toast"></div>
 
 <div class="container">
 
@@ -83,32 +65,13 @@ autoplay>
     </div>
 
 </div>
-        <h2 class="acount">Create your account</h2>
+        <h2 class="acount">log in your account</h2>
 
         <p class="subtitle">
             Connect with friends anytime, anywhere.
         </p>
 
         <form id="form">
-
-            <div class="row">
-
-                <div class="inputBox">
-                    <input type="text" id="firstname" required>
-                    <label>First Name</label>
-                </div>
-
-                <div class="inputBox">
-                    <input type="text" id="lastname" required>
-                    <label>Last Name</label>
-                </div>
-
-            </div>
-
-            <div class="inputBox">
-                <input type="text" id="username" required>
-                <label>Username</label>
-            </div>
 
             <div class="inputBox">
                 <input type="email" id="email-inp" required>
@@ -121,7 +84,7 @@ autoplay>
             </div>
 
             <button id="register">
-                Create Account
+                log in
             </button>
 <br>
 <br>
@@ -133,33 +96,17 @@ autoplay>
   >
    Continue with Google
 </button>
-<br>
-<center><a href="./login.html" id="forgot-password" style="color: #1a73e8; text-decoration: none;">forgot password?</a></center>    
-
-            <div class="message-area">
+<br>  
+        <div class="message-area">
                 <span id="message"></span>
-                 <div class="bottom">
-
-                <span>
-                    Already have an account?
-                </span>
-
-                <a href="./log in/login.html">
-                    Sign In
-                </a>
-
             </div>
-            </div>
-
-           
 
         </form>
-
     </div>
 
 </div>
 
-<script type="module" src="./app.js"></script>
+<script type="module" src="./login.js"></script>
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </body>
 </html>

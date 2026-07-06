@@ -8,8 +8,12 @@ import {
   deleteUser,
   GoogleAuthProvider,
     signInWithPopup,
+    sendPasswordResetEmail,
+    
+    
+  
 } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-auth.js";
-import { doc, setDoc ,addDoc,collection,deleteDoc,getFirestore,} from "https://www.gstatic.com/firebasejs/12.12.1/firebase-firestore.js";
+import { orderBy, onSnapshot , getDocs,getDoc, doc, setDoc ,addDoc,collection,deleteDoc,getFirestore,query,where,  and,or , serverTimestamp} from "https://www.gstatic.com/firebasejs/12.12.1/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBpXVaYQIOgn0oLJlhpYjbcc8TQi_TbDpQ",
@@ -45,7 +49,19 @@ export {
      signInWithPopup,
      provider,
      doc,
-      setDoc
+      setDoc,
+      sendPasswordResetEmail,
+      getDoc,
+      getDocs,
+      query,
+      where,
+       and,
+       or,
+       onSnapshot,
+       serverTimestamp,
+       orderBy
+       
+      
 };
 
 

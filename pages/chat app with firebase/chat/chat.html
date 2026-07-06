@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatFlow</title>
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Left Sidebar -->
+    <div class="sidebar">
+
+        <div class="sidebar-header">
+            <h2>ChatFlow</h2>
+        </div>
+
+        <div id="usersdiv" class="users-list">
+
+            <!-- User -->
+            <!-- JS yahan cards add karega -->
+
+        </div>
+
+    </div>
+
+    <!-- Right Chat -->
+
+    <div class="chat-section">
+
+        <div class="chat-header">
+
+            <h2 id="usenameselected">Select a User</h2>
+
+            <div>
+                <button id="logoutBtn">Logout</button>
+                <button id="delete">Delete</button>
+            </div>
+
+        </div>
+ <h3 class="empty-chat">
+    no conversion
+            </h3>
+        <div id="chatdiv" class="chat-body">
+
+           
+
+        </div>
+
+        <div class="chat-footer">
+
+            <input
+                id="messageInput"
+                type="text"
+                placeholder="Type a message..."
+            >
+
+            <button id="sendBtn">
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script type="module" src="chat.js"></script>
+
+</body>
+</html>

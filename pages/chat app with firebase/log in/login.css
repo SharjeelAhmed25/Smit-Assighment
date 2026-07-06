@@ -13,49 +13,6 @@ body{
     padding:20px;
     background:linear-gradient(135deg,#eef4ff,#f8f9fa,#eef3ff);
 }
-
-/* Loader */
-
-.loader{
-    position:fixed;
-    inset:0;
-    background:rgba(255,255,255,.85);
-    backdrop-filter:blur(8px);
-    display:none;
-    justify-content:center;
-    align-items:center;
-    z-index:99999;
-}
-
-/* Toast */
-
-#toast{
-    position:fixed;
-    top:30px;
-    right:30px;
-    min-width:280px;
-    max-width:340px;
-    padding:16px 20px;
-    border-radius:12px;
-    color:#fff;
-    font-weight:500;
-    transform:translateX(450px);
-    transition:.35s;
-    z-index:999999;
-    box-shadow:0 15px 35px rgba(0,0,0,.2);
-}
-
-#toast.show{
-    transform:translateX(0);
-}
-
-#toast.success{
-    background:#22c55e;
-}
-
-#toast.error{
-    background:#ef4444;
-}
 .acount{
     color:#5f6368;
 }
