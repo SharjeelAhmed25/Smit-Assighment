@@ -1,4 +1,3 @@
-
 import {onSnapshot,orderBy,  and,or,signOut, deleteDoc, deleteUser, auth,db,onAuthStateChanged,doc,getDoc,getDocs, query, collection , where , addDoc, serverTimestamp} from "../firebase/firebaseconfig.js";
 
 // users related
@@ -147,9 +146,29 @@ let rendermessage = ()=>{
       messagediv.className = "freind-message";
     }
      messagediv.innerHTML = `
-      <p>${msg.text}</p> `;
-      chatdiv.appendChild(messagediv)
+      <p>${msg.text}</p>
+      <span class = "time">${formatetime(msg.createdAt)}</span>
+      `;
+      if(msg.from === userIdget){
+        messagediv.addEventListener("contextmenu" , (e)=>{
+          e.preventDefault();
+          let cinfirmdelete = confirm("delete this message");
+          if(cinfirmdelete){
+            deletemessage(msg.id);
+          }
+        })
+      }
+      chatdiv.appendChild(messagediv);
   })
+  chatdiv.scrollTop = chatdiv.scrollHeight;
+}
+let deletemessage = async (id)=>{
+try {
+  let messagedelete = await deleteDoc(doc(db , "messages", id));
+  console.log("delet this message")
+} catch (error) {
+  console.log(error)
+}
 }
 /// send message 
 let sendmessage  = async ()=>{
@@ -173,6 +192,16 @@ return
     console.log(error)
   }
 }
+
+//// enter key to send msg
+
+messageInput.addEventListener("keypress",(e)=>{
+  if(e.key === "Enter"){
+sendmessage()
+  }
+})
+
+////send function
 sendBtn.addEventListener("click" ,sendmessage)
 let renderusers = ()=>{
   userdiv.innerHTML = "";
@@ -184,12 +213,12 @@ let renderusers = ()=>{
   users.forEach((user)=>{
     let usercard = document.createElement("div");
     usercard.className = "user-card";
-
     usercard.innerHTML = `
     <h4>${user.name || user.displayname}</h4>
    <p>${user.email}</p>`;
 
     usercard.addEventListener("click" , ()=>{
+      usercard.classList = "active-user";
       selectedUser = user.uid;
       let chatuser = document.querySelector("#usenameselected");
       chatuser.innerText = user.name || user.displayname;
@@ -199,4 +228,21 @@ let renderusers = ()=>{
     })
     userdiv.appendChild(usercard)
   })
+}
+
+//////time function
+
+let formatetime = (createdAt)=>{
+if(!createdAt || !createdAt.toDate){
+  return "";
+}
+let d = createdAt.toDate();
+let hours = d.getHours();
+let minutes = d.getMinutes().toString().padStart(2, "0");
+
+let ampm = hours >= 12 ? "PM" : "AM";
+hours = hours %=12
+if(hours === 0) hours = 12;
+
+ return `${hours}:${minutes} ${ampm}`;
 }

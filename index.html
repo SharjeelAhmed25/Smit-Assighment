@@ -3,124 +3,273 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Assignments</title>
+  <title>Sharjeel Ahmed — Web Development Assignments</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>My Web Development Assignments</h1>
-    <p>Name: Sharjeel Ahmed | Course: Web Development</p>
+  <div class="bg-grid"></div>
+
+  <header class="topbar reveal-item" style="--d:0s">
+    <div class="window-dots"><span></span><span></span><span></span></div>
+    <div class="tabs">
+      <div class="tab active">portfolio.html</div>
+      <div class="tab">assignments.js</div>
+      <div class="tab">style.css</div>
+    </div>
   </header>
 
-  <div class="container">
-
-    <div class="assignment">
-      <div class="card-img"><img src="./assets/images/largecolor.png" alt="Assignment Preview"></div>
-      <h2>Assignment 1</h2>
-      <p>Color Palette</p>
-      <div class="btn-group">
-        <a href="./pages/color pllate responsive/index.html" target="_blank" class="btn primary">View Now</a>
-        <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn secondary">View Code</a>
-      </div>
+  <section class="hero">
+    <p class="eyebrow reveal-item" style="--d:0.1s">&lt;/&gt; smit — web development track</p>
+    <h1><span id="typed"></span><span class="cursor">_</span></h1>
+    <p class="hero-sub reveal-item" style="--d:0.9s">Course assignments, built line by line while learning the fundamentals of the web.</p>
+    <div class="hero-links reveal-item" style="--d:1.05s">
+      <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn primary">
+        <span class="prompt">$</span> view all code
+      </a>
     </div>
+  </section>
 
-    <div class="assignment">
-      <div class="card-img"><img src="./assets/images/large iphine.png" alt="Assignment Preview"></div>
-      <h2>Assignment 2</h2>
-      <p>iPhone Clone Page</p>
-      <div class="btn-group">
-        <a href="./pages/iphone clon page/index.html" target="_blank" class="btn primary">View Now</a>
-        <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn secondary">View Code</a>
+  <main class="container" id="assignments">
+
+    <article class="assignment reveal">
+      <span class="line-no">01</span>
+      <div class="browser-card">
+        <div class="browser-chrome">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="url-bar">color-palette.html</span>
+        </div>
+        <div class="card-img"><img src="./assets/images/largecolor.png" alt="Color Palette assignment preview"></div>
       </div>
-    </div>
-
-    <div class="assignment">
-      <div class="card-img"><img src="./assets/images/largezero2.png" alt="Assignment Preview"></div>
-      <h2>Assignment 3</h2>
-      <p>Zero Lifestyle Clone Page</p>
-      <div class="btn-group">
-        <a href="./pages/ZERO LIFESTYLE/index.html" target="_blank" class="btn primary">View Now</a>
-        <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn secondary">View Code</a>
+      <div class="card-body">
+        <h2>Color Palette</h2>
+        <p class="tag">Assignment 1</p>
+        <div class="btn-group">
+          <a href="./pages/color pllate responsive/index.html" target="_blank" class="btn primary"><span class="prompt">$</span> view</a>
+          <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn secondary"><span class="prompt">&lt;/&gt;</span> code</a>
+        </div>
       </div>
-    </div>
+    </article>
 
-    <div class="assignment">
-      <div class="card-img"><img src="./assets/images/google.png" alt="Assignment Preview"></div>
-      <h2>Assignment 4</h2>
-      <p>Google Login Form</p>
-      <div class="btn-group">
-        <a href="./pages/responsive google form/index.html" target="_blank" class="btn primary">View Now</a>
-        <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn secondary">View Code</a>
+    <article class="assignment reveal">
+      <span class="line-no">02</span>
+      <div class="browser-card">
+        <div class="browser-chrome">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="url-bar">iphone-clone.html</span>
+        </div>
+        <div class="card-img"><img src="./assets/images/large iphine.png" alt="iPhone clone assignment preview"></div>
       </div>
-    </div>
-
-    <div class="assignment">
-      <div class="card-img"><img src="./assets/images/calculator.png" alt="Assignment Preview"></div>
-      <h2>Assignment 5</h2>
-      <p>Calculator</p>
-      <div class="btn-group">
-        <a href="./pages/calculator/index.html" target="_blank" class="btn primary">View Now</a>
-        <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank"class="btn secondary">View Code</a>
+      <div class="card-body">
+        <h2>iPhone Clone Page</h2>
+        <p class="tag">Assignment 2</p>
+        <div class="btn-group">
+          <a href="./pages/iphone clon page/index.html" target="_blank" class="btn primary"><span class="prompt">$</span> view</a>
+          <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn secondary"><span class="prompt">&lt;/&gt;</span> code</a>
+        </div>
       </div>
-    </div>
+    </article>
 
-    <div class="assignment">
-      <div class="card-img"><img src="./assets/images/clock.png" alt="Assignment Preview"></div>
-      <h2>Assignment 6</h2>
-      <p>Digital Clock</p>
-      <div class="btn-group">
-        <a href="./pages/digital clock/index.html" target="_blank" class="btn primary">View Now</a>
-        <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn secondary">View Code</a>
+    <article class="assignment reveal">
+      <span class="line-no">03</span>
+      <div class="browser-card">
+        <div class="browser-chrome">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="url-bar">zero-lifestyle.html</span>
+        </div>
+        <div class="card-img"><img src="./assets/images/largezero2.png" alt="Zero Lifestyle clone assignment preview"></div>
       </div>
-    </div>
-
-    <!-- Blank assignments -->
-    <div class="assignment">
-      <div class="card-img"><img src="./assets/images/crud2.png" alt="Assignment Preview"></div>
-      <h2>Crud Operation</h2>
-      <p>.</p>
-      <div class="btn-group">
-        <a href="./pages/crud operation/index.html" class="btn primary">View Now</a>
-        <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn secondary">View Code</a>
+      <div class="card-body">
+        <h2>Zero Lifestyle Clone Page</h2>
+        <p class="tag">Assignment 3</p>
+        <div class="btn-group">
+          <a href="./pages/ZERO LIFESTYLE/index.html" target="_blank" class="btn primary"><span class="prompt">$</span> view</a>
+          <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn secondary"><span class="prompt">&lt;/&gt;</span> code</a>
+        </div>
       </div>
-    </div>
+    </article>
 
-    <div class="assignment">
-      <div class="card-img"><img src="./assets/images/full stack.png" alt="Assignment Preview"></div>
-      <h2>todo list</h2>
-      <p>.</p>
-      <div class="btn-group">
-        <a href="./pages/todo list/index.html" target="_blank" class="btn primary">View Now</a>
-        <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn secondary">View Code</a>
+    <article class="assignment reveal">
+      <span class="line-no">04</span>
+      <div class="browser-card">
+        <div class="browser-chrome">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="url-bar">google-form.html</span>
+        </div>
+        <div class="card-img"><img src="./assets/images/google.png" alt="Google login form assignment preview"></div>
       </div>
-    </div>
-
-    <div class="assignment">
-      <div class="card-img"><img src="./assets/images/firebase2.png" alt="Assignment Preview"></div>
-      <h2>Assignment 9</h2>
-      <p>.</p>
-      <div class="btn-group">
-        <a href="./pages/form with firebase/index.html" target="_blank" class="btn primary">View Now</a>
-        <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn secondary">View Code</a>
+      <div class="card-body">
+        <h2>Google Login Form</h2>
+        <p class="tag">Assignment 4</p>
+        <div class="btn-group">
+          <a href="./pages/responsive google form/index.html" target="_blank" class="btn primary"><span class="prompt">$</span> view</a>
+          <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn secondary"><span class="prompt">&lt;/&gt;</span> code</a>
+        </div>
       </div>
-    </div>
+    </article>
 
-    <div class="assignment">
-      <div class="card-img"><img src="" alt="Assignment Preview"></div>
-      <h2>Assignment 10</h2>
-      <p>.</p>
-      <div class="btn-group">
-        <a href="pages/form with firebase/index.html" class="btn primary">View Now</a>
-        <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn secondary">View Code</a>
+    <article class="assignment reveal">
+      <span class="line-no">05</span>
+      <div class="browser-card">
+        <div class="browser-chrome">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="url-bar">calculator.html</span>
+        </div>
+        <div class="card-img"><img src="./assets/images/calculator.png" alt="Calculator assignment preview"></div>
       </div>
-    </div>
+      <div class="card-body">
+        <h2>Calculator</h2>
+        <p class="tag">Assignment 5</p>
+        <div class="btn-group">
+          <a href="./pages/calculator/index.html" target="_blank" class="btn primary"><span class="prompt">$</span> view</a>
+          <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn secondary"><span class="prompt">&lt;/&gt;</span> code</a>
+        </div>
+      </div>
+    </article>
 
-  </div>
+    <article class="assignment reveal">
+      <span class="line-no">06</span>
+      <div class="browser-card">
+        <div class="browser-chrome">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="url-bar">digital-clock.html</span>
+        </div>
+        <div class="card-img"><img src="./assets/images/clock.png" alt="Digital clock assignment preview"></div>
+      </div>
+      <div class="card-body">
+        <h2>Digital Clock</h2>
+        <p class="tag">Assignment 6</p>
+        <div class="btn-group">
+          <a href="./pages/digital clock/index.html" target="_blank" class="btn primary"><span class="prompt">$</span> view</a>
+          <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn secondary"><span class="prompt">&lt;/&gt;</span> code</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="assignment reveal">
+      <span class="line-no">07</span>
+      <div class="browser-card">
+        <div class="browser-chrome">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="url-bar">crud-operation.html</span>
+        </div>
+        <div class="card-img"><img src="./assets/images/crud2.png" alt="CRUD operation assignment preview"></div>
+      </div>
+      <div class="card-body">
+        <h2>Crud Operation</h2>
+        <p class="tag">Assignment 7</p>
+        <div class="btn-group">
+          <a href="./pages/crud operation/index.html" target="_blank" class="btn primary"><span class="prompt">$</span> view</a>
+          <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn secondary"><span class="prompt">&lt;/&gt;</span> code</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="assignment reveal">
+      <span class="line-no">08</span>
+      <div class="browser-card">
+        <div class="browser-chrome">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="url-bar">todo-list.html</span>
+        </div>
+        <div class="card-img"><img src="./assets/images/full stack.png" alt="Todo list assignment preview"></div>
+      </div>
+      <div class="card-body">
+        <h2>Todo List</h2>
+        <p class="tag">Assignment 8</p>
+        <div class="btn-group">
+          <a href="./pages/todo list/index.html" target="_blank" class="btn primary"><span class="prompt">$</span> view</a>
+          <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn secondary"><span class="prompt">&lt;/&gt;</span> code</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="assignment reveal">
+      <span class="line-no">09</span>
+      <div class="browser-card">
+        <div class="browser-chrome">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="url-bar">firebase-form.html</span>
+        </div>
+        <div class="card-img"><img src="./assets/images/firebase2.png" alt="Firebase form assignment preview"></div>
+      </div>
+      <div class="card-body">
+        <h2>Form with Firebase</h2>
+        <p class="tag">Assignment 9</p>
+        <div class="btn-group">
+          <a href="./pages/form with firebase/index.html" target="_blank" class="btn primary"><span class="prompt">$</span> view</a>
+          <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn secondary"><span class="prompt">&lt;/&gt;</span> code</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="assignment reveal">
+      <span class="line-no">10</span>
+      <div class="browser-card">
+        <div class="browser-chrome">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="url-bar">assignment-10.html</span>
+        </div>
+        <div class="card-img placeholder"><span>preview coming soon</span></div>
+      </div>
+      <div class="card-body">
+        <h2>Assignment 10</h2>
+        <p class="tag">Assignment 10</p>
+        <div class="btn-group">
+          <a href="./pages/form with firebase/index.html" class="btn primary"><span class="prompt">$</span> view</a>
+          <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn secondary"><span class="prompt">&lt;/&gt;</span> code</a>
+        </div>
+      </div>
+    </article>
+
+  </main>
 
   <footer>
-    <p>© 2026 Student Assignment Collection</p>
+    <p><span class="prompt">//</span> © 2026 Sharjeel Ahmed — Student Assignment Collection</p>
   </footer>
+
+<script>
+  // Typewriter effect for the hero name
+  (function(){
+    const el = document.getElementById('typed');
+    const text = 'Sharjeel Ahmed';
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(prefersReduced){ el.textContent = text; return; }
+    let i = 0;
+    function tick(){
+      if(i <= text.length){
+        el.textContent = text.slice(0, i);
+        i++;
+        setTimeout(tick, 55);
+      }
+    }
+    tick();
+  })();
+
+  // Staggered scroll-reveal for assignment cards
+  (function(){
+    const cards = document.querySelectorAll('.assignment.reveal');
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(prefersReduced){
+      cards.forEach(c => c.classList.add('in-view'));
+      return;
+    }
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if(entry.isIntersecting){
+          const card = entry.target;
+          const delay = (Array.from(cards).indexOf(card) % 3) * 0.12;
+          card.style.setProperty('--d', delay + 's');
+          card.classList.add('in-view');
+          io.unobserve(card);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    cards.forEach(c => io.observe(c));
+  })();
+</script>
 
 </body>
 </html>
