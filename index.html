@@ -1,275 +1,2359 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sharjeel Ahmed — Web Development Assignments</title>
+  <title>Muhammad Shajeel Ahmed | Frontend Developer</title>
+  <meta name="description" content="Muhammad Shajeel Ahmed — Frontend Developer from Karachi building modern web apps with JavaScript, Firebase & stunning UI. Open for freelance & collaboration.">
+  <meta name="author" content="Muhammad Shajeel Ahmed">
+  <meta name="theme-color" content="#07080c">
+  <meta property="og:title" content="Muhammad Shajeel Ahmed | Portfolio">
+  <meta property="og:description" content="Frontend Developer crafting responsive, Firebase-powered web experiences. View projects & get in touch.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Muhammad Shajeel Ahmed | Frontend Developer">
+  <meta name="twitter:description" content="Frontend Developer from Karachi building modern web apps with JavaScript, Firebase & stunning UI.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23060910' width='100' height='100' rx='20'/><text y='68' x='50' text-anchor='middle' font-size='52' font-family='sans-serif' font-weight='bold' fill='%2310b981'>S</text></svg>">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Muhammad Shajeel Ahmed",
+    "jobTitle": "Frontend Developer",
+    "url": "https://github.com/SharjeelAhmed25",
+    "address": { "@type": "PostalAddress", "addressLocality": "Karachi", "addressCountry": "PK" },
+    "sameAs": [
+      "https://github.com/SharjeelAhmed25"
+    ],
+    "knowsAbout": ["JavaScript", "Firebase", "Firestore", "HTML5", "CSS3", "REST APIs", "Frontend Development"]
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#07080c',
+            midnight: '#0e121b',
+            sky: '#10b981',
+            violet: '#f59e0b',
+            gold: '#e8b95f',
+          },
+          fontFamily: {
+            sans: ['DM Sans', 'sans-serif'],
+            display: ['Syne', 'sans-serif'],
+            mono: ['Fira Code', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=DM+Sans:wght@300;400;500;600&family=Syne:wght@700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <style>
+    html { overflow-x: hidden; max-width: 100%; }
+    body { background: #07080c; overflow-x: hidden; max-width: 100%; position: relative; }
+    h1,h2,h3,.font-display { font-family: 'Syne', sans-serif; }
+
+    .glass-card {
+      background: linear-gradient(180deg, rgba(17,21,30,0.75), rgba(13,16,23,0.6));
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.06);
+      box-shadow: 0 1px 0 0 rgba(255,255,255,0.03) inset, 0 20px 40px -24px rgba(0,0,0,0.55);
+      transition: border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
+    }
+    .glass-card:hover {
+      border-color: rgba(16,185,129,0.22);
+      box-shadow: 0 1px 0 0 rgba(255,255,255,0.04) inset, 0 28px 52px -26px rgba(0,0,0,0.6), 0 0 0 1px rgba(16,185,129,0.04);
+      transform: translateY(-3px);
+    }
+    .glass-nav {
+      background: rgba(7,8,12,0.82);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .ambient-blob {
+      position: absolute; border-radius: 50%;
+      filter: blur(130px); z-index: 0;
+      opacity: 0.09; pointer-events: none;
+    }
+
+    :root {
+      --accent: #10b981;
+      --accent-2: #f59e0b;
+      --gold: #e8b95f;
+      --surface: rgba(15,18,26,0.6);
+      --surface-border: rgba(255,255,255,0.07);
+    }
+
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      font-family: 'Fira Code', monospace; font-size: 0.68rem;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: #9fb3d9; font-weight: 500; margin-bottom: 1rem;
+    }
+    .eyebrow::before {
+      content: ''; width: 22px; height: 1px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+    }
+    .eyebrow.center { justify-content: center; }
+
+    .section-kicker { color: var(--accent); font-weight: 700; }
+
+    
+
+    .btn-primary {
+      position: relative; overflow: hidden;
+      background: linear-gradient(135deg, #34d399, var(--accent) 55%, #059669);
+      color: #060810; font-weight: 700; letter-spacing: 0.01em;
+      box-shadow: 0 12px 30px -12px rgba(16,185,129,0.55), inset 0 1px 0 rgba(255,255,255,0.35);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 18px 38px -14px rgba(16,185,129,0.65), inset 0 1px 0 rgba(255,255,255,0.4); filter: brightness(1.04); }
+    .btn-primary:active { transform: translateY(0); }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #e6ecf7; font-weight: 600;
+      transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+    }
+    .btn-secondary:hover { border-color: rgba(16,185,129,0.4); background: rgba(16,185,129,0.06); transform: translateY(-2px); }
+
+    .premium-card {
+      position: relative; isolation: isolate;
+      background: var(--surface); border: 1px solid var(--surface-border);
+      box-shadow: 0 1px 0 0 rgba(255,255,255,0.03) inset, 0 24px 48px -28px rgba(0,0,0,0.6);
+      transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+    }
+    .premium-card::before {
+      content: ''; position: absolute; inset: 0; border-radius: inherit; z-index: -1;
+      padding: 1px;
+      background: linear-gradient(160deg, rgba(16,185,129,0.35), rgba(255,255,255,0) 30%, rgba(255,255,255,0) 70%, rgba(245,158,11,0.25));
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor; mask-composite: exclude;
+      opacity: 0; transition: opacity 0.4s ease;
+    }
+    .premium-card:hover { transform: translateY(-4px); box-shadow: 0 30px 60px -28px rgba(16,185,129,0.22); }
+    .premium-card:hover::before { opacity: 1; }
+
+    .divider-fade { height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent); }
+
+    @keyframes scrollMarquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex; width: max-content;
+      animation: scrollMarquee 28s linear infinite;
+    }
+    .animate-marquee:hover { animation-play-state: paused; }
+
+    @keyframes floatAvatar {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .float-avatar { animation: floatAvatar 4s ease-in-out infinite; }
+
+    @keyframes pulseGlow {
+      0%,100% { transform: scale(1); opacity: 0.4; }
+      50% { transform: scale(1.05); opacity: 0.8; }
+    }
+    .pulse-glow { animation: pulseGlow 3s ease-in-out infinite; }
+
+    @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+    .cursor-blink { animation: blink 1s step-end infinite; }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #07080c; }
+    ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #334155; }
+
+    .glow-hover { transition: all 0.3s ease; }
+    .glow-hover:hover {
+      box-shadow: 0 0 25px rgba(16,185,129,0.2);
+      border-color: rgba(16,185,129,0.35) !important;
+    }
+
+    .nav-link-underline { position: relative; }
+    .nav-link-underline::after {
+      content: ''; position: absolute; bottom: -4px; left: 0;
+      width: 0; height: 2px; background: #10b981;
+      transition: width 0.25s ease;
+    }
+    .nav-link-underline:hover::after { width: 100%; }
+
+    .portfolio-item { transition: all 0.3s ease; }
+
+    @keyframes fadeIn { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+    .fade-in-up { opacity:0; transform:translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-in-up.visible { opacity:1; transform:translateY(0); }
+
+    #toastNotification { transition: transform 0.4s ease, opacity 0.4s ease; }
+    #projectModal { animation: fadeIn 0.25s forwards; }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    section, header, footer, div[id] { max-width: 100%; }
+    .ambient-blob { max-width: 60vw; max-height: 60vw; }
+
+    @media (max-width: 640px) {
+  .ambient-blob { opacity: 0.06; max-width: 280px; max-height: 280px; }
+  #home .grid { display: flex !important; flex-direction: column !important; }
+  #home .lg\:col-span-7,
+  #home .lg\:col-span-5 { width: 100% !important; max-width: 100% !important; }
+  #home .lg\:col-span-5 .max-w-\[400px\] { max-width: 100% !important; }
+  #home .lg\:col-span-5 { margin-top: 1.5rem; }
+  #home .absolute.-bottom-6 {
+    bottom: -0.5rem !important;
+    left: 0.5rem !important;
+    right: auto;
+    max-width: calc(100vw - 2rem);
+  }
+}
+      h1, h2, h3, h4, p, span { word-break: break-word; overflow-wrap: break-word; }
+      .font-display { word-break: break-word; }
+      pre, code { white-space: pre-wrap !important; word-break: break-all !important; max-width: 100% !important; overflow-x: hidden !important; }
+      .animate-marquee { font-size: 0.75rem !important; }
+      [class*="marquee"] { overflow: hidden; max-width: 100vw; }
+      #portfolioFilters { gap: 0.4rem; flex-wrap: wrap; }
+      #portfolioFilters button { font-size: 0.6rem; padding: 0.35rem 0.6rem; white-space: nowrap; }
+      #contact .lg\\:col-span-5 a { padding: 0.875rem 1rem; }
+      #toastNotification { right: 0.75rem !important; left: 0.75rem !important; max-width: calc(100vw - 1.5rem) !important; }
+      #projectModal > div { margin: 0.5rem !important; border-radius: 1.25rem; max-width: calc(100vw - 1rem) !important; }
+      #projectModal { padding: 0 !important; align-items: flex-end; }
+      #skills .grid { gap: 0.75rem; }
+      #about img { max-width: 200px; margin: 0 auto; }
+      #backToTop { bottom: 1rem !important; right: 1rem !important; width: 40px !important; height: 40px !important; }
+      #commandPalette { padding-top: 4vh !important; }
+      #commandPalette .cmd-box { max-width: calc(100vw - 1.5rem) !important; }
+      #why .grid { gap: 0.85rem; }
+    
+
+    @media (max-width: 380px) {
+      .ambient-blob { display: none; }
+      #home .text-5xl, #home .text-6xl, #home .text-7xl { font-size: 2rem !important; line-height: 1.2 !important; }
+      #portfolioFilters button { font-size: 0.55rem; padding: 0.3rem 0.5rem; }
+    }
+
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 1; pointer-events: none;
+      opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    #particleCanvas { z-index: 0; }
+    #scrollProgress { transform-origin: left; box-shadow: 0 0 12px rgba(16,185,129,0.5); }
+
+    #preloader {
+      position: fixed; inset: 0; z-index: 9999;
+      background: rgba(7,8,12,0.86); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+      perspective: 600px;
+    }
+    #preloader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    .preloader-logo {
+      position: relative; width: 116px; height: 116px;
+      display: flex; align-items: center; justify-content: center; margin-bottom: 0.25rem;
+      transform-style: preserve-3d;
+      animation: preloaderTilt3D 4.5s ease-in-out infinite;
+    }
+    @keyframes preloaderTilt3D {
+      0%, 100% { transform: rotateY(-16deg) rotateX(4deg); }
+      50% { transform: rotateY(16deg) rotateX(-4deg); }
+    }
+    @media (prefers-reduced-motion: reduce) { .preloader-logo { animation: none; } }
+    .preloader-ring-svg {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      transform: rotate(0deg);
+      animation: preloaderRotate 5s linear infinite;
+    }
+    @keyframes preloaderRotate { to { transform: rotate(360deg); } }
+    .preloader-u {
+      font-family: 'Syne', sans-serif; font-weight: 800; font-size: 2.6rem; line-height: 1;
+      color: #10b981; letter-spacing: -0.02em;
+      animation: preloaderPop 1s cubic-bezier(.16,1,.3,1) both, preloaderGlowPulse 2.6s ease-in-out infinite 1s;
+    }
+    @keyframes preloaderPop {
+      0% { opacity: 0; transform: scale(0.25) rotate(-30deg); filter: blur(6px); }
+      55% { opacity: 1; transform: scale(1.18) rotate(6deg); filter: blur(0); }
+      75% { transform: scale(0.94) rotate(-2deg); }
+      100% { opacity: 1; transform: scale(1) rotate(0deg); }
+    }
+    @keyframes preloaderGlowPulse {
+      0%,100% { text-shadow: 0 0 18px rgba(16,185,129,0.45); }
+      50% { text-shadow: 0 0 38px rgba(16,185,129,0.85), 0 0 64px rgba(245,158,11,0.45); }
+    }
+    .preloader-orbit-dot {
+      position: absolute; top: 50%; left: 50%; width: 6px; height: 6px; border-radius: 50%;
+      background: #f59e0b; box-shadow: 0 0 10px rgba(245,158,11,0.8);
+      animation: preloaderOrbit 2.4s linear infinite;
+      opacity: 0; animation-delay: 0.9s;
+    }
+    @keyframes preloaderOrbit {
+      0% { opacity: 0; transform: rotate(0deg) translateX(50px) rotate(0deg); }
+      8% { opacity: 1; }
+      100% { opacity: 1; transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+    }
+    #preloader.exiting .preloader-u { animation: preloaderExit 0.5s ease forwards; }
+    @keyframes preloaderExit { to { opacity: 0; transform: scale(0.6); filter: blur(8px); } }
+    #preloader .loader-text {
+      margin-top: 1.25rem; font-family: 'Fira Code', monospace;
+      font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
+      color: #64748b;
+    }
+    #preloader .loader-bar {
+      margin-top: 1rem; width: 160px; height: 2px;
+      background: rgba(255,255,255,0.06); border-radius: 2px; overflow: hidden;
+    }
+    #preloader .loader-bar-fill {
+      height: 100%; width: 0%;
+      background: linear-gradient(90deg, #10b981, #f59e0b);
+      transition: width 0.15s ease;
+    }
+
+    .gradient-text-animated {
+      background: linear-gradient(135deg, #10b981 0%, #67e8f9 35%, #f59e0b 70%, #10b981 100%);
+      background-size: 300% 300%;
+      -webkit-background-clip: text; background-clip: text;
+      color: transparent;
+      animation: gradientShift 6s ease infinite;
+    }
+    @keyframes gradientShift {
+      0%,100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .btn-premium { position: relative; overflow: hidden; }
+    .btn-premium::after {
+      content: ''; position: absolute; top: 0; left: -100%; width: 60%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+      transition: left 0.5s ease;
+    }
+    .btn-premium:hover::after { left: 150%; }
+
+    .marquee-wrap {
+      mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+      -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+    }
+
+    .hero-stat {
+      background: rgba(13,17,23,0.6);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.06);
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .hero-stat:hover { border-color: rgba(16,185,129,0.25); transform: translateY(-2px); }
+
+    .portfolio-item { transform-style: preserve-3d; will-change: transform; }
+    .portfolio-item .card-shine {
+      position: absolute; inset: 0; pointer-events: none; opacity: 0;
+      background: radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(16,185,129,0.12), transparent 60%);
+      transition: opacity 0.3s;
+    }
+    .portfolio-item:hover .card-shine { opacity: 1; }
+
+    .nav-link-underline.active { color: #10b981 !important; }
+    .nav-link-underline.active::after { width: 100%; }
+
+    #backToTop {
+      position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 40;
+      width: 44px; height: 44px; border-radius: 14px;
+      background: rgba(13,17,23,0.9); backdrop-filter: blur(12px);
+      border: 1px solid rgba(16,185,129,0.25);
+      color: #10b981; display: flex; align-items: center; justify-content: center;
+      opacity: 0; visibility: hidden; transform: translateY(12px);
+      transition: all 0.35s ease; cursor: pointer;
+    }
+    #backToTop.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+    #backToTop:hover { background: #10b981; color: #07080c; box-shadow: 0 0 24px rgba(16,185,129,0.35); }
+
+    .hero-grid-bg {
+      position: absolute; inset: 0; pointer-events: none; z-index: 0;
+      background-image:
+        linear-gradient(rgba(16,185,129,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(16,185,129,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black, transparent);
+    }
+
+    #webgl3D {
+      position: fixed; inset: 0; z-index: 1; pointer-events: none;
+      width: 100vw; height: 100vh; display: block;
+      opacity: 0; transition: opacity 1.4s ease;
+    }
+    #webgl3D.is-ready { opacity: 1; }
+
+    #skillsOrbit {
+      position: absolute; inset: 0; z-index: 1; pointer-events: none;
+      overflow: hidden; display: none;
+    }
+    #skillsOrbit.is-active { display: block; }
+    .orbit-badge {
+      position: absolute; top: 0; left: 0; will-change: transform, opacity;
+      display: flex; align-items: center; gap: 6px;
+      padding: 6px 11px; border-radius: 999px;
+      background: rgba(13,17,23,0.85); backdrop-filter: blur(8px);
+      border: 1px solid rgba(148,163,184,0.18);
+      font-family: 'Fira Code', monospace; font-size: 10px; font-weight: 700;
+      letter-spacing: 0.04em; color: #cbd5e1; white-space: nowrap;
+      opacity: 0; transition: border-color 0.3s ease;
+    }
+    .orbit-badge i { font-size: 11px; }
+    #preloader.exiting {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(1.02);
+}
+
+    @media (pointer: fine) {
+      .portfolio-item {
+        will-change: transform; position: relative;
+        transform: perspective(900px) rotateX(0deg) rotateY(0deg);
+      }
+      .portfolio-item::after {
+        content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+        opacity: 0; transition: opacity 0.35s ease;
+        background: radial-gradient(320px circle at var(--mx,50%) var(--my,50%), rgba(255,255,255,0.10), transparent 62%);
+      }
+      .portfolio-item.tilting::after { opacity: 1; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .portfolio-item { transform: none !important; }
+      .portfolio-item::after { display: none !important; }
+    }
+
+    .reveal-stagger > * {
+      opacity: 0; transform: translateY(20px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .reveal-stagger.visible > *:nth-child(1) { transition-delay: 0.05s; }
+    .reveal-stagger.visible > *:nth-child(2) { transition-delay: 0.12s; }
+    .reveal-stagger.visible > *:nth-child(3) { transition-delay: 0.19s; }
+    .reveal-stagger.visible > *:nth-child(4) { transition-delay: 0.26s; }
+    .reveal-stagger.visible > * { opacity: 1; transform: translateY(0); }
+
+    @media (prefers-reduced-motion: reduce) {
+      .gradient-text-animated, .animate-marquee, .float-avatar, .pulse-glow { animation: none !important; }
+      #particleCanvas, #webgl3D, #skillsOrbit { display: none; }
+    }
+
+    #commandPalette { animation: fadeIn 0.2s ease forwards; }
+    #commandPalette .cmd-box { animation: cmdSlideIn 0.25s cubic-bezier(.16,1,.3,1) forwards; }
+    @keyframes cmdSlideIn { from { opacity:0; transform: translateY(-16px) scale(0.98); } to { opacity:1; transform: translateY(0) scale(1); } }
+    .cmd-item { transition: background 0.15s ease; cursor: pointer; }
+    .cmd-item.active, .cmd-item:hover { background: rgba(16,185,129,0.08); }
+    .cmd-item.active .cmd-arrow { opacity: 1; transform: translateX(0); }
+    .cmd-arrow { opacity: 0; transform: translateX(-4px); transition: all 0.15s ease; }
+    kbd.kbd-key {
+      font-family: 'Fira Code', monospace; font-size: 10px; padding: 2px 6px;
+      border-radius: 6px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+      color: #94a3b8;
+    }
+
+    #cursorGlow {
+      position: fixed; top: 0; left: 0; width: 26px; height: 26px; border-radius: 50%;
+      border: 1.5px solid rgba(16,185,129,0.6);
+      pointer-events: none; z-index: 9998; transform: translate(-50%,-50%);
+      transition: width 0.2s ease, height 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+      mix-blend-mode: screen; will-change: transform;
+    }
+    #cursorGlow.grow { width: 52px; height: 52px; background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.9); }
+    #cursorDot {
+      position: fixed; top: 0; left: 0; width: 4px; height: 4px; border-radius: 50%;
+      background: #10b981; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%);
+      will-change: transform;
+    }
+    @media (pointer: coarse), (prefers-reduced-motion: reduce) {
+      #cursorGlow, #cursorDot { display: none !important; }
+    }
+
+    @media (pointer: fine) { .magnetic { transition: transform 0.15s ease-out; } }
+
+    #dotNav { position: fixed; right: 22px; top: 50%; transform: translateY(-50%); z-index: 40; }
+    #dotNav .dot {
+      width: 8px; height: 8px; border-radius: 50%; background: rgba(148,163,184,0.3);
+      transition: all 0.3s ease; cursor: pointer; position: relative;
+    }
+    #dotNav .dot.active { background: #10b981; box-shadow: 0 0 10px rgba(16,185,129,0.6); transform: scale(1.3); }
+    #dotNav .dot .dot-label {
+      position: absolute; right: 18px; top: 50%; transform: translateY(-50%) translateX(6px);
+      font-family: 'Fira Code', monospace; font-size: 10px; letter-spacing: 0.05em; text-transform: uppercase;
+      color: #94a3b8; background: rgba(13,17,23,0.9); border: 1px solid rgba(255,255,255,0.08);
+      padding: 3px 9px; border-radius: 6px; white-space: nowrap; opacity: 0; pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    #dotNav .dot:hover .dot-label, #dotNav .dot.active .dot-label { opacity: 1; transform: translateY(-50%) translateX(0); }
+    @media (max-width: 1024px) { #dotNav { display: none; } }
+
+    .gh-stat { transition: transform 0.25s ease, border-color 0.25s ease; }
+    .gh-stat:hover { transform: translateY(-3px); border-color: rgba(16,185,129,0.35); }
+    .gh-pulse { width: 6px; height: 6px; border-radius: 50%; background: #34d399; box-shadow: 0 0 0 0 rgba(52,211,153,0.6); animation: ghPulse 2s infinite; }
+    @keyframes ghPulse {
+      0% { box-shadow: 0 0 0 0 rgba(52,211,153,0.6); }
+      70% { box-shadow: 0 0 0 6px rgba(52,211,153,0); }
+      100% { box-shadow: 0 0 0 0 rgba(52,211,153,0); }
+    }
+
+    .value-card { transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; }
+    .value-card:hover { transform: translateY(-5px); border-color: rgba(16,185,129,0.3); box-shadow: 0 12px 30px -10px rgba(16,185,129,0.15); }
+
+    .coming-soon-card {
+      border: 1.5px dashed rgba(148,163,184,0.25);
+      background: rgba(15,18,26,0.35);
+    }
+    .coming-soon-card:hover { border-color: rgba(16,185,129,0.35); }
+  </style>
 </head>
-<body>
+<body class="text-slate-100 antialiased selection:bg-sky selection:text-obsidian">
 
-  <div class="bg-grid"></div>
+  <!-- Preloader -->
+<!-- Professional Minimal Preloader -->
+<div id="preloader" class="fixed inset-0 z-[9999] bg-[#07080c] flex flex-col items-center justify-center p-4 transition-all duration-700">
+  <div class="w-full max-w-xs flex flex-col items-center space-y-4">
+    
+    <!-- Minimalist Monogram / Logo -->
+    <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-emerald-500/20 to-emerald-500/5 border border-emerald-500/30 flex items-center justify-center shadow-lg shadow-emerald-500/10">
+      <span class="font-mono text-emerald-400 font-bold text-lg tracking-wider">S</span>
+    </div>
 
-  <header class="topbar reveal-item" style="--d:0s">
-    <div class="window-dots"><span></span><span></span><span></span></div>
-    <div class="tabs">
-      <div class="tab active">portfolio.html</div>
-      <div class="tab">assignments.js</div>
-      <div class="tab">style.css</div>
+    <!-- Professional Short Message -->
+    <div class="text-center space-y-1">
+      <p class="font-mono text-[11px] text-emerald-400 font-medium tracking-widest uppercase flex items-center justify-center gap-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Crafting Digital Experience</span>
+      </p>
+      <p id="loaderStatus" class="font-mono text-[10px] text-slate-500 tracking-wide">
+        Initializing workspace...
+      </p>
+    </div>
+
+    <!-- Sleek Minimal Progress Bar -->
+    <div class="w-full h-[2px] bg-slate-800/80 rounded-full overflow-hidden relative">
+      <div id="loaderFill" class="h-full bg-gradient-to-r from-emerald-500 to-amber-400 w-0 transition-all duration-200 ease-out"></div>
+    </div>
+
+  </div>
+</div>
+
+  <!-- Scroll Progress -->
+  <div id="scrollProgress" class="fixed top-0 left-0 h-[3px] bg-gradient-to-r from-sky via-violet to-cyan-400 z-[60]" style="width:0%"></div>
+
+  <!-- Particle Network -->
+  <canvas id="particleCanvas" class="fixed inset-0 pointer-events-none opacity-30" aria-hidden="true"></canvas>
+
+  <!-- Persistent 3D World -->
+  <canvas id="webgl3D" aria-hidden="true"></canvas>
+
+  <!-- Custom Cursor -->
+  <div id="cursorGlow" aria-hidden="true"></div>
+  <div id="cursorDot" aria-hidden="true"></div>
+
+  <!-- Section Dot Navigation -->
+  <nav id="dotNav" aria-label="Section navigation">
+    <div class="flex flex-col items-center space-y-5">
+      <div class="dot" data-target="home"><span class="dot-label">Home</span></div>
+      <div class="dot" data-target="about"><span class="dot-label">About</span></div>
+      <div class="dot" data-target="skills"><span class="dot-label">Skills</span></div>
+      <div class="dot" data-target="projects"><span class="dot-label">Projects</span></div>
+      <div class="dot" data-target="contact"><span class="dot-label">Contact</span></div>
+    </div>
+  </nav>
+
+  <!-- Back to top -->
+  <button id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up text-sm"></i>
+  </button>
+
+  <div style="overflow-x:hidden;max-width:100vw;position:relative">
+  <div class="ambient-blob bg-sky w-[320px] h-[320px] top-[-80px] left-[-80px]" style="pointer-events:none"></div>
+  <div class="ambient-blob bg-violet w-[400px] h-[400px] top-[900px] right-[-120px]" style="pointer-events:none"></div>
+  <div class="ambient-blob bg-cyan-500 w-[320px] h-[320px] bottom-[1400px] left-[-120px]" style="pointer-events:none"></div>
+  <div class="ambient-blob bg-indigo-600 w-[300px] h-[300px] bottom-[300px] right-[-80px]" style="pointer-events:none"></div>
+
+  <header class="fixed top-0 left-0 w-full z-50 glass-nav border-b border-white/5 transition-all duration-300" id="mainHeader">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+
+      <a href="#home" class="flex items-center space-x-3 group">
+        <div class="relative w-10 h-10 rounded-xl bg-gradient-to-tr from-violet to-sky p-[1.5px] shadow-lg shadow-sky/10">
+          <div class="w-full h-full bg-midnight rounded-[10px] flex items-center justify-center">
+            <span class="text-sky font-bold text-base font-mono">S</span>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-base font-bold tracking-wide text-white font-display group-hover:text-sky transition-colors">SHAJEEL AHMED</span>
+          <span class="text-[10px] text-slate-500 font-mono tracking-wider">FRONTEND DEV · KARACHI</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="#about"    data-nav="about"    class="text-sm font-medium text-slate-300 hover:text-sky transition-colors nav-link-underline">About</a>
+        <a href="#skills"   data-nav="skills"   class="text-sm font-medium text-slate-300 hover:text-sky transition-colors nav-link-underline">Skills</a>
+        <a href="#projects" data-nav="projects" class="text-sm font-medium text-slate-300 hover:text-sky transition-colors nav-link-underline">Projects</a>
+        <a href="#contact"  data-nav="contact"  class="text-sm font-medium text-slate-300 hover:text-sky transition-colors nav-link-underline">Contact</a>
+      </nav>
+
+      <div class="flex items-center space-x-3">
+        <button id="cmdTrigger" aria-label="Open quick navigation" class="hidden sm:flex items-center space-x-2 px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700 transition-all text-xs font-mono">
+          <i class="fa-solid fa-magnifying-glass text-[11px]"></i>
+          <span class="text-slate-500">Quick Nav</span>
+          <kbd class="kbd-key">Ctrl K</kbd>
+        </button>
+        <a href="mailto:sharjeelahmed617458@gmail.com" class="btn-primary hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-xs tracking-wider uppercase font-mono magnetic">
+          Hire Me
+        </a>
+        <button id="menuBtn" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white md:hidden transition-all" aria-label="Toggle Menu">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="burgerIcon">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="hidden md:hidden absolute top-20 left-0 w-full bg-midnight/95 backdrop-blur-xl border-b border-slate-800 shadow-xl">
+      <div class="px-6 py-8 flex flex-col space-y-5">
+        <a href="#about"    class="text-base font-semibold text-slate-200 hover:text-sky flex items-center space-x-3 transition-colors mobile-link"><i class="fa-solid fa-user text-slate-500 w-5 text-sm"></i><span>About Me</span></a>
+        <a href="#skills"   class="text-base font-semibold text-slate-200 hover:text-sky flex items-center space-x-3 transition-colors mobile-link"><i class="fa-solid fa-gears text-slate-500 w-5 text-sm"></i><span>Skills & Tools</span></a>
+        <a href="#projects" class="text-base font-semibold text-slate-200 hover:text-sky flex items-center space-x-3 transition-colors mobile-link"><i class="fa-solid fa-laptop-code text-slate-500 w-5 text-sm"></i><span>Projects</span></a>
+        <a href="#contact"  class="text-base font-semibold text-slate-200 hover:text-sky flex items-center space-x-3 transition-colors mobile-link"><i class="fa-solid fa-paper-plane text-slate-500 w-5 text-sm"></i><span>Get In Touch</span></a>
+        <div class="pt-4 border-t border-slate-800 flex flex-col space-y-4">
+          <div class="flex space-x-3 justify-center">
+            <a href="https://github.com/SharjeelAhmed25" target="_blank" class="w-9 h-9 rounded-lg bg-slate-900 flex items-center justify-center border border-slate-800 text-slate-400 hover:text-white"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:sharjeelahmed617458@gmail.com" class="w-9 h-9 rounded-lg bg-slate-900 flex items-center justify-center border border-slate-800 text-slate-400 hover:text-white"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+          <a href="mailto:sharjeelahmed617458@gmail.com" class="w-full py-2.5 rounded-xl bg-sky text-midnight font-bold text-xs uppercase tracking-wider font-mono hover:bg-white transition-colors mobile-link text-center">Hire Me</a>
+        </div>
+      </div>
     </div>
   </header>
 
-  <section class="hero">
-    <p class="eyebrow reveal-item" style="--d:0.1s">&lt;/&gt; smit — web development track</p>
-    <h1><span id="typed"></span><span class="cursor">_</span></h1>
-    <p class="hero-sub reveal-item" style="--d:0.9s">Course assignments, built line by line while learning the fundamentals of the web.</p>
-    <div class="hero-links reveal-item" style="--d:1.05s">
-      <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn primary">
-        <span class="prompt">$</span> view all code
-      </a>
+  <section id="home" class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden flex items-center min-h-screen">
+    <div id="scrollCue" class="hidden lg:flex absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex-col items-center space-y-2 cursor-pointer transition-opacity duration-300" aria-hidden="true">
+      <span class="text-[9px] font-mono uppercase tracking-widest text-slate-500">Scroll</span>
+      <div class="w-5 h-8 rounded-full border border-slate-700 flex items-start justify-center p-1.5">
+        <span class="w-1 h-1.5 rounded-full bg-sky animate-bounce"></span>
+      </div>
+    </div>
+    <div class="hero-grid-bg"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+        <div class="lg:col-span-7 flex flex-col space-y-6 text-center lg:text-left">
+          <div class="inline-flex flex-wrap items-center gap-2 w-fit mx-auto lg:mx-0">
+            <div class="inline-flex items-center space-x-2.5 px-3 py-1.5 rounded-full bg-slate-900/70 border border-slate-800">
+              <span class="flex h-2 w-2 relative">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-sky"></span>
+              </span>
+              <span class="text-[11px] font-mono tracking-wider text-slate-300 font-medium uppercase">Available for Work</span>
+            </div>
+            <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-slate-900/70 border border-slate-800">
+              <i class="fa-regular fa-clock text-slate-500 text-[10px]"></i>
+              <span id="liveClock" class="text-[11px] font-mono text-slate-400">--:--</span>
+              <span class="text-[10px] text-slate-600">Karachi</span>
+            </div>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-[4.6rem] font-bold tracking-tight text-white leading-[1.06] font-display">
+            Crafting clean, dynamic<br class="hidden lg:block"> interfaces as <span class="gradient-text-animated">Shajeel&nbsp;Ahmed</span>
+          </h1>
+
+          <div class="h-9 text-base sm:text-xl text-slate-300 font-mono flex items-center justify-center lg:justify-start">
+            <span class="text-slate-600 mr-2">&gt;</span><span id="typedOutput" class="pr-1">Frontend Developer</span><span class="cursor-blink border-r-2 border-sky h-5 inline-block ml-0.5"></span>
+          </div>
+
+          <p class="text-slate-400 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
+            Developer from <span class="text-white font-semibold">Karachi</span> studying web development at SMIT, building modern, responsive web apps with <span class="text-white font-semibold">JavaScript & Firebase</span> — currently expanding into full-stack development.
+          </p>
+
+          <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4 reveal-stagger">
+            <a href="#projects" class="btn-primary magnetic w-full sm:w-auto px-8 py-4 rounded-xl tracking-wide hover:scale-[1.02] active:scale-100 transition-all text-center">
+              View My Work
+            </a>
+            <a href="#contact" class="btn-secondary magnetic w-full sm:w-auto px-8 py-4 rounded-xl transition-all text-center">
+              Get In Touch
+            </a>
+          </div>
+
+          <div class="pt-8 grid grid-cols-3 gap-3 max-w-md mx-auto lg:mx-0">
+            <div class="hero-stat rounded-xl p-3 sm:p-4 text-center">
+              <span class="block text-xl sm:text-2xl font-bold text-sky font-display">3+</span>
+              <span class="text-[9px] sm:text-[10px] font-mono text-slate-500 uppercase tracking-wider">Projects</span>
+            </div>
+            <div class="hero-stat rounded-xl p-3 sm:p-4 text-center">
+              <span class="block text-xl sm:text-2xl font-bold text-violet font-display">SMIT</span>
+              <span class="text-[9px] sm:text-[10px] font-mono text-slate-500 uppercase tracking-wider">In Training</span>
+            </div>
+            <div class="hero-stat rounded-xl p-3 sm:p-4 text-center">
+              <span class="block text-xl sm:text-2xl font-bold text-cyan-400 font-display">24/7</span>
+              <span class="text-[9px] sm:text-[10px] font-mono text-slate-500 uppercase tracking-wider">Learning</span>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-slate-900 flex flex-wrap items-center justify-center lg:justify-start gap-5 text-slate-500 text-xs font-mono">
+            <span class="uppercase tracking-widest text-slate-400">Connect On</span>
+            <div class="flex items-center space-x-4 text-sm">
+              <a href="https://github.com/SharjeelAhmed25" target="_blank" class="hover:text-sky transition-colors flex items-center space-x-1.5"><i class="fa-brands fa-github text-base"></i><span class="hidden sm:inline">GitHub</span></a>
+              <a href="mailto:sharjeelahmed617458@gmail.com" class="hover:text-sky transition-colors flex items-center space-x-1.5"><i class="fa-solid fa-envelope text-base"></i><span class="hidden sm:inline">Email</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 relative flex items-center justify-center pb-12 sm:pb-0 w-full overflow-hidden">
+          <div class="relative w-full max-w-[340px] sm:max-w-[400px] aspect-square rounded-3xl bg-gradient-to-tr from-violet/30 via-midnight to-sky/30 p-[1.5px] shadow-2xl mx-auto">
+            <div class="w-full h-full bg-midnight rounded-[22px] overflow-hidden p-4 sm:p-8 flex flex-col justify-between relative">
+              <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                <div class="flex items-center space-x-2">
+                  <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                  <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                  <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                </div>
+                <span class="text-[11px] font-mono text-slate-500">shajeel &bull; profile.js</span>
+              </div>
+              <div class="flex-grow flex flex-col justify-center space-y-3 font-mono text-[11px] sm:text-sm text-slate-300 py-4 sm:py-6 overflow-hidden">
+                <p class="text-slate-500"><span class="text-violet">const</span> developer = {</p>
+                <p class="pl-3 sm:pl-4"><span class="text-sky">name</span>: <span class="text-amber-300 break-all">"Muhammad Shajeel Ahmed"</span>,</p>
+                <p class="pl-3 sm:pl-4"><span class="text-sky">passion</span>: <span class="text-amber-300 break-all">"Building_Real_Time_Apps"</span>,</p>
+                <p class="pl-3 sm:pl-4"><span class="text-sky">skills</span>: [<br>
+                  <span class="pl-3 sm:pl-4 text-purple-400">"JavaScript"</span>, <br>
+                  <span class="pl-3 sm:pl-4 text-purple-400">"Firebase"</span>, <br>
+                  <span class="pl-3 sm:pl-4 text-purple-400 break-all">"Full-Stack (Learning)"</span><br>
+                ],</p>
+                <p class="pl-3 sm:pl-4"><span class="text-sky">origin</span>: <span class="text-amber-300">"Karachi, PK"</span>,</p>
+                <p class="pl-3 sm:pl-4"><span class="text-sky">status</span>: <span class="text-emerald-400 break-all">"Continuously_Exploring"</span></p>
+                <p class="text-slate-500">};</p>
+              </div>
+              <div class="border-t border-slate-800 pt-4 flex items-center justify-between text-slate-500 text-[10px] font-mono">
+                <span>UTF-8</span>
+                <span class="text-sky">⚡ Code Enthusiast</span>
+              </div>
+            </div>
+          </div>
+          <div class="absolute bottom-0 left-2 sm:-left-10 glass-card rounded-2xl p-3 sm:p-3.5 flex items-center space-x-2 sm:space-x-3 shadow-xl border border-slate-800 z-10 max-w-[calc(100%-1rem)]" style="animation: floatAvatar 6s ease-in-out infinite;">
+            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-sky/10 flex items-center justify-center text-sky text-base sm:text-lg shrink-0">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="flex flex-col min-w-0">
+              <span class="text-[9px] sm:text-[10px] text-slate-400 font-mono uppercase tracking-wider">Currently Learning</span>
+              <span class="text-xs sm:text-sm font-bold text-white font-display truncate">Full-Stack Development</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
-  <main class="container" id="assignments">
+  <div class="w-full bg-slate-900/40 border-y border-slate-900 py-5 overflow-hidden marquee-wrap" style="max-width:100vw">
+    <div class="animate-marquee whitespace-nowrap text-slate-300 font-display text-lg font-bold uppercase tracking-wider flex items-center space-x-10">
+      <span>⚡ FULL-STACK DEVELOPMENT</span> <span class="text-sky">&bull;</span>
+      <span>⚡ FIREBASE & FIRESTORE</span> <span class="text-sky">&bull;</span>
+      <span>⚡ RESPONSIVE UI DESIGN</span> <span class="text-sky">&bull;</span>
+      <span>⚡ REAL-TIME WEB APPS</span> <span class="text-sky">&bull;</span>
+      <span>⚡ JAVASCRIPT DEVELOPMENT</span> <span class="text-sky">&bull;</span>
+      <span>⚡ GIT & GITHUB</span> <span class="text-sky">&bull;</span>
+      <span>⚡ FULL-STACK DEVELOPMENT</span> <span class="text-sky">&bull;</span>
+      <span>⚡ FIREBASE & FIRESTORE</span> <span class="text-sky">&bull;</span>
+      <span>⚡ RESPONSIVE UI DESIGN</span> <span class="text-sky">&bull;</span>
+      <span>⚡ REAL-TIME WEB APPS</span> <span class="text-sky">&bull;</span>
+      <span>⚡ JAVASCRIPT DEVELOPMENT</span> <span class="text-sky">&bull;</span>
+      <span>⚡ GIT & GITHUB</span> <span class="text-sky">&bull;</span>
+    </div>
+  </div>
 
-    <article class="assignment reveal">
-      <span class="line-no">01</span>
-      <div class="browser-card">
-        <div class="browser-chrome">
-          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-          <span class="url-bar">color-palette.html</span>
-        </div>
-        <div class="card-img"><img src="./assets/images/largecolor.png" alt="Color Palette assignment preview"></div>
+  <section id="about" class="py-24 md:py-32 relative fade-in-up">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="eyebrow center">Behind the Screen</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight font-display">My Story & Journey</h2>
+        <p class="mt-4 text-slate-400 text-base sm:text-lg">Learning fast, building real, and focused on shipping working products.</p>
       </div>
-      <div class="card-body">
-        <h2>Color Palette</h2>
-        <p class="tag">Assignment 1</p>
-        <div class="btn-group">
-          <a href="./pages/color pllate responsive/index.html" target="_blank" class="btn primary"><span class="prompt">$</span> view</a>
-          <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn secondary"><span class="prompt">&lt;/&gt;</span> code</a>
-        </div>
-      </div>
-    </article>
 
-    <article class="assignment reveal">
-      <span class="line-no">02</span>
-      <div class="browser-card">
-        <div class="browser-chrome">
-          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-          <span class="url-bar">iphone-clone.html</span>
-        </div>
-        <div class="card-img"><img src="./assets/images/large iphine.png" alt="iPhone clone assignment preview"></div>
-      </div>
-      <div class="card-body">
-        <h2>iPhone Clone Page</h2>
-        <p class="tag">Assignment 2</p>
-        <div class="btn-group">
-          <a href="./pages/iphone clon page/index.html" target="_blank" class="btn primary"><span class="prompt">$</span> view</a>
-          <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn secondary"><span class="prompt">&lt;/&gt;</span> code</a>
-        </div>
-      </div>
-    </article>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div class="lg:col-span-6 space-y-6">
+          <h3 class="text-xl sm:text-2xl font-bold text-white font-display flex items-center space-x-3">
+            <span class="w-1.5 h-6 rounded-full bg-sky"></span>
+            <span>Frontend Developer, in training</span>
+          </h3>
+          <p class="text-slate-400 leading-relaxed font-light">
+            I'm a developer from <strong class="text-slate-200">Karachi, Pakistan</strong>, currently enrolled in the Web Development course at <strong class="text-slate-200">SMIT (Saylani Mass IT Training)</strong>, passionate about building modern, interactive web systems with clean, optimized configurations.
+          </p>
+          <p class="text-slate-400 leading-relaxed font-light">
+            My focus right now is on <strong class="text-slate-200">Firebase-powered applications</strong> — authentication flows, real-time Firestore syncing, and role-based dashboards — including a hackathon project built entirely from scratch.
+          </p>
 
-    <article class="assignment reveal">
-      <span class="line-no">03</span>
-      <div class="browser-card">
-        <div class="browser-chrome">
-          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-          <span class="url-bar">zero-lifestyle.html</span>
-        </div>
-        <div class="card-img"><img src="./assets/images/largezero2.png" alt="Zero Lifestyle clone assignment preview"></div>
-      </div>
-      <div class="card-body">
-        <h2>Zero Lifestyle Clone Page</h2>
-        <p class="tag">Assignment 3</p>
-        <div class="btn-group">
-          <a href="./pages/ZERO LIFESTYLE/index.html" target="_blank" class="btn primary"><span class="prompt">$</span> view</a>
-          <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn secondary"><span class="prompt">&lt;/&gt;</span> code</a>
-        </div>
-      </div>
-    </article>
+          <div class="p-6 rounded-2xl border border-sky/20 bg-gradient-to-r from-sky/5 via-violet/5 to-transparent relative overflow-hidden group">
+            <div class="absolute top-0 right-0 p-4 text-sky/20 group-hover:text-sky/40 transition-colors text-4xl font-display">
+              <i class="fa-solid fa-layer-group pulse-glow"></i>
+            </div>
+            <h4 class="text-sm font-mono text-sky font-bold uppercase tracking-wider mb-2 flex items-center space-x-2">
+              <i class="fa-solid fa-star text-xs"></i> <span>Currently Building</span>
+            </h4>
+            <p class="text-xs text-slate-300 leading-relaxed font-light">
+              Building MaintainIQ, a role-based facility maintenance platform, for a hackathon — while also studying full-stack development to round out my skill set with proper backend architecture.
+            </p>
+          </div>
 
-    <article class="assignment reveal">
-      <span class="line-no">04</span>
-      <div class="browser-card">
-        <div class="browser-chrome">
-          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-          <span class="url-bar">google-form.html</span>
+          <div class="grid grid-cols-2 gap-4 pt-2" id="statsSection">
+            <div class="p-5 rounded-2xl glass-card border border-slate-800">
+              <span class="block text-3xl sm:text-4xl font-bold text-sky font-display" id="statProjects">0</span>
+              <span class="text-xs text-slate-400 font-mono mt-1 block uppercase tracking-wider">Projects Built</span>
+            </div>
+            <div class="p-5 rounded-2xl glass-card border border-slate-800">
+              <span class="block text-3xl sm:text-4xl font-bold text-violet font-display" id="statSkills">0</span>
+              <span class="text-xs text-slate-400 font-mono mt-1 block uppercase tracking-wider">Skills Mastered</span>
+            </div>
+          </div>
         </div>
-        <div class="card-img"><img src="./assets/images/google.png" alt="Google login form assignment preview"></div>
-      </div>
-      <div class="card-body">
-        <h2>Google Login Form</h2>
-        <p class="tag">Assignment 4</p>
-        <div class="btn-group">
-          <a href="./pages/responsive google form/index.html" target="_blank" class="btn primary"><span class="prompt">$</span> view</a>
-          <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn secondary"><span class="prompt">&lt;/&gt;</span> code</a>
-        </div>
-      </div>
-    </article>
 
-    <article class="assignment reveal">
-      <span class="line-no">05</span>
-      <div class="browser-card">
-        <div class="browser-chrome">
-          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-          <span class="url-bar">calculator.html</span>
-        </div>
-        <div class="card-img"><img src="./assets/images/calculator.png" alt="Calculator assignment preview"></div>
-      </div>
-      <div class="card-body">
-        <h2>Calculator</h2>
-        <p class="tag">Assignment 5</p>
-        <div class="btn-group">
-          <a href="./pages/calculator/index.html" target="_blank" class="btn primary"><span class="prompt">$</span> view</a>
-          <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn secondary"><span class="prompt">&lt;/&gt;</span> code</a>
-        </div>
-      </div>
-    </article>
+        <div class="lg:col-span-6 flex flex-col items-center space-y-6">
+          <div class="relative w-full max-w-[280px] sm:max-w-[320px] mx-auto">
+            <div class="w-full aspect-square rounded-3xl bg-gradient-to-tr from-violet/40 to-sky/40 p-[2px] shadow-2xl shadow-sky/20">
+              <div class="w-full h-full bg-midnight rounded-[22px] overflow-hidden flex items-center justify-center">
+                <span class="text-7xl font-display font-extrabold text-sky float-avatar">SA</span>
+              </div>
+            </div>
+            <div class="absolute -top-3 -right-3 bg-sky text-midnight text-[10px] font-mono font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-lg">
+              Open to Work
+            </div>
+          </div>
 
-    <article class="assignment reveal">
-      <span class="line-no">06</span>
-      <div class="browser-card">
-        <div class="browser-chrome">
-          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-          <span class="url-bar">digital-clock.html</span>
-        </div>
-        <div class="card-img"><img src="./assets/images/clock.png" alt="Digital clock assignment preview"></div>
-      </div>
-      <div class="card-body">
-        <h2>Digital Clock</h2>
-        <p class="tag">Assignment 6</p>
-        <div class="btn-group">
-          <a href="./pages/digital clock/index.html" target="_blank" class="btn primary"><span class="prompt">$</span> view</a>
-          <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn secondary"><span class="prompt">&lt;/&gt;</span> code</a>
-        </div>
-      </div>
-    </article>
+          <div class="w-full glass-card rounded-2xl p-6 border border-slate-800 relative">
+            <div class="absolute -top-3 right-5 bg-violet text-white font-mono text-[9px] uppercase font-extrabold tracking-widest px-3 py-1 rounded-full">Continuous Learning</div>
+            <h4 class="text-base font-bold text-white font-display mb-4">Deep Exploring Tracks</h4>
+            <div class="space-y-3">
+              <div>
+                <div class="flex justify-between text-xs font-mono mb-1.5"><span class="text-slate-300">JavaScript (ES6+)</span><span class="text-sky">80%</span></div>
+                <div class="h-1.5 bg-slate-900 rounded-full"><div class="h-full bg-gradient-to-r from-sky to-cyan-400 rounded-full" style="width:80%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs font-mono mb-1.5"><span class="text-slate-300">Firebase / Firestore</span><span class="text-sky">75%</span></div>
+                <div class="h-1.5 bg-slate-900 rounded-full"><div class="h-full bg-gradient-to-r from-sky to-cyan-400 rounded-full" style="width:75%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs font-mono mb-1.5"><span class="text-slate-300">Full-Stack Basics</span><span class="text-violet">40%</span></div>
+                <div class="h-1.5 bg-slate-900 rounded-full"><div class="h-full bg-gradient-to-r from-violet to-amber-300 rounded-full" style="width:40%"></div></div>
+              </div>
+            </div>
+          </div>
 
-    <article class="assignment reveal">
-      <span class="line-no">07</span>
-      <div class="browser-card">
-        <div class="browser-chrome">
-          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-          <span class="url-bar">crud-operation.html</span>
+          <!-- Live GitHub Stats -->
+          <div class="w-full glass-card rounded-2xl p-6 border border-slate-800" id="githubStatsCard">
+            <div class="flex items-center justify-between mb-4">
+              <h4 class="text-base font-bold text-white font-display flex items-center gap-2"><i class="fa-brands fa-github text-slate-400"></i> Live from GitHub</h4>
+              <span class="flex items-center gap-1.5 text-[10px] font-mono text-emerald-400 uppercase tracking-wider"><span class="gh-pulse"></span>Live</span>
+            </div>
+            <div class="grid grid-cols-3 gap-3" id="githubStatsGrid">
+              <div class="gh-stat p-3 rounded-xl bg-slate-950 border border-slate-800 text-center">
+                <span class="block text-xl font-bold text-sky font-display" id="ghRepos">—</span>
+                <span class="text-[9px] text-slate-500 font-mono uppercase tracking-wider">Repos</span>
+              </div>
+              <div class="gh-stat p-3 rounded-xl bg-slate-950 border border-slate-800 text-center">
+                <span class="block text-xl font-bold text-violet font-display" id="ghFollowers">—</span>
+                <span class="text-[9px] text-slate-500 font-mono uppercase tracking-wider">Followers</span>
+              </div>
+              <div class="gh-stat p-3 rounded-xl bg-slate-950 border border-slate-800 text-center">
+                <span class="block text-xl font-bold text-cyan-400 font-display" id="ghFollowing">—</span>
+                <span class="text-[9px] text-slate-500 font-mono uppercase tracking-wider">Following</span>
+              </div>
+            </div>
+            <a href="https://github.com/SharjeelAhmed25" target="_blank" class="mt-4 w-full inline-flex items-center justify-center gap-2 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs font-mono text-slate-300 hover:text-white transition-all">
+              <span>View GitHub Profile</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
         </div>
-        <div class="card-img"><img src="./assets/images/crud2.png" alt="CRUD operation assignment preview"></div>
       </div>
-      <div class="card-body">
-        <h2>Crud Operation</h2>
-        <p class="tag">Assignment 7</p>
-        <div class="btn-group">
-          <a href="./pages/crud operation/index.html" target="_blank" class="btn primary"><span class="prompt">$</span> view</a>
-          <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn secondary"><span class="prompt">&lt;/&gt;</span> code</a>
-        </div>
-      </div>
-    </article>
+    </div>
+  </section>
 
-    <article class="assignment reveal">
-      <span class="line-no">08</span>
-      <div class="browser-card">
-        <div class="browser-chrome">
-          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-          <span class="url-bar">todo-list.html</span>
-        </div>
-        <div class="card-img"><img src="./assets/images/full stack.png" alt="Todo list assignment preview"></div>
+  <section id="why" class="py-20 relative fade-in-up">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="eyebrow center">The Edge</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-display">Why Work With Me</h2>
       </div>
-      <div class="card-body">
-        <h2>Todo List</h2>
-        <p class="tag">Assignment 8</p>
-        <div class="btn-group">
-          <a href="./pages/todo list/index.html" target="_blank" class="btn primary"><span class="prompt">$</span> view</a>
-          <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn secondary"><span class="prompt">&lt;/&gt;</span> code</a>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="value-card p-6 rounded-2xl glass-card border border-slate-800">
+          <div class="w-11 h-11 rounded-xl bg-sky/10 flex items-center justify-center text-sky text-lg mb-4"><i class="fa-solid fa-rocket"></i></div>
+          <h4 class="text-sm font-bold text-white font-display mb-1.5">Fast Learner</h4>
+          <p class="text-xs text-slate-400 font-light leading-relaxed">Actively training at SMIT and applying every concept to real projects, not just exercises.</p>
+        </div>
+        <div class="value-card p-6 rounded-2xl glass-card border border-slate-800">
+          <div class="w-11 h-11 rounded-xl bg-violet/10 flex items-center justify-center text-violet text-lg mb-4"><i class="fa-solid fa-bolt"></i></div>
+          <h4 class="text-sm font-bold text-white font-display mb-1.5">Real-Time Systems</h4>
+          <p class="text-xs text-slate-400 font-light leading-relaxed">Comfortable wiring up Firebase & Firestore for live, reactive data — not just static pages.</p>
+        </div>
+        <div class="value-card p-6 rounded-2xl glass-card border border-slate-800">
+          <div class="w-11 h-11 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-lg mb-4"><i class="fa-solid fa-pen-ruler"></i></div>
+          <h4 class="text-sm font-bold text-white font-display mb-1.5">Pixel-Level Care</h4>
+          <p class="text-xs text-slate-400 font-light leading-relaxed">Every layout is checked across breakpoints — no broken UI, no ignored edge cases.</p>
+        </div>
+        <div class="value-card p-6 rounded-2xl glass-card border border-slate-800">
+          <div class="w-11 h-11 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 text-lg mb-4"><i class="fa-solid fa-comments"></i></div>
+          <h4 class="text-sm font-bold text-white font-display mb-1.5">Clear Communication</h4>
+          <p class="text-xs text-slate-400 font-light leading-relaxed">Quick replies, honest timelines, and updates throughout — no disappearing after the deposit.</p>
         </div>
       </div>
-    </article>
+    </div>
+  </section>
 
-    <article class="assignment reveal">
-      <span class="line-no">09</span>
-      <div class="browser-card">
-        <div class="browser-chrome">
-          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-          <span class="url-bar">firebase-form.html</span>
+  <section id="skills" class="py-24 md:py-32 bg-midnight/30 border-y border-slate-900 relative fade-in-up">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-4 flex flex-col space-y-4 relative" id="skillsColumn">
+          <div id="skillsOrbit" aria-hidden="true">
+            <div class="orbit-badge" data-orbit="0"><i class="fa-brands fa-js text-sky"></i><span>JavaScript</span></div>
+            <div class="orbit-badge" data-orbit="1"><i class="fa-solid fa-satellite text-violet"></i><span>Firebase</span></div>
+            <div class="orbit-badge" data-orbit="2"><i class="fa-brands fa-html5 text-sky"></i><span>HTML5</span></div>
+            <div class="orbit-badge" data-orbit="3"><i class="fa-brands fa-css3-alt text-violet"></i><span>CSS3</span></div>
+            <div class="orbit-badge" data-orbit="4"><i class="fa-brands fa-git-alt text-sky"></i><span>Git</span></div>
+            <div class="orbit-badge" data-orbit="5"><i class="fa-solid fa-bolt text-violet"></i><span>REST APIs</span></div>
+          </div>
+          <span class="eyebrow">Capabilities</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-display">Technical Arsenal & Tools</h2>
+          <p class="text-slate-400 text-sm sm:text-base leading-relaxed font-light">
+            Core frontend systems paired with cloud databases and modern tooling for building fast, reliable web apps.
+          </p>
+          <div class="pt-4">
+            <a href="#contact" class="inline-flex items-center space-x-2 text-sm text-sky font-bold tracking-wide hover:underline font-mono">
+              <span>Let's Work Together</span> <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
-        <div class="card-img"><img src="./assets/images/firebase2.png" alt="Firebase form assignment preview"></div>
-      </div>
-      <div class="card-body">
-        <h2>Form with Firebase</h2>
-        <p class="tag">Assignment 9</p>
-        <div class="btn-group">
-          <a href="./pages/form with firebase/index.html" target="_blank" class="btn primary"><span class="prompt">$</span> view</a>
-          <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn secondary"><span class="prompt">&lt;/&gt;</span> code</a>
-        </div>
-      </div>
-    </article>
 
-    <article class="assignment reveal">
-      <span class="line-no">10</span>
-      <div class="browser-card">
-        <div class="browser-chrome">
-          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-          <span class="url-bar">assignment-10.html</span>
-        </div>
-        <div class="card-img placeholder"><span>preview coming soon</span></div>
-      </div>
-      <div class="card-body">
-        <h2>Assignment 10</h2>
-        <p class="tag">Assignment 10</p>
-        <div class="btn-group">
-          <a href="./pages/form with firebase/index.html" class="btn primary"><span class="prompt">$</span> view</a>
-          <a href="https://github.com/SharjeelAhmed25/Smit-Assighment" target="_blank" class="btn secondary"><span class="prompt">&lt;/&gt;</span> code</a>
-        </div>
-      </div>
-    </article>
+        <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div class="p-6 rounded-2xl glass-card border border-slate-800 glow-hover">
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-10 h-10 rounded-xl bg-sky/10 flex items-center justify-center text-sky text-lg"><i class="fa-brands fa-js"></i></div>
+              <span class="text-[10px] font-mono text-slate-500">Core Language</span>
+            </div>
+            <h4 class="text-base font-bold text-white font-display">JavaScript (ES6+)</h4>
+            <p class="text-xs text-slate-400 font-light mt-1.5 leading-relaxed">DOM manipulation, async routines, event structures, LocalStorage matrices, and modular architecture scripts.</p>
+            <div class="mt-4 pt-3 border-t border-slate-900 flex flex-wrap gap-1.5">
+              <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">ES6+</span>
+              <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">DOM API</span>
+              <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">Async/Await</span>
+            </div>
+          </div>
 
-  </main>
+          <div class="p-6 rounded-2xl glass-card border border-slate-800 glow-hover">
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-10 h-10 rounded-xl bg-violet/10 flex items-center justify-center text-violet text-lg"><i class="fa-solid fa-satellite"></i></div>
+              <span class="text-[10px] font-mono text-slate-500">Cloud & Data</span>
+            </div>
+            <h4 class="text-base font-bold text-white font-display">Firebase & APIs</h4>
+            <p class="text-xs text-slate-400 font-light mt-1.5 leading-relaxed">Firebase Authentication, Firestore real-time syncing, and role-based data structures.</p>
+            <div class="mt-4 pt-3 border-t border-slate-900 flex flex-wrap gap-1.5">
+              <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">Firebase Auth</span>
+              <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">Firestore</span>
+              <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">REST APIs</span>
+            </div>
+          </div>
 
-  <footer>
-    <p><span class="prompt">//</span> © 2026 Sharjeel Ahmed — Student Assignment Collection</p>
+          <div class="p-6 rounded-2xl glass-card border border-slate-800 glow-hover">
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-10 h-10 rounded-xl bg-sky/10 flex items-center justify-center text-sky text-lg"><i class="fa-brands fa-css3-alt"></i></div>
+              <span class="text-[10px] font-mono text-slate-500">UI & Layouts</span>
+            </div>
+            <h4 class="text-base font-bold text-white font-display">HTML5 & CSS3</h4>
+            <p class="text-xs text-slate-400 font-light mt-1.5 leading-relaxed">Semantic markups, responsive interfaces, Flexbox/Grid systems, and pixel-perfect viewport styling.</p>
+            <div class="mt-4 pt-3 border-t border-slate-900 flex flex-wrap gap-1.5">
+              <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">HTML5</span>
+              <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">CSS3</span>
+              <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">Flexbox/Grid</span>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl glass-card border border-slate-800 glow-hover">
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-10 h-10 rounded-xl bg-violet/10 flex items-center justify-center text-violet text-lg"><i class="fa-brands fa-git-alt"></i></div>
+              <span class="text-[10px] font-mono text-slate-500">Workflow</span>
+            </div>
+            <h4 class="text-base font-bold text-white font-display">Git & Dev Tools</h4>
+            <p class="text-xs text-slate-400 font-light mt-1.5 leading-relaxed">Version control, browser DevTools debugging, and a clean, organized commit history for every project.</p>
+            <div class="mt-4 pt-3 border-t border-slate-900 flex flex-wrap gap-1.5">
+              <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">Git / GitHub</span>
+              <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">DevTools</span>
+              <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">Debugging</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- project section start                                                             -->
+
+  <section id="projects" class="py-24 md:py-32 relative fade-in-up" data-aos="zoom-in">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div class="max-w-xl">
+          <span class="eyebrow">Showcase</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-display mt-2">Featured Projects</h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-2 font-light">Hand-crafted applications showcasing real-world JavaScript and Firebase integration skills.</p>
+        </div>
+        <div class="mt-6 md:mt-0 flex flex-wrap gap-2" id="portfolioFilters">
+          <button onclick="filterProjects('all')" id="filterBtn-all" class="px-4 py-2 rounded-xl text-xs font-semibold bg-sky text-midnight font-mono tracking-wider uppercase transition-all">All</button>
+          <button onclick="filterProjects('firebase')" id="filterBtn-firebase" class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 hover:bg-slate-800 text-slate-300 font-mono tracking-wider uppercase transition-all">Firebase</button>
+          <button onclick="filterProjects('soon')" id="filterBtn-soon" class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 hover:bg-slate-800 text-slate-300 font-mono tracking-wider uppercase transition-all">Coming Soon</button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projectsContainer">
+
+        <!-- ── MaintainIQ (Flagship Hackathon Project) ── -->
+        <div class="portfolio-item firebase bg-slate-900/40 rounded-3xl overflow-hidden border border-slate-800 flex flex-col justify-between hover:scale-[1.01] hover:border-sky/30 transition-all duration-300" style="border-color: rgba(16,185,129,0.18); box-shadow: 0 0 32px rgba(16,185,129,0.06);">
+          <div>
+            <div class="relative overflow-hidden bg-slate-950 aspect-[16/10] flex items-center justify-center p-6">
+              <div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(rgba(16,185,129,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(16,185,129,0.4) 1px, transparent 1px); background-size: 28px 28px;"></div>
+              <div class="absolute w-28 h-28 rounded-full opacity-20" style="background: radial-gradient(circle, #10b981, transparent 70%); filter: blur(18px);"></div>
+              <i class="fa-solid fa-gauge-high text-5xl text-sky opacity-90 relative z-10"></i>
+              <span class="absolute top-4 left-4 bg-sky/15 text-sky font-mono text-[9px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-full border border-sky/30">⭐ Hackathon</span>
+              <span class="absolute top-4 right-4 bg-slate-900/80 text-slate-300 font-mono text-[9px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-full border border-slate-700">Firebase</span>
+            </div>
+            <div class="p-6">
+              <span class="text-[10px] font-mono text-sky uppercase tracking-wider font-bold">Facility Maintenance Platform</span>
+              <h3 class="text-lg font-bold text-white font-display mt-1">MaintainIQ</h3>
+              <p class="text-xs sm:text-sm text-slate-400 font-light mt-2 leading-relaxed">A role-based facility maintenance platform built for a hackathon, with QR-code asset identity, Reporter / Admin / Technician access tiers, Firestore-synced issue tracking, and client-side rule-based auto-triage.</p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 border-t border-slate-800 flex flex-col space-y-3">
+            <div class="flex items-center justify-between w-full pt-3">
+              <div class="flex gap-1.5 flex-wrap">
+                <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">Firebase Auth</span>
+                <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">Firestore</span>
+                <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">QR Codes</span>
+              </div>
+              <button onclick="openProjectModal('maintain-iq')" class="text-xs font-semibold text-sky hover:underline font-mono flex items-center space-x-1.5 ml-2 shrink-0">
+                <span>Details</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </button>
+            </div>
+            <div class="grid grid-cols-2 gap-2 pt-1">
+              <a href="https://github.com/SharjeelAhmed25" target="_blank" class="px-3 py-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 rounded-xl text-center text-xs font-mono font-medium text-slate-300 hover:text-white transition-all flex items-center justify-center space-x-1.5"><i class="fa-brands fa-github"></i> <span>View Code</span></a>
+              <span class="px-3 py-2 bg-sky/5 border border-sky/10 rounded-xl text-center text-xs font-mono font-medium text-slate-500 flex items-center justify-center space-x-1.5"><i class="fa-solid fa-hammer"></i> <button><a href="#">view now</a></button></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Firebase Authentication System ── -->
+        <div  class="portfolio-item firebase bg-slate-900/40 rounded-3xl overflow-hidden border border-slate-800 flex flex-col justify-between hover:scale-[1.01] hover:border-sky/30 transition-all duration-300">
+          <div>
+            <div class="relative overflow-hidden bg-slate-950 aspect-[16/10] flex items-center justify-center p-6">
+              <div class="absolute w-24 h-24 rounded-full opacity-20" style="background: radial-gradient(circle, #f59e0b, transparent 70%); filter: blur(20px); left: 30%; top: 20%;"></div>
+              <i class="fa-solid fa-lock-open text-5xl text-orange-400 opacity-90 relative z-10"></i>
+              <span class="absolute top-4 left-4 bg-orange-500/10 text-orange-400 font-mono text-[9px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-full border border-orange-500/20">Auth</span>
+              <span class="absolute top-4 right-4 bg-sky/10 text-sky font-mono text-[9px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-full border border-sky/20">Firestore</span>
+            </div>
+            <div class="p-6">
+              <span class="text-[10px] font-mono text-orange-400 uppercase tracking-wider font-bold">Firebase Auth Signup & Login</span>
+              <h3 class="text-lg font-bold text-white font-display mt-1">Firebase Authentication System</h3>
+              <p class="text-xs sm:text-sm text-slate-400 font-light mt-2 leading-relaxed">A clean, secure signup and login system built with Firebase Auth and Firestore — handling async validation, double-submit protection, and proper session handling.</p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 border-t border-slate-900 flex flex-col space-y-3">
+            <div class="flex items-center justify-between w-full pt-3">
+              <div class="flex gap-1.5 flex-wrap">
+                <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">Firebase Auth</span>
+                <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">Firestore</span>
+              </div>
+              <button onclick="openProjectModal('firebase-auth')" class="text-xs font-semibold text-sky hover:underline font-mono flex items-center space-x-1.5 ml-2 shrink-0">
+                <span>Details</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </button>
+            </div>
+            <div class="grid grid-cols-2 gap-2 pt-1">
+              <a href="https://github.com/SharjeelAhmed25/Smit-Assighment/tree/main/pages" target="_blank" class="px-3 py-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 rounded-xl text-center text-xs font-mono font-medium text-slate-300 hover:text-white transition-all flex items-center justify-center space-x-1.5"><i class="fa-brands fa-github"></i> <span>View Code</span></a>
+              <span class="px-3 py-2 bg-sky/5 border border-sky/10 rounded-xl text-center text-xs font-mono font-medium text-slate-500 flex items-center justify-center space-x-1.5"><i class="fa-solid fa-hammer"></i> <span><a href="./pages/form with firebase/index.html">view now</a></span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── SMIT Assignment Portfolio ── -->
+        <div class="portfolio-item firebase bg-slate-900/40 rounded-3xl overflow-hidden border border-slate-800 flex flex-col justify-between hover:scale-[1.01] hover:border-sky/30 transition-all duration-300">
+          <div>
+            <div class="relative overflow-hidden bg-slate-950 aspect-[16/10] flex items-center justify-center p-6">
+              <i class="fa-solid fa-terminal text-5xl text-cyan-400 opacity-80"></i>
+              <span class="absolute top-4 right-4 bg-cyan-500/10 text-cyan-400 font-mono text-[9px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-full border border-cyan-500/20">Coursework</span>
+            </div>
+            <div class="p-6">
+              <span class="text-[10px] font-mono text-slate-500 uppercase">Code-Editor Aesthetic</span>
+              <h3 class="text-lg font-bold text-white font-display mt-1">SMIT Assignment Portfolio</h3>
+              <p class="text-xs sm:text-sm text-slate-400 font-light mt-2 leading-relaxed">An interactive assignment portfolio for SMIT coursework, styled with a dark code-editor aesthetic, smooth scroll animations, and IntersectionObserver-based reveal effects.</p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 border-t border-slate-900 flex flex-col space-y-3">
+            <div class="flex items-center justify-between w-full pt-3">
+              <div class="flex gap-1.5 flex-wrap">
+                <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">JavaScript</span>
+                <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">Scroll Animation</span>
+              </div>
+              <button onclick="openProjectModal('smit-portfolio')" class="text-xs font-semibold text-sky hover:underline font-mono flex items-center space-x-1.5 ml-2 shrink-0">
+                <span>Details</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </button>
+            </div>
+            <div class="grid grid-cols-2 gap-2 pt-1">
+              <a href="https://github.com/SharjeelAhmed25/Smit-Assighment/tree/main/pages" target="_blank" class="px-3 py-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 rounded-xl text-center text-xs font-mono font-medium text-slate-300 hover:text-white transition-all flex items-center justify-center space-x-1.5"><i class="fa-brands fa-github"></i> <span>View Code</span></a>
+              <span class="px-3 py-2 bg-sky/5 border border-sky/10 rounded-xl text-center text-xs font-mono font-medium text-slate-500 flex items-center justify-center space-x-1.5"><i class="fa-solid fa-hammer"></i> <span>In Progress</span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Coming Soon Placeholders ── -->
+       <div class="portfolio-item chat-app bg-slate-900/40 rounded-3xl overflow-hidden border border-slate-800 flex flex-col justify-between hover:scale-[1.01] hover:border-sky/30 transition-all duration-300">
+  <div>
+
+    <div class="relative overflow-hidden bg-slate-950 aspect-[16/10]">
+
+      <img
+        src="https://images.openai.com/static-rsc-4/J5BoIhEch46p-NbHN8F9XTiGIxxuAeUGgyMjhvsAd7Eg44zbqBmBe7LQPtlYCIS8qmJVPEuzemXDCEseLkHOUnk6t_txOduk9M_7jh5RCWD7yFysnqNYV2DLcODmIYGZcACMsax6kwk4cjqWPon7l9Y01Y-OoQewIJSFeJ3Pd-iCOMhkoluub-Z7fh1lKuTM?purpose=fullsize"
+        alt="Chat Application"
+        class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+      >
+
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+
+      <span class="absolute top-4 left-4 bg-green-500/10 text-green-400 font-mono text-[9px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-full border border-green-500/20">
+        CHAT APP
+      </span>
+
+      <span class="absolute top-4 right-4 bg-sky/10 text-sky font-mono text-[9px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-full border border-sky/20">
+        FIREBASE
+      </span>
+
+    </div>
+
+    <div class="p-6">
+
+      <span class="text-[10px] font-mono text-green-400 uppercase tracking-wider font-bold">
+        REAL-TIME MESSAGING
+      </span>
+
+      <h3 class="text-lg font-bold text-white font-display mt-1">
+        Firebase Chat Application
+      </h3>
+
+      <p class="text-xs sm:text-sm text-slate-400 font-light mt-2 leading-relaxed">
+        A modern real-time chat application developed with Firebase Authentication and Cloud Firestore. Users can securely sign in, view registered users, exchange instant messages, and experience seamless real-time communication with an elegant and responsive interface.
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="p-6 pt-0 border-t border-slate-900 flex flex-col space-y-3">
+
+    <div class="flex items-center justify-between w-full pt-3">
+
+      <div class="flex gap-1.5 flex-wrap">
+        <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">
+          Firebase Auth
+        </span>
+
+        <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">
+          Firestore
+        </span>
+
+        <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">
+          Real-Time DB
+        </span>
+      </div>
+
+      <button onclick="openProjectModal('chat-app')" class="text-xs font-semibold text-sky hover:underline font-mono flex items-center space-x-1.5 ml-2 shrink-0">
+        <span>Details</span>
+        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+      </button>
+
+    </div>
+
+    <div class="grid grid-cols-2 gap-2 pt-1">
+
+      <a href="https://github.com/SharjeelAhmed25/Smit-Assighment/tree/main/pages"
+        target="_blank"
+        class="px-3 py-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 rounded-xl text-center text-xs font-mono font-medium text-slate-300 hover:text-white transition-all flex items-center justify-center space-x-1.5">
+        <i class="fa-brands fa-github"></i>
+        <span>View Code</span>
+      </a>
+
+      <a href="./pages/chat app with firebase/index.html"
+        class="px-3 py-2 bg-sky/5 hover:bg-sky/10 border border-sky/10 rounded-xl text-center text-xs font-mono font-medium text-slate-300 hover:text-white transition-all flex items-center justify-center space-x-1.5">
+        <i class="fa-solid fa-comments"></i>
+        <span>View now</span>
+      </a>
+
+    </div>
+
+  </div>
+</div>
+
+        <!-- digital clock -->
+
+      <div class="portfolio-item javascript bg-slate-900/40 rounded-3xl overflow-hidden border border-slate-800 flex flex-col justify-between hover:scale-[1.01] hover:border-cyan-400/30 transition-all duration-300">
+  <div>
+
+    <div class="relative overflow-hidden bg-slate-950 aspect-[16/10]">
+
+      <img
+        src="https://images.openai.com/static-rsc-4/fkLZWIqtPCJrAeKIyvTRl2RTAtknp3_ot_dk-uN4DFUAuf5Sd3NJNDCmbxJwcxwhn8BkVEdcwBNL33_BgU4e8mFFShlwHlHKEZnIrYdENZldYOZmP_2iinRd2dhmLa3rmHldkKPUn8xXBJkP0ZTmfw8aLVmrZe9ndPcf47RzgCMm-zVn5-00amB8T_tO8DZe?purpose=fullsize"
+        alt="Digital Clock"
+        class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+      >
+
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+
+      <span class="absolute top-4 left-4 bg-cyan-500/10 text-cyan-400 font-mono text-[9px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-full border border-cyan-500/20">
+        JAVASCRIPT
+      </span>
+
+      <span class="absolute top-4 right-4 bg-indigo-500/10 text-indigo-300 font-mono text-[9px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-full border border-indigo-500/20">
+        CLOCK
+      </span>
+
+    </div>
+
+    <div class="p-6">
+
+      <span class="text-[10px] font-mono text-cyan-400 uppercase tracking-wider font-bold">
+        REAL-TIME TIME DISPLAY
+      </span>
+
+      <h3 class="text-lg font-bold text-white font-display mt-1">
+        Digital Clock
+      </h3>
+
+      <p class="text-xs sm:text-sm text-slate-400 font-light mt-2 leading-relaxed">
+        A sleek and responsive digital clock built with HTML, CSS, and JavaScript. It displays the current time in real time with hours, minutes, and seconds, featuring a modern glassmorphism-inspired interface and smooth live updates.
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="p-6 pt-0 border-t border-slate-900 flex flex-col space-y-3">
+
+    <div class="flex items-center justify-between w-full pt-3">
+
+      <div class="flex gap-1.5 flex-wrap">
+        <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">
+          HTML5
+        </span>
+
+        <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">
+          CSS3
+        </span>
+
+        <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">
+          JavaScript
+        </span>
+      </div>
+
+      <button onclick="openProjectModal('digital-clock')" class="text-xs font-semibold text-sky hover:underline font-mono flex items-center space-x-1.5 ml-2 shrink-0">
+        <span>Details</span>
+        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+      </button>
+
+    </div>
+
+    <div class="grid grid-cols-2 gap-2 pt-1">
+
+      <a href="https://github.com/SharjeelAhmed25/Smit-Assighment/tree/main/pages"
+         target="_blank"
+         class="px-3 py-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 rounded-xl text-center text-xs font-mono font-medium text-slate-300 hover:text-white transition-all flex items-center justify-center space-x-1.5">
+        <i class="fa-brands fa-github"></i>
+        <span>View Code</span>
+      </a>
+
+      <a href="./pages/digital clock/index.html"
+         class="px-3 py-2 bg-sky/5 hover:bg-sky/10 border border-sky/10 rounded-xl text-center text-xs font-mono font-medium text-slate-300 hover:text-white transition-all flex items-center justify-center space-x-1.5">
+        <i class="fa-regular fa-clock"></i>
+        <span>View Now</span>
+      </a>
+
+    </div>
+
+  </div>
+</div>
+<!-- iphone clone page -->
+      <div class="portfolio-item html-css bg-slate-900/40 rounded-3xl overflow-hidden border border-slate-800 flex flex-col justify-between hover:scale-[1.01] hover:border-slate-400/30 transition-all duration-300">
+
+  <div>
+
+    <div class="relative overflow-hidden bg-slate-950 aspect-[16/10]">
+
+      <img
+        src="https://images.openai.com/static-rsc-4/ZmIDJRZeqJNks0CzAYva894zp4RDqf6hEKss4ZTXVaTrW8VnvH8gGdcOID4QF0x3QnmUHJHT5i5WOkv2HHNr-kKaCB_ZifPPLpwhLpH7tWOwHALy9vLj6DUjv4IUOpmVYdFP8AdzmodO4-f4eTMdoZwHGXy-UucLNO57zFeqHShotdBF0hOL2qIS7En5m5sz?purpose=fullsize"
+        alt="iPhone Clone Website"
+        class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+      >
+
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+
+      <span class="absolute top-4 left-4 bg-gray-500/10 text-gray-300 font-mono text-[9px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-full border border-gray-500/20">
+        HTML & CSS
+      </span>
+
+      <span class="absolute top-4 right-4 bg-white/10 text-white font-mono text-[9px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-full border border-white/20">
+        APPLE UI
+      </span>
+
+    </div>
+
+    <div class="p-6">
+
+      <span class="text-[10px] font-mono text-gray-300 uppercase tracking-wider font-bold">
+        RESPONSIVE LANDING PAGE
+      </span>
+
+      <h3 class="text-lg font-bold text-white font-display mt-1">
+        iPhone Clone Website
+      </h3>
+
+      <p class="text-xs sm:text-sm text-slate-400 font-light mt-2 leading-relaxed">
+        A pixel-perfect Apple iPhone landing page clone built using only HTML5 and CSS3. The project recreates Apple's modern design with smooth layouts, responsive sections, elegant typography, and clean user interface components.
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="p-6 pt-0 border-t border-slate-900 flex flex-col space-y-3">
+
+    <div class="flex items-center justify-between w-full pt-3">
+
+      <div class="flex gap-1.5 flex-wrap">
+        <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">
+          HTML5
+        </span>
+
+        <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">
+          CSS3
+        </span>
+
+        <span class="text-[9px] font-mono px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300">
+          Responsive
+        </span>
+      </div>
+
+      <button onclick="openProjectModal('iphone-clone')" class="text-xs font-semibold text-sky hover:underline font-mono flex items-center space-x-1.5 ml-2 shrink-0">
+        <span>Details</span>
+        <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+      </button>
+
+    </div>
+
+    <div class="grid grid-cols-2 gap-2 pt-1">
+
+      <a href="https://github.com/SharjeelAhmed25/Smit-Assighment/tree/main/pages"
+         target="_blank"
+         class="px-3 py-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 rounded-xl text-center text-xs font-mono font-medium text-slate-300 hover:text-white transition-all flex items-center justify-center space-x-1.5">
+        <i class="fa-brands fa-github"></i>
+        <span>View Code</span>
+      </a>
+
+      <a href="./pages/iphone clon page/index.html"
+         class="px-3 py-2 bg-sky/5 hover:bg-sky/10 border border-sky/10 rounded-xl text-center text-xs font-mono font-medium text-slate-300 hover:text-white transition-all flex items-center justify-center space-x-1.5">
+        <i class="fa-solid fa-mobile-screen-button"></i>
+        <span>View Now</span>
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-24 md:py-32 bg-midnight/40 border-t border-slate-900 relative fade-in-up">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="eyebrow center">Get In Touch</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight font-display">Let's Create Something Great</h2>
+        <p class="mt-4 text-slate-400 text-base sm:text-lg">Have a project idea? Reach out by email or check out my code on GitHub.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <div class="lg:col-span-5 space-y-4">
+          <div class="p-5 rounded-2xl glass-card border border-slate-800 flex items-center space-x-4 hover:border-sky/40 transition-all group">
+            <a href="mailto:sharjeelahmed617458@gmail.com" class="flex items-center space-x-4 flex-grow min-w-0">
+              <div class="w-11 h-11 rounded-xl bg-sky/10 flex items-center justify-center text-sky text-lg shrink-0 group-hover:bg-sky group-hover:text-midnight transition-all"><i class="fa-solid fa-envelope"></i></div>
+              <div class="min-w-0">
+                <h4 class="text-[10px] font-mono text-slate-500 uppercase tracking-wider">Email Address</h4>
+                <p class="text-sm font-bold text-white font-display mt-0.5 truncate">sharjeelahmed617458@gmail.com</p>
+              </div>
+            </a>
+            <button class="copy-email-btn shrink-0 w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-sky hover:border-sky/30 flex items-center justify-center transition-all" aria-label="Copy email address" title="Copy email">
+              <i class="fa-solid fa-copy text-xs"></i>
+            </button>
+          </div>
+          
+          <a href="https://github.com/SharjeelAhmed25" target="_blank" class="p-5 rounded-2xl glass-card border border-slate-800 flex items-center space-x-4 hover:border-slate-600 transition-all group block">
+            <div class="w-11 h-11 rounded-xl bg-white/5 flex items-center justify-center text-slate-300 text-lg shrink-0 group-hover:bg-white group-hover:text-obsidian transition-all"><i class="fa-brands fa-github"></i></div>
+            <div>
+              <h4 class="text-[10px] font-mono text-slate-500 uppercase tracking-wider">GitHub Repository</h4>
+              <p class="text-sm font-bold text-white font-display mt-0.5">github.com/SharjeelAhmed25</p>
+            </div>
+          </a>
+
+          <div class="p-5 rounded-2xl glass-card border border-slate-800 border-dashed flex items-center space-x-4 opacity-60">
+            <div class="w-11 h-11 rounded-xl bg-white/5 flex items-center justify-center text-slate-500 text-lg shrink-0"><i class="fa-solid fa-share-nodes"></i></div>
+            <div>
+              <h4 class="text-[10px] font-mono text-slate-500 uppercase tracking-wider">More Socials</h4>
+              <p class="text-sm font-bold text-slate-500 font-display mt-0.5">Coming soon</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <form id="contactForm" class="p-6 sm:p-8 rounded-3xl glass-card border border-slate-800 space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="formName" class="block text-xs font-mono uppercase text-slate-400 tracking-wider mb-2">Your Name</label>
+                <input type="text" id="formName" placeholder="Your Name" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3.5 text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-sky transition-all">
+              </div>
+              <div>
+                <label for="formEmail" class="block text-xs font-mono uppercase text-slate-400 tracking-wider mb-2">Email Address</label>
+                <input type="email" id="formEmail" placeholder="you@example.com" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3.5 text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-sky transition-all">
+              </div>
+            </div>
+            <div>
+              <label for="formSubject" class="block text-xs font-mono uppercase text-slate-400 tracking-wider mb-2">Subject (Optional)</label>
+              <input type="text" id="formSubject" placeholder="Project Collaboration Proposal" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3.5 text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-sky transition-all">
+            </div>
+            <div>
+              <label for="formMessage" class="block text-xs font-mono uppercase text-slate-400 tracking-wider mb-2">Your Message</label>
+              <textarea id="formMessage" rows="4" placeholder="Tell me about your amazing project idea..." required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3.5 text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-sky transition-all resize-none"></textarea>
+            </div>
+            <button type="submit" id="sendBtn" class="w-full py-4 rounded-xl bg-gradient-to-r from-sky to-cyan-400 text-midnight font-bold font-mono uppercase tracking-wider text-xs hover:shadow-lg hover:shadow-sky/10 hover:scale-[1.01] active:scale-100 transition-all flex items-center justify-center space-x-2">
+              <i class="fa-solid fa-paper-plane"></i> <span>Send Message</span>
+            </button>
+            <p class="text-[10px] text-slate-600 font-mono text-center">Opens your email app addressed to sharjeelahmed617458@gmail.com</p>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="py-10 border-t border-slate-900 bg-obsidian text-center font-mono text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>&copy; 2026 Muhammad Shajeel Ahmed. All rights reserved.</p>
+      <div class="flex space-x-4 text-sm">
+        <a href="https://github.com/SharjeelAhmed25" target="_blank" class="hover:text-sky transition-colors"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:sharjeelahmed617458@gmail.com" class="hover:text-sky transition-colors"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
   </footer>
 
-<script>
-  // Typewriter effect for the hero name
-  (function(){
-    const el = document.getElementById('typed');
-    const text = 'Sharjeel Ahmed';
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if(prefersReduced){ el.textContent = text; return; }
-    let i = 0;
-    function tick(){
-      if(i <= text.length){
-        el.textContent = text.slice(0, i);
-        i++;
-        setTimeout(tick, 55);
-      }
-    }
-    tick();
-  })();
+  <div id="projectModal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-obsidian/80 backdrop-blur-xl p-4 sm:p-6 flex items-center justify-center">
+    <div class="glass-card w-full max-w-2xl rounded-3xl border border-slate-800 overflow-hidden relative shadow-2xl">
+      <div class="h-32 bg-slate-950 border-b border-slate-900 flex items-center justify-center relative">
+        <button onclick="closeProjectModal()" class="absolute top-4 right-4 w-9 h-9 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white border border-slate-800 flex items-center justify-center transition-all">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div id="modalIconContainer" class="text-4xl"></div>
+      </div>
+      <div class="p-6 sm:p-8 space-y-4">
+        <div class="flex items-center justify-between">
+          <h3 id="modalTitle" class="text-xl sm:text-2xl font-bold text-white font-display"></h3>
+          <span id="modalBadge" class="font-mono text-[10px] px-2.5 py-1 rounded-full font-bold"></span>
+        </div>
+        <p id="modalDesc" class="text-sm text-slate-400 leading-relaxed font-light"></p>
+        <div class="pt-2">
+          <h5 class="text-xs font-mono uppercase text-slate-500 tracking-wider mb-2">Built with / Technical stack:</h5>
+          <div id="modalTags" class="flex flex-wrap gap-1.5"></div>
+        </div>
+        <div class="pt-6 border-t border-slate-900 flex justify-end space-x-3">
+          <a id="modalCodeLink" href="#" target="_blank" class="px-4 py-2.5 rounded-xl border border-slate-800 bg-slate-900 text-slate-300 font-semibold text-xs tracking-wide font-mono hover:text-white transition-all">Source Code</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  // Staggered scroll-reveal for assignment cards
-  (function(){
-    const cards = document.querySelectorAll('.assignment.reveal');
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if(prefersReduced){
-      cards.forEach(c => c.classList.add('in-view'));
-      return;
+  <div id="toastNotification" class="fixed bottom-6 right-6 z-50 translate-y-20 opacity-0 pointer-events-none max-w-sm w-full bg-slate-900/95 backdrop-blur-xl border border-slate-800 p-4 rounded-2xl shadow-2xl flex items-start space-x-3">
+    <div id="toastIcon" class="w-8 h-8 rounded-lg flex items-center justify-center text-sm"></div>
+    <div class="flex-grow">
+      <h5 id="toastTitle" class="text-sm font-bold text-white font-display"></h5>
+      <p id="toastBody" class="text-xs text-slate-400 font-light mt-0.5 leading-relaxed"></p>
+    </div>
+  </div>
+
+  <!-- Command Palette -->
+  <div id="commandPalette" class="hidden fixed inset-0 z-[70] bg-obsidian/80 backdrop-blur-md p-4 sm:pt-[12vh] flex items-start justify-center">
+    <div class="cmd-box w-full max-w-lg glass-card rounded-2xl border border-slate-800 shadow-2xl overflow-hidden">
+      <div class="flex items-center gap-3 px-4 py-3.5 border-b border-slate-800">
+        <i class="fa-solid fa-magnifying-glass text-slate-500 text-sm"></i>
+        <input id="cmdInput" type="text" placeholder="Search sections, projects, or links..." autocomplete="off"
+          class="flex-grow bg-transparent text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none">
+        <kbd class="kbd-key">Esc</kbd>
+      </div>
+      <div id="cmdResults" class="max-h-[50vh] overflow-y-auto py-2"></div>
+      <div class="flex items-center gap-4 px-4 py-2.5 border-t border-slate-800 text-[10px] font-mono text-slate-500">
+        <span class="flex items-center gap-1.5"><kbd class="kbd-key">↑</kbd><kbd class="kbd-key">↓</kbd> navigate</span>
+        <span class="flex items-center gap-1.5"><kbd class="kbd-key">↵</kbd> select</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ── Preloader Dismiss ──
+    window.addEventListener('DOMContentLoaded', () => {
+  const loaderFill = document.getElementById('loaderFill');
+  const loaderStatus = document.getElementById('loaderStatus');
+  const preloader = document.getElementById('preloader');
+
+  const statusMessages = [
+    "Initializing workspace...",
+    "Loading components...",
+    "Ready."
+  ];
+
+  let progress = 0;
+
+  const interval = setInterval(() => {
+    progress += Math.floor(Math.random() * 15) + 10;
+
+    if (progress >= 30 && progress < 70) {
+      loaderStatus.textContent = statusMessages[1];
+    } else if (progress >= 90) {
+      loaderStatus.textContent = statusMessages[2];
     }
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
-        if(entry.isIntersecting){
-          const card = entry.target;
-          const delay = (Array.from(cards).indexOf(card) % 3) * 0.12;
-          card.style.setProperty('--d', delay + 's');
-          card.classList.add('in-view');
-          io.unobserve(card);
+
+    if (progress >= 100) {
+      progress = 100;
+      loaderFill.style.width = '100%';
+      clearInterval(interval);
+
+      // Smooth Exit
+      setTimeout(() => {
+        preloader.classList.add('exiting');
+      }, 300);
+    } else {
+      loaderFill.style.width = `${progress}%`;
+    }
+  }, 120);
+});
+    // Project Registry Database
+    const projectDetails = {
+      'maintain-iq': {
+        title: 'MaintainIQ',
+        badge: '⭐ Hackathon',
+        badgeClass: 'bg-sky/15 text-sky border border-sky/30',
+        desc: 'A role-based facility maintenance management platform built for a hackathon. Uses QR-code-based asset identity, three access tiers (Reporter, Admin, Technician), Firestore collections for assets/issues/users, and client-side rule-based auto-triage — no Cloud Functions needed, keeping it within the Firebase free tier.',
+        tags: ['Firebase Auth', 'Cloud Firestore', 'QR Code Identity', 'Role-Based Access', 'JavaScript ES6+', 'Client-Side Triage'],
+        icon: '<i class="fa-solid fa-gauge-high text-sky"></i>',
+        code: 'https://github.com/SharjeelAhmed25'
+      },
+      'firebase-auth': {
+        title: 'Firebase Authentication System',
+        badge: 'Auth + Firestore',
+        badgeClass: 'bg-orange-500/10 text-orange-400 border border-orange-500/20',
+        desc: 'A general-purpose Firebase authentication system with signup and login flows. Built with proper async/await handling on auth calls, correct use of setDoc for user documents, double-submit protection on buttons, and safe handling of user state before touching localStorage.',
+        tags: ['Firebase Auth SDK', 'Cloud Firestore', 'JavaScript ES6+', 'Form Validation', 'Session Handling'],
+        icon: '<i class="fa-solid fa-lock-open text-orange-400"></i>',
+        code: 'https://github.com/SharjeelAhmed25'
+      },
+      'smit-portfolio': {
+        title: 'SMIT Assignment Portfolio',
+        badge: 'Coursework',
+        badgeClass: 'bg-cyan-500/10 text-cyan-400 border border-cyan-500/20',
+        desc: 'An interactive assignment portfolio built for SMIT coursework, featuring a dark code-editor aesthetic, smooth scroll-triggered animations, and IntersectionObserver-based card reveals — all while preserving the original relative asset paths.',
+        tags: ['JavaScript', 'IntersectionObserver', 'Scroll Animation', 'HTML/CSS'],
+        icon: '<i class="fa-solid fa-terminal text-cyan-400"></i>',
+        code: 'https://github.com/SharjeelAhmed25'
+      }
+    };
+
+    // Mobile Navigation Drawer Menu Toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const burgerIcon = document.getElementById('burgerIcon');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      if (mobileMenu.classList.contains('hidden')) {
+        burgerIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>`;
+      } else {
+        burgerIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>`;
+      }
+    });
+
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        burgerIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>`;
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('mainHeader');
+      if (window.scrollY > 20) {
+        header.classList.add('bg-obsidian/95', 'shadow-lg', 'border-slate-900');
+        header.classList.remove('glass-nav');
+      } else {
+        header.classList.remove('bg-obsidian/95', 'shadow-lg', 'border-slate-900');
+        header.classList.add('glass-nav');
+      }
+    });
+
+    const phrases = ["Frontend Developer", "Firebase Enthusiast", "JavaScript Developer", "Full-Stack Learner"];
+    let phraseIdx = 0, charIdx = 0, isDeleting = false;
+    const targetElement = document.getElementById('typedOutput');
+
+    function runTypewriter() {
+      const currentText = phrases[phraseIdx];
+      if (isDeleting) {
+        targetElement.textContent = currentText.substring(0, charIdx - 1);
+        charIdx--;
+      } else {
+        targetElement.textContent = currentText.substring(0, charIdx + 1);
+        charIdx++;
+      }
+
+      let speed = isDeleting ? 40 : 100;
+
+      if (!isDeleting && charIdx === currentText.length) {
+        speed = 1800;
+        isDeleting = true;
+      } else if (isDeleting && charIdx === 0) {
+        isDeleting = false;
+        phraseIdx = (phraseIdx + 1) % phrases.length;
+        speed = 400;
+      }
+
+      setTimeout(runTypewriter, speed);
+    }
+    document.addEventListener('DOMContentLoaded', runTypewriter);
+
+    function animateCounters() {
+      const configuration = [
+        { id: 'statProjects', max: 3 },
+        { id: 'statSkills', max: 6 }
+      ];
+
+      configuration.forEach(stat => {
+        const target = document.getElementById(stat.id);
+        if (!target || target.getAttribute('data-animated')) return;
+        target.setAttribute('data-animated', 'true');
+        let count = 0;
+        const duration = 900;
+        const tickRate = duration / stat.max;
+
+        const timer = setInterval(() => {
+          count++;
+          target.textContent = count + (stat.id === 'statProjects' ? '+' : '');
+          if (count >= stat.max) clearInterval(timer);
+        }, tickRate);
+      });
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          if (entry.target.id === 'about') animateCounters();
         }
       });
-    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-    cards.forEach(c => io.observe(c));
-  })();
-</script>
+    }, { threshold: 0.1 });
 
+    document.querySelectorAll('.fade-in-up').forEach(section => observer.observe(section));
+
+    function filterProjects(category) {
+      const items = document.querySelectorAll('.portfolio-item');
+      items.forEach(item => {
+        if (category === 'all' || item.classList.contains(category)) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+
+      const buttons = document.querySelectorAll('#portfolioFilters button');
+      buttons.forEach(btn => {
+        btn.className = "px-4 py-2 rounded-xl text-xs font-semibold bg-slate-900 hover:bg-slate-800 text-slate-300 font-mono tracking-wider uppercase transition-all";
+      });
+      document.getElementById(`filterBtn-${category}`).className = "px-4 py-2 rounded-xl text-xs font-semibold bg-sky text-midnight font-mono tracking-wider uppercase transition-all";
+    }
+
+    const modal = document.getElementById('projectModal');
+    function openProjectModal(key) {
+      const data = projectDetails[key];
+      if (!data) return;
+
+      document.getElementById('modalIconContainer').innerHTML = data.icon;
+      document.getElementById('modalTitle').textContent = data.title;
+
+      const badge = document.getElementById('modalBadge');
+      badge.textContent = data.badge;
+      badge.className = `font-mono text-[10px] px-2.5 py-1 rounded-full font-bold ${data.badgeClass}`;
+
+      document.getElementById('modalDesc').textContent = data.desc;
+
+      const tagsContainer = document.getElementById('modalTags');
+      tagsContainer.innerHTML = '';
+      data.tags.forEach(tag => {
+        const span = document.createElement('span');
+        span.className = "text-[10px] font-mono px-2.5 py-1 rounded bg-slate-950 border border-slate-900 text-slate-400";
+        span.textContent = tag;
+        tagsContainer.appendChild(span);
+      });
+
+      document.getElementById('modalCodeLink').href = data.code;
+
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeProjectModal() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) closeProjectModal();
+    });
+
+    function showToast(title, body, status = 'success') {
+      const toast = document.getElementById('toastNotification');
+      const tIcon = document.getElementById('toastIcon');
+
+      document.getElementById('toastTitle').textContent = title;
+      document.getElementById('toastBody').textContent = body;
+
+      if (status === 'success') {
+        tIcon.className = "w-8 h-8 rounded-lg flex items-center justify-center text-sm bg-emerald-500/10 text-emerald-400 border border-emerald-500/20";
+        tIcon.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+      } else {
+        tIcon.className = "w-8 h-8 rounded-lg flex items-center justify-center text-sm bg-red-500/10 text-red-400 border border-red-500/20";
+        tIcon.innerHTML = '<i class="fa-solid fa-circle-xmark"></i>';
+      }
+
+      toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+      }, 4500);
+    }
+
+    // Contact form: opens the user's email client (no backend needed)
+   document.getElementById("contactForm").addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+    const btn = this.querySelector("button[type='submit']");
+
+    btn.disabled = true;
+    btn.innerHTML = "Sending...";
+
+    emailjs.send("service_9sg9usa", "template_k4jqjei", {
+
+        from_name: document.getElementById("formName").value,
+
+        from_email: document.getElementById("formEmail").value,
+
+        subject: document.getElementById("formSubject").value,
+
+        message: document.getElementById("formMessage").value
+
+    }).then(function () {
+
+        showToast("Success", "Your message has been sent successfully!");
+
+        document.getElementById("contactForm").reset();
+
+    }).catch(function (error) {
+
+        console.error("EmailJS Error:", error);
+
+        showToast("Error", "Failed to send message.");
+
+    }).finally(function () {
+
+        btn.disabled = false;
+        btn.innerHTML = "Send Message";
+
+    });
+
+});
+  </script>
+
+  <script>
+    /* ════════════════════════════════════════
+       ADVANCED ENHANCEMENTS
+    ════════════════════════════════════════ */
+
+    (function () {
+      const el = document.getElementById('liveClock');
+      if (!el) return;
+      function tick() {
+        const now = new Date().toLocaleTimeString('en-US', {
+          timeZone: 'Asia/Karachi', hour: '2-digit', minute: '2-digit', hour12: true
+        });
+        el.textContent = now + ' PKT';
+      }
+      tick();
+      setInterval(tick, 30000);
+    })();
+
+    document.querySelectorAll('.copy-email-btn').forEach(btn => {
+      btn.addEventListener('click', async (e) => {
+        e.preventDefault();
+        const email = 'sharjeelahmed617458@gmail.com';
+        try {
+          await navigator.clipboard.writeText(email);
+          showToast('Email Copied! 📋', `${email} is now in your clipboard.`);
+        } catch (err) {
+          window.location.href = 'mailto:' + email;
+        }
+      });
+    });
+
+    const scrollProgressBar = document.getElementById('scrollProgress');
+    const backToTopBtn = document.getElementById('backToTop');
+    function updateScrollUI() {
+      const h = document.documentElement;
+      const scrolled = (h.scrollTop || document.body.scrollTop);
+      const max = h.scrollHeight - h.clientHeight;
+      const pct = max > 0 ? (scrolled / max) * 100 : 0;
+      if (scrollProgressBar) scrollProgressBar.style.width = pct + '%';
+      if (backToTopBtn) backToTopBtn.classList.toggle('visible', scrolled > 480);
+    }
+    window.addEventListener('scroll', updateScrollUI, { passive: true });
+    updateScrollUI();
+    if (backToTopBtn) {
+      backToTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    }
+
+    (function () {
+      const sections = ['home','about','skills','projects','contact']
+        .map(id => document.getElementById(id)).filter(Boolean);
+      const navLinks = document.querySelectorAll('.nav-link-underline[data-nav]');
+      const dots = document.querySelectorAll('#dotNav .dot');
+
+      const spy = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const id = entry.target.id;
+          navLinks.forEach(l => l.classList.toggle('active', l.dataset.nav === id));
+          dots.forEach(d => d.classList.toggle('active', d.dataset.target === id));
+        });
+      }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+
+      sections.forEach(s => spy.observe(s));
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          const target = document.getElementById(dot.dataset.target);
+          if (target) target.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+    })();
+
+    if (window.matchMedia('(pointer: fine)').matches) {
+      const glow = document.getElementById('cursorGlow');
+      const dot = document.getElementById('cursorDot');
+      let gx = 0, gy = 0, dxp = 0, dyp = 0;
+      window.addEventListener('mousemove', (e) => {
+        gx = e.clientX; gy = e.clientY;
+        if (dot) { dot.style.left = gx + 'px'; dot.style.top = gy + 'px'; }
+      });
+      function animateGlow() {
+        dxp += (gx - dxp) * 0.18;
+        dyp += (gy - dyp) * 0.18;
+        if (glow) { glow.style.left = dxp + 'px'; glow.style.top = dyp + 'px'; }
+        requestAnimationFrame(animateGlow);
+      }
+      animateGlow();
+      document.querySelectorAll('a, button, .portfolio-item, input, textarea').forEach(el => {
+        el.addEventListener('mouseenter', () => glow && glow.classList.add('grow'));
+        el.addEventListener('mouseleave', () => glow && glow.classList.remove('grow'));
+      });
+    }
+
+    if (window.matchMedia('(pointer: fine)').matches) {
+      document.querySelectorAll('.magnetic').forEach(el => {
+        el.addEventListener('mousemove', (e) => {
+          const r = el.getBoundingClientRect();
+          const mx = e.clientX - r.left - r.width / 2;
+          const my = e.clientY - r.top - r.height / 2;
+          el.style.transform = `translate(${mx * 0.18}px, ${my * 0.3}px)`;
+        });
+        el.addEventListener('mouseleave', () => { el.style.transform = 'translate(0,0)'; });
+      });
+    }
+
+    document.querySelectorAll('.portfolio-item, #skills .glow-hover').forEach(card => {
+      if (!card.querySelector('.card-shine')) {
+        const shine = document.createElement('div');
+        shine.className = 'card-shine';
+        card.style.position = card.style.position || 'relative';
+        card.appendChild(shine);
+      }
+      card.addEventListener('mousemove', (e) => {
+        const r = card.getBoundingClientRect();
+        const px = ((e.clientX - r.left) / r.width) * 100;
+        const py = ((e.clientY - r.top) / r.height) * 100;
+        card.style.setProperty('--mx', px + '%');
+        card.style.setProperty('--my', py + '%');
+        if (window.matchMedia('(pointer: fine)').matches) {
+          const rotY = ((e.clientX - r.left) / r.width - 0.5) * 6;
+          const rotX = ((e.clientY - r.top) / r.height - 0.5) * -6;
+          card.style.transform = `perspective(900px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateZ(0)`;
+        }
+      });
+      card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+    });
+
+    (async function () {
+      try {
+        const res = await fetch('https://api.github.com/users/SharjeelAhmed25');
+        if (!res.ok) throw new Error('GitHub fetch failed');
+        const data = await res.json();
+        const setIfExists = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+        setIfExists('ghRepos', data.public_repos ?? '—');
+        setIfExists('ghFollowers', data.followers ?? '—');
+        setIfExists('ghFollowing', data.following ?? '—');
+      } catch (err) {
+        ['ghRepos','ghFollowers','ghFollowing'].forEach(id => { const el = document.getElementById(id); if (el) el.textContent = 'N/A'; });
+      }
+    })();
+
+    (function () {
+      const palette = document.getElementById('commandPalette');
+      const input = document.getElementById('cmdInput');
+      const resultsBox = document.getElementById('cmdResults');
+      const trigger = document.getElementById('cmdTrigger');
+      let activeIdx = 0;
+
+      const commands = [
+        { label: 'Home', sub: 'Back to top', icon: 'fa-house', action: () => scrollToId('home') },
+        { label: 'About Me', sub: 'My story & journey', icon: 'fa-user', action: () => scrollToId('about') },
+        { label: 'Why Work With Me', sub: 'Strengths & approach', icon: 'fa-circle-check', action: () => scrollToId('why') },
+        { label: 'Skills & Tools', sub: 'Technical arsenal', icon: 'fa-gears', action: () => scrollToId('skills') },
+        { label: 'Projects', sub: 'Featured work', icon: 'fa-laptop-code', action: () => scrollToId('projects') },
+        { label: 'Contact', sub: 'Get in touch', icon: 'fa-paper-plane', action: () => scrollToId('contact') },
+        { label: 'GitHub Profile', sub: 'github.com/SharjeelAhmed25', icon: 'fa-github', brand: true, action: () => window.open('https://github.com/SharjeelAhmed25', '_blank') },
+        { label: 'Email Me', sub: 'sharjeelahmed617458@gmail.com', icon: 'fa-envelope', action: () => window.location.href = 'mailto:sharjeelahmed617458@gmail.com' },
+      ];
+
+      function scrollToId(id) {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }
+
+      function renderResults(filter = '') {
+        const f = filter.trim().toLowerCase();
+        const filtered = commands.filter(c => c.label.toLowerCase().includes(f) || c.sub.toLowerCase().includes(f));
+        activeIdx = 0;
+        resultsBox.innerHTML = '';
+        if (filtered.length === 0) {
+          resultsBox.innerHTML = '<div class="px-5 py-8 text-center text-xs text-slate-500 font-mono">No matches found.</div>';
+          return;
+        }
+        filtered.forEach((c, i) => {
+          const row = document.createElement('div');
+          row.className = `cmd-item flex items-center justify-between gap-3 px-4 py-3 ${i === 0 ? 'active' : ''}`;
+          row.innerHTML = `
+            <div class="flex items-center gap-3 min-w-0">
+              <div class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-sky text-xs shrink-0">
+                <i class="${c.brand ? 'fa-brands' : 'fa-solid'} ${c.icon}"></i>
+              </div>
+              <div class="min-w-0">
+                <div class="text-sm text-slate-200 font-medium truncate">${c.label}</div>
+                <div class="text-[11px] text-slate-500 truncate">${c.sub}</div>
+              </div>
+            </div>
+            <i class="fa-solid fa-arrow-right cmd-arrow text-sky text-xs shrink-0"></i>`;
+          row.addEventListener('click', () => { c.action(); closePalette(); });
+          row.addEventListener('mouseenter', () => setActive(i));
+          resultsBox.appendChild(row);
+        });
+        resultsBox._filtered = filtered;
+      }
+
+      function setActive(i) {
+        const items = resultsBox.querySelectorAll('.cmd-item');
+        items.forEach(it => it.classList.remove('active'));
+        if (items[i]) { items[i].classList.add('active'); activeIdx = i; }
+      }
+
+      function openPalette() {
+        palette.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        renderResults('');
+        setTimeout(() => input.focus(), 50);
+      }
+      function closePalette() {
+        palette.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+        input.value = '';
+      }
+
+      if (trigger) trigger.addEventListener('click', openPalette);
+      document.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+          e.preventDefault();
+          palette.classList.contains('hidden') ? openPalette() : closePalette();
+        }
+        if (!palette.classList.contains('hidden')) {
+          const filtered = resultsBox._filtered || [];
+          if (e.key === 'Escape') closePalette();
+          if (e.key === 'ArrowDown') { e.preventDefault(); setActive(Math.min(activeIdx + 1, filtered.length - 1)); }
+          if (e.key === 'ArrowUp') { e.preventDefault(); setActive(Math.max(activeIdx - 1, 0)); }
+          if (e.key === 'Enter') { e.preventDefault(); if (filtered[activeIdx]) { filtered[activeIdx].action(); closePalette(); } }
+        }
+      });
+      input.addEventListener('input', () => renderResults(input.value));
+      palette.addEventListener('click', (e) => { if (e.target === palette) closePalette(); });
+    })();
+
+    // ── Persistent 3D World (Three.js) ──
+    (function () {
+      const canvas = document.getElementById('webgl3D');
+      if (!canvas) return;
+      if (typeof THREE === 'undefined') return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      let renderer, scene, camera, rig, outer, inner, points;
+      let running = false;
+      let frameId = null;
+      let downgraded = false;
+      let slowFrames = 0;
+      const clock = new THREE.Clock();
+      const mouseTarget = { x: 0, y: 0 };
+      const mouseCurrent = { x: 0, y: 0 };
+      let currentCalm = 1;
+
+      const SECTION_IDS = ['home', 'about', 'why', 'skills', 'projects', 'contact'];
+      const SECTION_TARGETS = {
+        home:     { c1: 0x10b981, c2: 0xf59e0b, x: 1.7,  xm: 0,    y: 0.15, scale: 1.00, intensity: 0.85, calm: 1.0  },
+        about:    { c1: 0x10b981, c2: 0xf59e0b, x: -1.6, xm: 0,    y: -0.1, scale: 0.72, intensity: 0.32, calm: 0.85 },
+        why:      { c1: 0xf59e0b, c2: 0x10b981, x: 1.4,  xm: 0,    y: -0.2, scale: 0.68, intensity: 0.26, calm: 0.85 },
+        skills:   { c1: 0xf59e0b, c2: 0xe8b95f, x: -2.2, xm: 0,    y: 0.3,  scale: 0.5,  intensity: 0.16, calm: 0.7  },
+        projects: { c1: 0xe8b95f, c2: 0x10b981, x: 1.8,  xm: 0,    y: 0.1,  scale: 0.7,  intensity: 0.28, calm: 0.85 },
+        contact:  { c1: 0x34d399, c2: 0x10b981, x: 0,    xm: 0,    y: 0,    scale: 0.8,  intensity: 0.42, calm: 0.45 },
+      };
+      Object.values(SECTION_TARGETS).forEach(t => { t.c1obj = new THREE.Color(t.c1); t.c2obj = new THREE.Color(t.c2); });
+      let activeTarget = SECTION_TARGETS.home;
+
+      const skillsColumn = document.getElementById('skillsColumn');
+      const skillsOrbitEl = document.getElementById('skillsOrbit');
+      const orbitBadges = skillsOrbitEl ? Array.from(skillsOrbitEl.querySelectorAll('.orbit-badge')) : [];
+      let skillsActive = false;
+
+      function unprojectToZ(ndcX, ndcY, z) {
+        const vec = new THREE.Vector3(ndcX, ndcY, 0.5).unproject(camera);
+        const dir = vec.sub(camera.position).normalize();
+        const dist = (z - camera.position.z) / dir.z;
+        return camera.position.clone().add(dir.multiplyScalar(dist));
+      }
+
+      function buildScene() {
+        renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+
+        scene = new THREE.Scene();
+        camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100);
+        camera.position.z = 8;
+
+        rig = new THREE.Group();
+        scene.add(rig);
+
+        const outerGeo = new THREE.IcosahedronGeometry(2.15, 1);
+        outer = new THREE.LineSegments(new THREE.EdgesGeometry(outerGeo), new THREE.LineBasicMaterial({ color: 0x10b981, transparent: true, opacity: 0.55 }));
+        rig.add(outer);
+
+        const innerGeo = new THREE.OctahedronGeometry(1.2, 0);
+        inner = new THREE.LineSegments(new THREE.EdgesGeometry(innerGeo), new THREE.LineBasicMaterial({ color: 0xf59e0b, transparent: true, opacity: 0.45 }));
+        rig.add(inner);
+
+        const count = window.innerWidth < 640 ? 90 : (window.innerWidth < 1024 ? 160 : 220);
+        const positions = new Float32Array(count * 3);
+        const colors = new Float32Array(count * 3);
+        const palette = [[0x10 / 255, 0xb9 / 255, 0x81 / 255], [0xf5 / 255, 0x9e / 255, 0x0b / 255], [0xe8 / 255, 0xb9 / 255, 0x5f / 255]];
+        for (let i = 0; i < count; i++) {
+          const radius = 3.1 + Math.random() * 1.4;
+          const theta = Math.random() * Math.PI * 2;
+          const phi = Math.acos((Math.random() * 2) - 1);
+          positions[i * 3] = radius * Math.sin(phi) * Math.cos(theta);
+          positions[i * 3 + 1] = radius * Math.sin(phi) * Math.sin(theta);
+          positions[i * 3 + 2] = radius * Math.cos(phi);
+          const c = palette[i % palette.length];
+          colors[i * 3] = c[0]; colors[i * 3 + 1] = c[1]; colors[i * 3 + 2] = c[2];
+        }
+        const pointsGeo = new THREE.BufferGeometry();
+        pointsGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+        pointsGeo.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+        points = new THREE.Points(pointsGeo, new THREE.PointsMaterial({
+          size: 0.045, vertexColors: true, transparent: true, opacity: 0.85,
+          sizeAttenuation: true, blending: THREE.AdditiveBlending, depthWrite: false,
+        }));
+        rig.add(points);
+
+        resize();
+      }
+
+      function resize() {
+        if (!camera || !renderer) return;
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight, false);
+      }
+
+      function onPointerMove(e) {
+        mouseTarget.x = ((e.clientY / window.innerHeight) - 0.5) * 0.4;
+        mouseTarget.y = ((e.clientX / window.innerWidth) - 0.5) * 0.5;
+      }
+
+      function updateSkillsOrbit() {
+        if (!skillsActive || !skillsColumn || !orbitBadges.length) return;
+        const rect = skillsColumn.getBoundingClientRect();
+        if (!rect.width || !rect.height) return;
+        const ndcX = ((rect.left + rect.width * 0.5) / window.innerWidth) * 2 - 1;
+        const ndcY = -((rect.top + rect.height * 0.42) / window.innerHeight) * 2 + 1;
+        const anchor = unprojectToZ(ndcX, ndcY, 0.3);
+        const t = clock.elapsedTime;
+        const rx = 1.15, ry = 0.6, rz = 0.55;
+
+        orbitBadges.forEach((el, i) => {
+          const angle = t * 0.35 + (i / orbitBadges.length) * Math.PI * 2;
+          const world = anchor.clone().add(new THREE.Vector3(
+            Math.cos(angle) * rx,
+            Math.sin(angle) * ry,
+            Math.sin(angle * 0.7 + i) * rz
+          ));
+          const proj = world.clone().project(camera);
+          const screenX = (proj.x * 0.5 + 0.5) * window.innerWidth;
+          const screenY = (-proj.y * 0.5 + 0.5) * window.innerHeight;
+          const depth = Math.min(1, Math.max(0, (Math.sin(angle * 0.7 + i) * rz + rz) / (rz * 2)));
+          const scale = 0.72 + depth * 0.5;
+          el.style.transform = `translate3d(${(screenX - rect.left).toFixed(1)}px, ${(screenY - rect.top).toFixed(1)}px, 0) translate(-50%, -50%) scale(${scale.toFixed(2)})`;
+          el.style.opacity = String((0.45 + depth * 0.5).toFixed(2));
+        });
+      }
+
+      function tick() {
+        if (!running) return;
+        const dt = Math.min(clock.getDelta(), 0.05);
+
+        currentCalm += (activeTarget.calm - currentCalm) * 0.03;
+        outer.rotation.x += dt * 0.09 * currentCalm; outer.rotation.y += dt * 0.14 * currentCalm;
+        inner.rotation.x -= dt * 0.13 * currentCalm; inner.rotation.y -= dt * 0.1 * currentCalm;
+        points.rotation.y += dt * 0.045 * currentCalm;
+
+        mouseCurrent.x += (mouseTarget.x - mouseCurrent.x) * 0.045;
+        mouseCurrent.y += (mouseTarget.y - mouseCurrent.y) * 0.045;
+        rig.rotation.x = mouseCurrent.x;
+        rig.rotation.y = mouseCurrent.y;
+
+        const desktop = window.innerWidth >= 1024;
+        const targetX = desktop ? activeTarget.x : activeTarget.xm;
+        rig.position.x += (targetX - rig.position.x) * 0.025;
+        rig.position.y += (activeTarget.y - rig.position.y) * 0.025;
+        const targetScale = activeTarget.scale;
+        rig.scale.x += (targetScale - rig.scale.x) * 0.025;
+        rig.scale.y = rig.scale.z = rig.scale.x;
+
+        outer.material.color.lerp(activeTarget.c1obj, 0.02);
+        inner.material.color.lerp(activeTarget.c2obj, 0.02);
+
+        const el = renderer.domElement;
+        const currentOpacity = parseFloat(el.dataset.intensity || '0.85');
+        const nextOpacity = currentOpacity + (activeTarget.intensity - currentOpacity) * 0.03;
+        el.dataset.intensity = String(nextOpacity);
+        el.style.opacity = String(nextOpacity);
+
+        updateSkillsOrbit();
+
+        if (!downgraded) {
+          if (dt > 0.033) { slowFrames++; } else if (slowFrames > 0) { slowFrames--; }
+          if (slowFrames > 90) {
+            downgraded = true;
+            renderer.setPixelRatio(1);
+            points.visible = false;
+          }
+        }
+
+        renderer.render(scene, camera);
+        frameId = requestAnimationFrame(tick);
+      }
+
+      function start() {
+        if (running) return;
+        running = true;
+        clock.getDelta();
+        frameId = requestAnimationFrame(tick);
+      }
+      function stop() {
+        running = false;
+        if (frameId) cancelAnimationFrame(frameId);
+        frameId = null;
+      }
+
+      try {
+        buildScene();
+      } catch (err) {
+        return;
+      }
+
+      canvas.classList.add('is-ready');
+      start();
+
+      const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && SECTION_TARGETS[entry.target.id]) {
+            activeTarget = SECTION_TARGETS[entry.target.id];
+          }
+        });
+      }, { rootMargin: '-42% 0px -42% 0px', threshold: 0 });
+      SECTION_IDS.forEach((id) => { const el = document.getElementById(id); if (el) sectionObserver.observe(el); });
+
+      if (skillsOrbitEl) {
+        const skillsSection = document.getElementById('skills');
+        if (skillsSection) {
+          const orbitObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              skillsActive = entry.isIntersecting;
+              skillsOrbitEl.classList.toggle('is-active', skillsActive);
+              orbitBadges.forEach((el) => { if (!skillsActive) el.style.opacity = '0'; });
+            });
+          }, { threshold: 0.2 });
+          orbitObserver.observe(skillsSection);
+        }
+      }
+
+      document.addEventListener('visibilitychange', () => { document.hidden ? stop() : start(); });
+      window.addEventListener('resize', resize);
+      window.addEventListener('mousemove', onPointerMove, { passive: true });
+    })();
+
+    (function () {
+      if (!window.matchMedia('(pointer: fine)').matches) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const cards = document.querySelectorAll('.portfolio-item');
+      if (!cards.length) return;
+
+      cards.forEach((card) => {
+        card.style.transition = 'transform 0.35s cubic-bezier(.16,1,.3,1)';
+        card.addEventListener('mouseenter', () => {
+          card.classList.add('tilting');
+          card.style.transition = 'transform 0.06s linear';
+        });
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const px = (e.clientX - rect.left) / rect.width;
+          const py = (e.clientY - rect.top) / rect.height;
+          const rotY = (px - 0.5) * 10;
+          const rotX = (0.5 - py) * 8;
+          card.style.transform = `perspective(900px) rotateX(${rotX.toFixed(2)}deg) rotateY(${rotY.toFixed(2)}deg) translateZ(4px)`;
+          card.style.setProperty('--mx', (px * 100).toFixed(1) + '%');
+          card.style.setProperty('--my', (py * 100).toFixed(1) + '%');
+        });
+        card.addEventListener('mouseleave', () => {
+          card.classList.remove('tilting');
+          card.style.transition = 'transform 0.5s cubic-bezier(.16,1,.3,1)';
+          card.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg)';
+        });
+      });
+    })();
+
+    (function () {
+      const canvas = document.getElementById('particleCanvas');
+      if (!canvas || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const ctx = canvas.getContext('2d');
+      let particles = [];
+      let w, h;
+      const mouse = { x: null, y: null, radius: 140 };
+
+      function resize() {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+        const count = w < 640 ? 35 : 70;
+        particles = Array.from({ length: count }, () => ({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          vx: (Math.random() - 0.5) * 0.35,
+          vy: (Math.random() - 0.5) * 0.35,
+          r: Math.random() * 1.6 + 0.6
+        }));
+      }
+      window.addEventListener('resize', resize);
+      window.addEventListener('mousemove', (e) => { mouse.x = e.clientX; mouse.y = e.clientY; });
+      window.addEventListener('mouseout', () => { mouse.x = null; mouse.y = null; });
+      resize();
+
+      function tick() {
+        ctx.clearRect(0, 0, w, h);
+        particles.forEach(p => {
+          p.x += p.vx; p.y += p.vy;
+          if (p.x < 0 || p.x > w) p.vx *= -1;
+          if (p.y < 0 || p.y > h) p.vy *= -1;
+          if (mouse.x !== null) {
+            const dx = p.x - mouse.x, dy = p.y - mouse.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < mouse.radius) {
+              const force = (mouse.radius - dist) / mouse.radius;
+              p.x += (dx / dist) * force * 1.2;
+              p.y += (dy / dist) * force * 1.2;
+            }
+          }
+        });
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const a = particles[i], b = particles[j];
+            const dx = a.x - b.x, dy = a.y - b.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 130) {
+              ctx.strokeStyle = `rgba(16,185,129,${(1 - dist / 130) * 0.15})`;
+              ctx.lineWidth = 1;
+              ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+            }
+          }
+        }
+        particles.forEach(p => {
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(16,185,129,0.55)';
+          ctx.fill();
+        });
+        requestAnimationFrame(tick);
+      }
+      tick();
+    })();
+
+    (function () {
+      const cue = document.getElementById('scrollCue');
+      if (!cue) return;
+      cue.addEventListener('click', () => {
+        document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+      });
+      window.addEventListener('scroll', () => {
+        cue.style.opacity = window.scrollY > 120 ? '0' : '1';
+      }, { passive: true });
+    })();
+    console.log('%c👋 Hey, fellow developer!', 'color:#10b981;font-size:16px;font-weight:bold;');
+    console.log('%cLiking what you see? Let\'s build something together → sharjeelahmed617458@gmail.com', 'color:#94a3b8;font-size:12px;');
+  </script>
+  </div><!-- /root overflow wrapper -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init({
+    publicKey: "yfIBvhbTP0YDPfB2T",
+});
+</script>
 </body>
 </html>
